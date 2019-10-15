@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <base href = "/" />
+    <base href = "<%= htmlWebpackPlugin.options.baseUrl %>" />
     <title>Flicker Fun</title>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
 
@@ -43,7 +43,7 @@
   </head>
   <body>
         <div id="root"></div>
-        <script type="text/javascript" src="/bundle.js?5095f64062d204d7de6e/"></script>
+        <% for (key in htmlWebpackPlugin.files.js) { %><script type="text/javascript" src="/<%= htmlWebpackPlugin.files.js[key] %>/"></script><% } %>
 
 
         <a style="display: none" href="https://smallseotools.com/visitor-hit-counter/" target="_blank" title="smallseotools counter for traffic" rel="nofollow noopener"><img src="https://smallseotools.com/counterDisplay?code=d907e5aa552fbc59c27cc6cf1f25dfb9&style=0001&pad=5&type=ip&initCount=1" alt="smallseotools counter for traffic" border="0"></a>

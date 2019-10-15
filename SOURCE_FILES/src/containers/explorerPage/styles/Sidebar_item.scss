@@ -1,0 +1,68 @@
+@import "../../../styles/variables";
+
+.FunFileExplorer_sidebar_item_Container{
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Lato', sans-serif;
+  padding: 12px 0px 12px 20px;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: $transition_mid;
+  cursor: pointer;
+  user-select: none;
+}
+
+.FunFileExplorer_sidebar_item_Container:hover{
+  background: $color_bg_highlight;
+}
+
+.FunFileExplorer_sidebar_item_bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.FunFileExplorer_sidebar_item_Container:hover .FunFileExplorer_sidebar_item_image{
+  background: white;
+  border-radius: 100px;
+}
+.FunFileExplorer_sidebar_item_Container:hover .FunFileExplorer_sidebar_expanded_bar{
+  background: $color_bg_shade2;
+}
+
+.FunFileExplorer_sidebar_item_image {
+  transition: $transition_slow;
+  margin-right: 28px;
+}
+
+.FunFileExplorer_sidebar_item_image_open {
+  transform: rotate(180deg);
+}
+
+.FunFileExplorer_sidebar_expanded_container{
+  display: flex;
+  width: 100%;
+  margin: 24px 0;
+}
+
+.FunFileExplorer_sidebar_expanded_bar{
+  background: $color_bg_highlight;
+  width: 2px;
+  border-radius: 5px;
+  transition: $transition_slow;
+}
+
+.FunFileExplorer_sidebar_expanded_content{
+  width: 100%;
+  color: $color_text_mid_grey2;
+  transition: $transition_fast;
+}
+
+.FunFileExplorer_sidebar_expanded_content:hover{
+  color: $color_text_mid_grey;
+}

@@ -1,0 +1,107 @@
+@import "../../../styles/variables";
+
+.FunFileExplorer_FnFContainer{
+  width: 100%;
+  background-color: $color_bg_shade1;
+}
+
+.FunFileExplorer_viewContainer{
+  height: 100%;
+}
+
+.FunFileExplorer_FnFviewContainer{
+  display: flex;
+  padding: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+
+.FunFileExplorer_item{
+  margin: 10px 3px;
+  padding: 5px 35px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: $transition_slow;
+}
+
+.FunFileExplorer_item_blueHover:hover{
+  background: #E6F5FF;
+}
+
+.FunFileExplorer_item_yellowHover:hover {
+  background: #fcffd2;
+}
+
+.FunFileExplorer_FNFVIW_item_fileText{
+  position: absolute;
+  color: #fff;
+  margin-top: 20px;
+  font-weight: 700;
+  margin-left: 10px;
+  z-index: 2;
+}
+
+.FunFileExplorer_item_icon{
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+
+.FunFileExplorer_context_menu_container{
+  position: fixed;
+  z-index: 20;
+  color: $color_text_mid_grey;
+  display: flex;
+  background: $color_bg_shade1;
+  width: 150px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: $shadow_L2;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+.FunFileExplorer_context_menu_item{
+  padding: 12px 24px;
+  transition: $transition_slow;
+}
+
+.FunFileExplorer_context_menu_item:hover{
+  background: $color_bg_highlight;
+}
+
+
+.FunFileExplorer_context_menu_item_delete{
+  padding: 12px 24px;
+  color: $color_text_warning;
+  transition: $transition_slow;
+}
+
+.FunFileExplorer_context_menu_item_delete:hover{
+  background: $color_text_warningBG;
+}
+
+.FunFileExplorer_addNewItem{
+  /* height: 90px; */
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  /* padding: 10px 20px; */
+  border-radius: 8px;
+  border: 4px dashed #efeef2;
+  cursor: pointer;
+}
+
+.FunFileExplorer_addNewItem_Image{
+  height: 30px;
+  padding: 35px;
+}
+
+.grabbing{
+  cursor: grabbing;
+}

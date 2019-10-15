@@ -1,0 +1,60 @@
+@import "../../../styles/variables";
+
+.FunFileExplorer_NavBarContainer{
+  height: 85px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 28px;
+}
+
+.FunFileExplorer_pathContainer{
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.FunFileExplorer_pathImg{
+  padding: 0px 30px;
+  cursor: pointer;
+  transition: $transition_mid;
+  width: 22px;
+  height: 22px;
+}
+
+.FunFileExplorer_pathImg:hover{
+  filter: brightness(1.6);
+}
+
+.FunFileExplorer_searchFieldContainer{
+  flex-grow: 0;
+}
+
+.FunFileExplorer_pathTextContainer{
+  display: flex;
+}
+
+.FunFileExplorer_pathText{
+  margin: 5px;
+
+
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.FunFileExplorer_pathHolder{
+  display: flex;
+  cursor: pointer;
+}
+
+.FunFileExplorer_pathImg_disabled{
+  padding: 0px 30px;
+  cursor: not-allowed;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  width: 22px;
+  height: 22px;
+}
+
