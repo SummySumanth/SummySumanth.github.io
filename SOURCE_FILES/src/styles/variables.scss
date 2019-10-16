@@ -8,7 +8,7 @@ $color_new_textGunmetalBlack : #535b62;
 
 
 $color_bg_shade1: #FFF;
-$color_bg_shade2: #F9FAFC;
+$color_bg_shade2: #e6e7e9;
 $color_bg_highlight: #EEEEF1;
 
 $color_text_dark_grey: #2F363F;
@@ -20,7 +20,10 @@ $color_text_warningBG: #ffece9;
 
 $color_blue: #4bb7f8;
 
+$color_accent_1: #f64c72;
 
+
+$color_btnBackground:  rgba(0, 0, 0, 0.65);;
 // Shadows
 $shadow_L1 : 0px 12px 24px 0px rgba(0,0,0,0.05);
 $shadow_L2 : 0px 16px 64px 0px rgba(0,0,0,0.08);
@@ -30,9 +33,13 @@ $shadow_L2 : 0px 16px 64px 0px rgba(0,0,0,0.08);
 $transition_fast : all 0.06s linear;
 $transition_mid : all 0.5s cubic-bezier(.25,.8,.25,1);
 $transition_slow : all 0.7s cubic-bezier(.25,.8,.25,1);
+$transition_UltraSlow : all 1.2s cubic-bezier(.25,.8,.25,1);
 
 // Font Dimensions
 $cardHeaderFontSize: 15px;
 $cardDescriptionFontSize: 14px;
 $cardlinkFontSize: 12px;
 $lineHeight : 22px;
+
+// animations
+$btns_entrance_animation_duration: 0.8s

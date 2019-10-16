@@ -1,162 +1,241 @@
-a.nostyle:link {
-  text-decoration: none;
-  color: inherit;
-  cursor: auto;
+@import "./../../../styles/variables";
+
+.accent{
+  color: $color_accent_1;
 }
 
-a.nostyle:visited {
-  text-decoration: none;
-  color: inherit;
-  cursor: auto;
+.Portfolio_WelcomeScreen{
+  background: black;
+  width: 100vw;
+  height: 100vh;
+  top: 0vh;
+  position: absolute;
+  transition: $transition_UltraSlow;
 }
 
-.WelcomeScreen{
-  position: fixed;
-  background: #000000ad;
-  z-index: 15;
-  top: 0;
+.Portfolio_WelcomeScreen_HIDE{
+  transform: translateY(-110%);
+}
+.Portfolio_WS_imgHolder{
+  width: 100%;
   height: 100%;
-  width: 100%;
-  //box-shadow: inset 0px 1px 210px 20px rgba(0, 0, 0, 0.33);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.WelcomeScreenHide{
-
-}
-
-.ModalContainer{
-  color: #000;
-  width: 70%;
-  border-radius: 10px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  background: #fff;
-}
-
-.ContentHolder{
-  height: auto;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  text-align: center;
-  color: #212121;
-}
-
-.ModalSubHeader{
-  width: 75%;
-  margin: 0px auto;
-  color: #5a5a5a;
-  text-align: center;
-  font-size: 10pt;
-}
-
-.ModalBody{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  margin: 0px 20px;
-}
-
-.divider{
-  width: 100%;
-  height: 2px;
-  border-radius: 5px;
-  background: #cecece;
-  margin: 15px 0px;
-}
-
-.ModalBody-header{
-  margin: 15px 0px;
-}
-.TechBlock{
-  display: flex;
-  width: 100%;
-  background: #efefef;
-  border-radius: 10px;
-  margin-bottom: 0px;
-  padding: 5px;
-}
-
-.TechBlock-container{
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.TechUsedContainer{
-  display: flex;
-  height: auto;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 20px;
-  flex: 1 1 0%;
-}
-
-.TechUsedContainerLinks{
-  display: flex;
-  height: auto;
-  justify-content: center;
-  align-items: center;
-  margin: 5px 0px;
-  flex: 0 1 0%;
-  cursor: pointer;
-  transition: all 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
-  border-radius: 10px;
-  padding: 5px 20px;
-}
-
-.TechUsedContainerLinks:hover{
-  background: #d4d4d4;
-}
-
-.TechUsedImage{
-  height: 35px;
-  width: 35px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  animation-name: imageAppearAndDisappear;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
 }
 
-.TechUsedTextContainer{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 10px;
+.Portfolio_WS_ContentHolder{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: #00000075;
 }
 
-.TechUsedText{
-  user-select: none;
+.Portfolio_WS_GotoSiteBtn{
+  position: absolute;
+  bottom: 0;
+  color: $color_accent_1;
+  left: 50%;
+  padding: 7px 43px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 40px;
+  background: $color_btnBackground;
+  transition: $transition_slow;
+  font-family: 'Gochi Hand', cursive;
+
+  transform: translate(-50%, 120%);
+  animation-name: closeButtonEntrance;
+  animation-fill-mode: forwards;
+  animation-delay: 4.5s;
+  animation-duration: $btns_entrance_animation_duration;
+  animation-timing-function: ease-in-out;
+}
+
+.Portfolio_WS_GotoSiteBtn:Hover{
+  color: $color_accent_1;
+  background: $color_bg_shade2;
+  box-shadow: 0px 7px 9px 0px #000000b0;
+}
+
+.Portfolio_WelcomeScreen_SHOWBtn{
+  position: absolute;
+  background: $color_btnBackground;
+  color: $color_accent_1;
+  padding: 20px 5px 9px 5px;
+  border-radius: 0px 0px 10px 10px;
+  transition: $transition_slow;
+  cursor: pointer;
+  top: 0vh;
+  left: 90%;
+  font-family: 'Gochi Hand', cursive;
+
+  transform: translateY(-110%);
+  animation-name: showButtonEntrance;
+  animation-fill-mode: forwards;
+  animation-delay: 1.2s;
+  animation-duration: $btns_entrance_animation_duration;
+  animation-timing-function: ease-in-out;
+}
+
+.Portfolio_WelcomeScreen_SHOWBtn:Hover{
+  color: $color_accent_1;
+  background: $color_bg_shade2;
+  box-shadow: 0px 7px 9px 0px #000000b0;
+}
+
+.Portfolio_WelcomeScreen_contentsContainerBox{
+  margin: 4%;
+}
+
+.Portfolio_WelcomeScreen_Header{
+  color: #e6e7e9;
+  font-size: 60pt;
+  text-shadow: 0px 2px 10px black, 0px 2px 3px black;
+  line-height: 45pt;
+  font-family: 'Gochi Hand', cursive;
+}
+//Animations
+
+.Portfolio_WelcomeScreen_Header_Name{
+  font-size: 105pt;
+  line-height: 115pt;
+}
+
+.Portfolio_WelcomeScreen_hello{
+  transform: translate(0, 120vh) ;
+  opacity: 0;
+
+  animation-name: helloAnimation;
+  animation-delay: 0.5s;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.Portfolio_WelcomeScreen_Iam {
+  transform: translate(120vh,0);
+  opacity: 0;
+
+  animation-name: iAmAnimation;
+  animation-delay: 0.5s;
+  animation-duration: 1.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.Portfolio_WelcomeScreen_name {
+  transform: translate(120vw,90vh);
+  opacity: 0;
+
+  animation-name: NameAnimation;
+  animation-delay: 0.75s;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.gotoSiteInlineBtn{
+  bottom: 0;
+  display: inline;
+  color: #f64c72;
+  left: 50%;
+  padding: 5px 11px;
+  margin: 15px;
+  cursor: pointer;
+  border-radius: 40px;
+  background: rgba(0, 0, 0, 0.65);
+  transition: all 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+  font-family: 'Gochi Hand', cursive;
+}
+
+.gotoSiteInlineBtn{
+  color: $color_accent_1;
+  background: $color_bg_shade2;
+  box-shadow: 0px 7px 9px 0px #000000b0;
   white-space: nowrap;
 }
 
-.TechUsedTextVersion{
-  font-size: 7pt;
-  text-align: left;
-  width: 100%;
-  cursor: default;
-  color: #949494;
-}
-
-.modalCloseBtn{
-  background: #d0d0d0;
-  text-align: center;
+.mainShortDescription{
   width: 30%;
-  padding: 15px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.7s cubic-bezier(.25,.8,.25,1);
-}
-
-.modalCloseBtn:hover{
-  background: #4da9ff;
+  line-height: 35px;
   color: #fff;
+  font-size: 14pt;
+  text-align: justify;
+  border-radius: 2px;
+  padding: 7px 14px;
+  background: rgba(0, 0, 0, 0.53);
 }
 
+@keyframes imageAppearAndDisappear {
+  0% {
+    opacity: 0;
+   }
+  20% {
+    opacity: 1;
+  }
+  80%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes showButtonEntrance {
+  from{
+    transform: translateY(-110%);
+  }
+  to{
+    transform: translateY(0);
+  }
+}
+
+@keyframes closeButtonEntrance {
+  from{
+    transform: translate(-50%, 120%) scale(0.5);
+
+  }
+  to{
+    transform: translate(-50%, 0%) scale(1.2);
+  }
+}
+
+@keyframes helloAnimation {
+
+  from{
+    opacity: 0;
+    transform: translate(0, 120vh) ;
+  }
+  to{
+    opacity: 1;
+    transform: translate(0,0);
+  }
+}
+@keyframes iAmAnimation {
+  from{
+    opacity: 0;
+    transform: translate(120vh,0);
+  }
+  to{
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+}
+@keyframes NameAnimation {
+  from{
+    opacity: 0;
+    transform: translate(120vw,90vh);
+  }
+  to{
+    opacity: 1;
+    transform: translate(0%, 0%);
+  }
+}
