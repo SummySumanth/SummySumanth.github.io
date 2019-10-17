@@ -20,6 +20,11 @@ const styles = {
   accent: 'accent',
   inlineBtn: 'gotoSiteInlineBtn',
   description: 'mainShortDescription',
+  sideBarBackground: 'Portfolio_WelcomeScreen_SidebarBackground',
+  description1 : 'description1',
+  description2 : 'description2',
+  description3: 'description3',
+
 }
 
 const BackgroundImages = [ a1, a2, a3, a4, a5, a6, a7, a8];
@@ -60,6 +65,33 @@ class WelcomeScreen extends Component{
     );
   };
 
+  getDescription = () =>{
+    return(
+      <div className={styles.description}>
+        <p className={styles.description1}>
+          I'm a Javascript enthusiast focusing on frontend development with the great technologies like React and
+          tech associated with the modern web development technologies and tools.
+        </p>
+        <br />
+        <p className={styles.description2}>
+          When I am not hooked into macbook, I would be snugging on food, xbox, cycling, beer and hey netflix is default for everyone right?
+        </p>
+        <br />
+        <p className={styles.description3}>
+          Thanks for reaching out to my site, please hit
+          <div
+            className={styles.inlineBtn}
+            onClick={this.props.onHideClickHandler}
+          >
+            Let's go!
+          </div>
+          to explore more about my works, projects and contact details.
+        </p>
+
+      </div>
+    )
+  };
+
   render(){
     const welcomeScreenStyle = classnames(styles.welcomeScreen, { [styles.welcomeScreenHide] : !this.props.showWelcomeScreen})
     const nameStyle = classnames(styles.headerName, styles.nameText);
@@ -80,25 +112,8 @@ class WelcomeScreen extends Component{
               </p>
             </div>
 
-            <div className={styles.description}>
-              I'm a Javascript enthusiast focusing on frontend development with the great technologies like React and
-              tech associated with the modern web development technologies and tools.
-              <br />
-              <br />
-              When I am not hooked into macbook, I would be snugging on food, xbox, cycling, beer and hey netflix is default for everyone right?
-              <br />
-              <br />
-              Thanks for reaching out to my site, please hit
-
-              <div
-                className={styles.inlineBtn}
-                onClick={this.props.onHideClickHandler}
-              >
-                Let's go !
-              </div>
-
-              to explore more about my works, projects and contact details.
-            </div>
+            {this.getDescription()}
+            <div className={styles.sideBarBackground} />
           </div>
 
 

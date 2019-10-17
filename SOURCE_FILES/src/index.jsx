@@ -31,6 +31,7 @@ class Main extends Component{
           onHideClickHandler={this.hideWelcome}
           showWelcomeScreen={this.state.showWelcome}
         />
+
       </div>
     )
   }
