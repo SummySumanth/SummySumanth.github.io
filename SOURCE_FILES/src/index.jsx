@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import './styles/index.scss';
 
 import WelcomeScreen from "./containers/welcomePage/WelcomeScreenContainer.jsx";
+import MainPage from "./containers/mainPage/mainPage.jsx";
 
 const classNameEnums = {
 
@@ -31,7 +32,7 @@ class Main extends Component{
           onHideClickHandler={this.hideWelcome}
           showWelcomeScreen={this.state.showWelcome}
         />
-
+        {/*<MainPage />*/}
       </div>
     )
   }

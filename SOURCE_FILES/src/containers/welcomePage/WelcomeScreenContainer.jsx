@@ -102,13 +102,13 @@ class WelcomeScreen extends Component{
           <div className={styles.containerBox}>
             <div className={styles.header}>
               <p className={styles.helloText}>
-                HELLO<span className={styles.accent}>,</span>
+                Hello<span className={styles.accent}>,</span>
               </p>
               <p className={styles.iAmText}>
-                I AM
+                I am
               </p>
               <p className={nameStyle}>
-                <span className={styles.accent}>SUMMY</span>
+                <span className={styles.accent}>Summy</span>
               </p>
             </div>
 
@@ -125,9 +125,9 @@ class WelcomeScreen extends Component{
           >
             Let's go !
           </div>
-          <div className={styles.showBtn}>
-            Home
-          </div>
+          {/*<div className={styles.showBtn}>*/}
+          {/*  Home*/}
+          {/*</div>*/}
         </div>
         {this.getBackgroundImages()}
       </div>

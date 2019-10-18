@@ -6,9 +6,11 @@
 
 .Portfolio_WelcomeScreen{
   background: black;
-  width: 100vw;
-  height: 100vh;
-  top: 0vh;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   position: absolute;
   transition: $transition_UltraSlow;
 }
@@ -70,11 +72,12 @@
   cursor: pointer;
   border-radius: 40px;
 
-  transition: $transition_slow;
+  transition: $transition_mid;
   font-family: 'Gochi Hand', cursive;
   transform: translate(0, 0);
 
-  right: 110%;
+  right: 5%;
+  bottom: -10%;
   animation-name: closeButtonEntrance;
   animation-fill-mode: forwards;
   animation-delay: 8.5s;
@@ -83,7 +86,7 @@
 }
 
 .Portfolio_WS_GotoSiteBtn:Hover{
-  color: $color_accent_1;
+  color: $color_accent_2;
   background: $color_bg_shade3;
   box-shadow: 0px 7px 9px 0px #000000b0;
 }
@@ -166,7 +169,6 @@
 .gotoSiteInlineBtn{
   bottom: 0;
   display: inline;
-  color: #f64c72;
   left: 50%;
   padding: 5px 11px;
   margin: 15px;
@@ -175,13 +177,14 @@
   background: rgba(0, 0, 0, 0.65);
   transition: all 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
   font-family: 'Gochi Hand', cursive;
-}
-
-.gotoSiteInlineBtn{
   color: $color_accent_1;
   background: $color_bg_shade2;
   box-shadow: 0px 7px 9px 0px #000000b0;
   white-space: nowrap;
+}
+
+.gotoSiteInlineBtn:hover{
+  color: $color_accent_2
 }
 
 .mainShortDescription{
@@ -248,11 +251,11 @@
 @keyframes closeButtonEntrance {
   from{
     //transform: translate(0, 300%);
-    right: 110%
+    bottom: -10%
   }
   to{
     //transform: translate(0, 0);
-    right: 5%
+    bottom: 5%
   }
 }
 
