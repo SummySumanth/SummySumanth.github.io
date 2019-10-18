@@ -11,7 +11,6 @@ const styles = {
   contentHolder: 'Portfolio_WS_ContentHolder',
   gotoSiteBtn: 'Portfolio_WS_GotoSiteBtn',
   showBtn:  'Portfolio_WelcomeScreen_SHOWBtn',
-  containerBox: 'Portfolio_WelcomeScreen_contentsContainerBox',
   header : 'Portfolio_WelcomeScreen_Header',
   headerName: 'Portfolio_WelcomeScreen_Header_Name',
   helloText: 'Portfolio_WelcomeScreen_hello',
@@ -20,7 +19,9 @@ const styles = {
   accent: 'accent',
   inlineBtn: 'gotoSiteInlineBtn',
   description: 'mainShortDescription',
-  sideBarBackground: 'Portfolio_WelcomeScreen_SidebarBackground',
+  sideBar: 'Portfolio_WelcomeScreen_Sidebar',
+  sideBarDisappear: 'Portfolio_WelcomeScreen_Sidebar_disappear',
+  sidebarContainer: 'Portfolio_WelcomeScreen_Sidebar_container',
   description1 : 'description1',
   description2 : 'description2',
   description3: 'description3',
@@ -35,6 +36,7 @@ class WelcomeScreen extends Component{
     super(props);
     this.state = {
       currentImage: 0,
+      hideSideBar: false
     };
     setInterval(()=>{
       this.setNextImage();
@@ -69,66 +71,88 @@ class WelcomeScreen extends Component{
     return(
       <div className={styles.description}>
         <p className={styles.description1}>
-          I'm a Javascript enthusiast focusing on frontend development with the great technologies like React and
-          tech associated with the modern web development technologies and tools.
+          I'm a Javascript enthusiast crazed with web development with the top notch techno like ReactJs and
+          also a keen nodeJs learner. I love designing and I love coding and that's how I ended up becoming web developer.
         </p>
         <br />
         <p className={styles.description2}>
-          When I am not hooked into macbook, I would be snugging on food, xbox, cycling, beer and hey netflix is default for everyone right?
+          Apart from being "In the zone" when hooked into my macbook, I'm a raging foodie, hardcore Xbox gamer, cyclist, beer dude and a binge watcher on Netflix.
         </p>
         <br />
         <p className={styles.description3}>
-          Thanks for reaching out to my site, please hit
+          Thanks for tuning in, be sure to click on
           <div
             className={styles.inlineBtn}
             onClick={this.props.onHideClickHandler}
           >
             Let's go!
           </div>
-          to explore more about my works, projects and contact details.
+          for more info on my works, projects, designs and contact.
         </p>
 
       </div>
     )
   };
 
+  hideHandler = () =>{
+    this.setState({
+      hideSideBar: true
+    });
+
+    // this.props.onHideClickHandler();
+  };
+
+  sideBarAnimationEndHandler = () =>{
+    if(this.state.hideSideBar){
+      this.props.onHideClickHandler();
+    }
+  };
+
   render(){
     const welcomeScreenStyle = classnames(styles.welcomeScreen, { [styles.welcomeScreenHide] : !this.props.showWelcomeScreen})
     const nameStyle = classnames(styles.headerName, styles.nameText);
+    const sideBarStyle = classnames(styles.headerName, styles.nameText);
+    const sideBarVisibilityStyle = classnames(styles.sideBar, { [styles.sideBarDisappear] : this.state.hideSideBar});
     return(
       <div className={welcomeScreenStyle}>
         <div className={styles.contentHolder}>
-
-          <div className={styles.containerBox}>
-            <div className={styles.header}>
-              <p className={styles.helloText}>
-                Hello<span className={styles.accent}>,</span>
-              </p>
-              <p className={styles.iAmText}>
-                I am
-              </p>
-              <p className={nameStyle}>
-                <span className={styles.accent}>Summy</span>
-              </p>
+            <div
+              className={sideBarVisibilityStyle}
+              onAnimationEndCapture={this.sideBarAnimationEndHandler}
+            >
+              <div className={styles.sidebarContainer}>
+                <div className={styles.header}>
+                  <p className={styles.helloText}>
+                    Hello<span className={styles.accent}>,</span>
+                  </p>
+                  <p className={styles.iAmText}>
+                    I am
+                  </p>
+                  <p className={nameStyle}>
+                    <span className={styles.accent}>Summy</span>
+                  </p>
+                </div>
+                {this.getDescription()}
+              </div>
             </div>
 
-            {this.getDescription()}
-            <div className={styles.sideBarBackground} />
-          </div>
 
 
-
-
+          {/*Open button*/}
           <div
             className={styles.gotoSiteBtn}
-            onClick={this.props.onHideClickHandler}
+            onClick={this.hideHandler}
           >
             Let's go !
           </div>
+
+          {/*Close button*/}
           {/*<div className={styles.showBtn}>*/}
           {/*  Home*/}
           {/*</div>*/}
+
         </div>
+
         {this.getBackgroundImages()}
       </div>
     );

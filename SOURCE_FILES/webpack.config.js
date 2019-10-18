@@ -42,6 +42,10 @@ module.exports = {
           name: "static/media/[name].[hash:8].[ext]"}
       },
       {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader'
+      },
+      {
         test: /\.scss$/,
         loaders: [
           require.resolve('style-loader'),

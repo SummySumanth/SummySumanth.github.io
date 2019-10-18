@@ -19,9 +19,12 @@ class MainPage extends Component{
   }
 
   render(){
+    const show =  this.props.welcomeScreenHidden;
     return(
       <div className={styles.mainpageContainer}>
-          <SideBar />
+          <SideBar
+            show={show}
+          />
       </div>
     );
   }
