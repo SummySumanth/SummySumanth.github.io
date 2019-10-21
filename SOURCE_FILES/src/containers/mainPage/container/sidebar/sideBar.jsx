@@ -59,11 +59,12 @@ class SideBar extends Component{
 
         {/* Download Resume*/}
 
-        <div className={styles.downloadContainer}>
-            <div className={styles.downloadIconHolder}>{download}</div>
-            <div> Download Resume</div>
-        </div>
-
+        <a href={'https://raw.githubusercontent.com/SummySumanth/SummySumanth.github.io/master/SOURCE_FILES/src/assets/sumathsResume.pdf'}>
+          <div className={styles.downloadContainer}>
+              <div className={styles.downloadIconHolder}>{download}</div>
+              <div> Download Resume</div>
+          </div>
+        </a>
 
         {/*NAVIGATIONS CONTAINER*/}
         <div className={styles.navigationContainer}>

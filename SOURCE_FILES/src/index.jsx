@@ -28,10 +28,10 @@ class Main extends Component{
   render(){
     return(
       <div>
-        {/*<WelcomeScreen*/}
-        {/*  onHideClickHandler={this.hideWelcome}*/}
-        {/*  showWelcomeScreen={this.state.showWelcome}*/}
-        {/*/>*/}
+        <WelcomeScreen
+          onHideClickHandler={this.hideWelcome}
+          showWelcomeScreen={this.state.showWelcome}
+        />
         <MainPage
           welcomeScreenHidden={!this.state.showWelcome}
         />

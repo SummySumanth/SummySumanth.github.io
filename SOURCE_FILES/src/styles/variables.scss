@@ -47,6 +47,7 @@ $transition_fast : all 0.06s linear;
 $transition_mid : all 0.5s cubic-bezier(.25,.8,.25,1);
 $transition_slow : all 0.7s cubic-bezier(.25,.8,.25,1);
 $transition_UltraSlow : all 1.2s cubic-bezier(.25,.8,.25,1);
+$transition_Coin : all 0.5s ease-in-out;
 
 // Font Dimensions
 $cardHeaderFontSize: 15px;

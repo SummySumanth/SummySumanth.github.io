@@ -103,32 +103,6 @@
   box-shadow: 0px 7px 9px 0px #000000b0;
 }
 
-.Portfolio_WelcomeScreen_SHOWBtn{
-  position: absolute;
-  background: $color_darkmode_blackTransparent2;
-  color: $color_accent_1;
-  padding: 20px 5px 9px 5px;
-  border-radius: 0px 0px 10px 10px;
-  transition: $transition_slow;
-  cursor: pointer;
-  top: 0vh;
-  left: 90%;
-  font-family: 'Gochi Hand', cursive;
-
-  transform: translateY(-110%);
-  animation-name: showButtonEntrance;
-  animation-fill-mode: forwards;
-  animation-delay: 1.2s;
-  animation-duration: $btns_entrance_animation_duration;
-  animation-timing-function: ease-in-out;
-}
-
-.Portfolio_WelcomeScreen_SHOWBtn:Hover{
-  color: $color_accent_2;
-  background: $color_text_white1;
-
-  box-shadow: 0px 4px 6px 0px #000000b0;
-}
 
 .Portfolio_WelcomeScreen_Header{
   color: $color_text_white1;

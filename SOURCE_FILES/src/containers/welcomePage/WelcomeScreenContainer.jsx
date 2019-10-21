@@ -10,7 +10,7 @@ const styles = {
   imgHolder: 'Portfolio_WS_imgHolder',
   contentHolder: 'Portfolio_WS_ContentHolder',
   gotoSiteBtn: 'Portfolio_WS_GotoSiteBtn',
-  showBtn:  'Portfolio_WelcomeScreen_SHOWBtn',
+
   header : 'Portfolio_WelcomeScreen_Header',
   headerName: 'Portfolio_WelcomeScreen_Header_Name',
   helloText: 'Portfolio_WelcomeScreen_hello',
@@ -137,20 +137,13 @@ class WelcomeScreen extends Component{
             </div>
 
 
-
           {/*Open button*/}
           <div
             className={styles.gotoSiteBtn}
-            onClick={this.hideHandler}
+            onClick={this.props.onHideClickHandler}
           >
             Let's go !
           </div>
-
-          {/*Close button*/}
-          {/*<div className={styles.showBtn}>*/}
-          {/*  Home*/}
-          {/*</div>*/}
-
         </div>
 
         {this.getBackgroundImages()}

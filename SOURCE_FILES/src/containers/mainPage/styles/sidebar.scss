@@ -44,8 +44,12 @@
   border-radius: 50px;
   background-size: cover;
   border: 3px solid $color_accent_3;
+  transition: $transition_Coin;
 }
 
+.sidebarNameContainer:hover .sidebarNamePic{
+  transform: rotateY(360deg);
+}
 .sidebarNameTextContainer{
   margin-left: 15px;
 }
