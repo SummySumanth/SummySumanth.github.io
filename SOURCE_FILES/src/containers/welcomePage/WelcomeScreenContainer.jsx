@@ -99,7 +99,7 @@ class WelcomeScreen extends Component{
       hideSideBar: true
     });
 
-    // this.props.onHideClickHandler();
+    this.props.onHideClickHandler();
   };
 
   sideBarAnimationEndHandler = () =>{
