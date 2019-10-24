@@ -118,7 +118,15 @@ class SideBar extends Component{
           <div className={styles.contentItem} ref={this.props.references.feeds}>
             <div className={feedsHeaderStyle}>Feeds</div>
             <div className={styles.contentItemContainer}>
-              Ushhh! cookies are still in the oven, don't rush!
+              <a
+                className="twitter-timeline"
+                data-lang="en"
+                data-width="50% "
+                data-height="100%"
+                data-theme="dark"
+
+                href="https://twitter.com/i_freak_summy?ref_src=twsrc%5Etfw">Tweets by i_freak_summy
+              </a>
             </div>
           </div>
 
