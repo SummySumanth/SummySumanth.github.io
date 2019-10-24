@@ -19,6 +19,7 @@ const styles = {
   navigationContainer: 'sidebarNavigationContainer',
   navigationItemContainer: 'sidebarNavigationItemContainer',
   navigationItem: 'sidebarNavigationItem',
+  navigationItemHeighlighter: 'sidebarNavigationItemHeighlighter',
   navigationItemSelected: 'sidebarNavigationItemSelected',
   downloadIconHolder: 'downloadIconHolder',
   downloadContainer: 'downloadResumeContainer',
@@ -39,6 +40,17 @@ class SideBar extends Component{
     const twitterStyle = classnames(styles.linksIconHolderTwitter, 'twitter');
     const githubStyle = classnames(styles.linksIconHolder, 'github');
     const defaultStyle = classnames(styles.linksIconHolder, 'defaultHover');
+
+
+    const projectsBarStyle = classnames(styles.navigationItem, { [styles.navigationItemHeighlighter] : this.props.currentActiveContent === 'projects'});
+    const techStackBarStyle = classnames(styles.navigationItem, { [styles.navigationItemHeighlighter] : this.props.currentActiveContent === 'techStack'});
+    const experiencesBarStyle = classnames(styles.navigationItem, { [styles.navigationItemHeighlighter] : this.props.currentActiveContent === 'experiences'});
+    const certificatesBarStyle = classnames(styles.navigationItem, { [styles.navigationItemHeighlighter] : this.props.currentActiveContent === 'certificates'});
+    const articlesBarStyle = classnames(styles.navigationItem, { [styles.navigationItemHeighlighter] : this.props.currentActiveContent === 'articles'});
+    const feedsBarStyle = classnames(styles.navigationItem, { [styles.navigationItemHeighlighter] : this.props.currentActiveContent === 'feeds'});
+    const contactBarStyle = classnames(styles.navigationItem, { [styles.navigationItemHeighlighter] : this.props.currentActiveContent === 'contact'});
+
+
 
     return(
       <div className={styles.sidebarContainer}>
@@ -68,23 +80,57 @@ class SideBar extends Component{
 
         {/*NAVIGATIONS CONTAINER*/}
         <div className={styles.navigationContainer}>
-          <div className={styles.navigationItemContainer}>
-            <div className={styles.navigationItem}>Projects</div>
+          <div
+            className={styles.navigationItemContainer}
+            onClick={() => this.props.onLinkClick('projects')}
+          >
+            <div className={projectsBarStyle}>Projects</div>
           </div>
-          <div className={styles.navigationItemContainer}>
-            <div className={styles.navigationItem}>Tech Stack</div>
+
+          <div
+            className={styles.navigationItemContainer}
+            onClick={() => this.props.onLinkClick('techStack')}
+          >
+            <div className={techStackBarStyle}>Tech Stack</div>
           </div>
-          <div className={styles.navigationItemContainer}>
-            <div className={styles.navigationItem}>Experiences</div>
+
+
+          <div
+            className={styles.navigationItemContainer}
+            onClick={() => this.props.onLinkClick('experiences')}
+          >
+            <div className={experiencesBarStyle}>Experiences</div>
           </div>
-          <div className={styles.navigationItemContainer}>
-            <div className={styles.navigationItem}>Articles</div>
+
+          <div
+            className={styles.navigationItemContainer}
+            onClick={() => this.props.onLinkClick('certificates')}
+          >
+            <div className={certificatesBarStyle}>Certificates</div>
           </div>
-          <div className={styles.navigationItemContainer}>
-            <div className={styles.navigationItem}>Feeds</div>
+
+
+          <div
+            className={styles.navigationItemContainer}
+            onClick={() => this.props.onLinkClick('articles')}
+          >
+            <div className={articlesBarStyle}>Articles</div>
           </div>
-          <div className={styles.navigationItemContainer}>
-            <div className={styles.navigationItem}>Contact</div>
+
+
+          <div
+            className={styles.navigationItemContainer}
+            onClick={() => this.props.onLinkClick('feeds')}
+          >
+            <div className={feedsBarStyle}>Feeds</div>
+          </div>
+
+
+          <div
+            className={styles.navigationItemContainer}
+            onClick={() => this.props.onLinkClick('contact')}
+          >
+            <div className={contactBarStyle}>Contact</div>
           </div>
         </div>
 

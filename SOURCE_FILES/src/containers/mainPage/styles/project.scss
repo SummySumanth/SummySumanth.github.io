@@ -1,0 +1,45 @@
+@import "../../../styles/variables";
+
+.projectsContainer{
+  overflow: hidden;
+  background: #4a4a4a;
+  background-size: cover;
+  border-radius: 5px;
+  box-shadow: 7px 7px 6px -5px #0000001f;
+  text-shadow: 0px 0px 4px #000000;
+  transition: $transition_mid;
+  cursor: default;
+}
+
+.projectsContainer:hover{
+  //transform: rotateX(-6deg) rotateY(7deg) rotateZ(-2deg) translateX(0px) scale(1.08);
+  box-shadow: 11px 10px 19px -6px #00000040;
+  //transform: scale(1.02);
+
+};
+
+.projectDetailsHolder{
+  background: rgba(0, 0, 0, 0.71);
+  color: $color_text_white2;
+}
+
+.projectTitle{
+  color: $color_text_white1;
+  font-weight: bold;
+  font-size: 30pt;
+  padding: 10px 15px 0px 15px;
+  text-shadow: 0px 0px 4px #000000;
+}
+
+.projectDescription{
+  text-indent: 35px;
+  padding: 5px 15px 10px 15px;
+  color: $color_text_white4;
+}
+
+.projectLinks{
+  background: #0000008a;
+  padding: 10px 15px;
+  margin-top: 27px;
+  font-weight: bold;
+}

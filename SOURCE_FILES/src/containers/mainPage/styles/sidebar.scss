@@ -89,39 +89,39 @@
 
 .linkedin:hover{
   background: #0077B5;
-  transform: scale(1.05);
-  box-shadow: 1px 4px 10px 2px #0000009e;
+  transform: scale(1.4);
+  //box-shadow: 1px 4px 10px 2px #0000009e;
 }
 
 .facebook:hover{
   background: #3b5998;
-  transform: scale(1.05);
-  box-shadow: 1px 4px 10px 2px #0000009e;
+  transform: scale(1.4);
+  //box-shadow: 1px 4px 10px 2px #0000009e;
 }
 
 .github:hover{
   background: rgba(0, 0, 0, 0.98);
-  transform: scale(1.05);
-  box-shadow: 1px 4px 10px 2px #0000009e;
+  transform: scale(1.4);
+  //box-shadow: 1px 4px 10px 2px #0000009e;
 }
 
 .twitter:hover{
   background: #38A1F3;
-  transform: scale(1.05);
-  box-shadow: 1px 4px 10px 2px #0000009e;
+  transform: scale(1.4);
+  //box-shadow: 1px 4px 10px 2px #0000009e;
 }
 
 .medium:hover{
   background: #292929;
-  transform: scale(1.05);
+  transform: scale(1.4);
   border-radius: 2px;
-  box-shadow: 1px 4px 10px 2px #0000009e;
+  //box-shadow: 1px 4px 10px 2px #0000009e;
 }
 
 .defaultHover:hover{
   background: $color_accent_1;
-  transform: scale(1.05);
-  box-shadow: 1px 4px 10px 2px #0000009e;
+  transform: scale(1.4);
+  //box-shadow: 1px 4px 10px 2px #0000009e;
 }
 
 .sidebarNavigationContainer{
@@ -135,25 +135,40 @@
   width: 100%;
   padding-top: 10px;
 }
+
 .sidebarNavigationItem{
   width: auto;
-  padding: 30px 20px;
+  padding: 25px 20px;
   color: $color_text_white1;
-  //border: 3px solid $color_darkmode_black2;
   font-weight: bold;
   font-size: 11pt;
   cursor: pointer;
   transition: $transition_mid;
-  //border-top: 1px solid $color_darkmode_black3;
-  //border-bottom: 2px solid $color_darkmode_black3;
-  //box-shadow: inset 0 -2px 1px -1px #000;
 }
-// Animations
+
 .sidebarNavigationItem:hover{
   background: $color_darkmode_black2;
   background: #414141;
   transform: translate(5%, -6%) scale(1.05);
   box-shadow: 22px 30px 33px -27px #0000009c, inset 0 0px 0px 2px #5a5a5a66;
+}
+
+.sidebarNavigationItemHeighlighter{
+  width: auto;
+  padding: 25px 20px;
+  color: #f0f0f0;
+  background: $color_accent_7;
+  font-weight: bold;
+  font-size: 11pt;
+  cursor: pointer;
+  transition: $transition_mid;
+}
+
+.sidebarNavigationItemHeighlighter:hover{
+  background: $color_accent_7;
+  //background: #414141;
+  transform: none;
+  box-shadow: none;
 }
 
 .sidebarNavigationItemSelected{

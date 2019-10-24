@@ -19,6 +19,11 @@ body {
   height: inherit;
 }
 
+/* css */
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   color: #0060B6;
   text-decoration: none;
