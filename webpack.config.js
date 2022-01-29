@@ -1,38 +1,63 @@
-let path = require('path');
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ReactRootPlugin = require('html-webpack-root-plugin');
-const moduleObj = {
-    rules: [
-        {
-            test: /\.jsx?$/,
-            exclude: /node_modules/,
-            loader: "babel-loader",
-        },
-        {
-            test: /\.scss$/,
-            exclude: /node_modules/,
-            loaders:['css-loader','sass-loader']
-        }
-    ],
-};
 
 module.exports = {
-    entry : './view/js/index.jsx',
-    mode: 'development',
-    output : {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname + '/dist/public')
+  mode: 'development', // production
+  entry: {
+    main: path.resolve(__dirname, 'view/js/index.js'),
+  },
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].[contenthash].js',
+    clean: true,
+    assetModuleFilename: '[name][ext]'
+  },
+  devtool: 'inline-source-map',
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, 'dist'),
     },
-    resolve : {
-        extensions:['.js','.jsx']
-    },
-    module: moduleObj,
-    plugins: [
-      new HtmlWebpackPlugin({ 
-        title:"Summy's Boilerplate", 
-        hash: true,
-      }),
-      new ReactRootPlugin()
+    port: '5000',
+    open: true,
+    hot: true,
+    watchFiles: {
+      paths: [path.resolve(__dirname, 'dist')],
+    }
+  },
+  // loaders
+  module: {
+    rules: [
+      {
+        // css
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        // images
+        test: /\.(svg|ico|png|webp|gif|jpeg|jpg)$/,
+        type: 'asset/resource'
+      },
+      {
+        // js for babel
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              '@babel/preset-env',
+            ]
+          }
+        }
+      }
     ]
-};
-
+  },
+  // plugins
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'summy.dev',
+      filename: 'index.html',
+      template: path.resolve(__dirname, 'view/temp.html')
+    })
+  ]
+}

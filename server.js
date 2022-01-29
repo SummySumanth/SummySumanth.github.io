@@ -8,7 +8,7 @@ app.use(express.static(__dirname + '/dist/public'));
 app.use('/api', routes);
 
 app.get('*', function(req, res){
-    res.sendFile(__dirname + '/dist/public/index.html');
+    res.sendFile(__dirname + '/dist/index.html');
   });
 
 app.listen(8080, () =>{
