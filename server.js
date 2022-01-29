@@ -12,5 +12,5 @@ app.get('*', function(req, res){
   });
 
 app.listen(8080, () =>{
-    console.log('Server is now running at post 8000 in localhost successfully');
+    console.log('Server is now running at post 8080 in localhost successfully');
 })
