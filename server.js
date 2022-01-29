@@ -11,6 +11,6 @@ app.get('*', function(req, res){
     res.sendFile(__dirname + '/dist/public/index.html');
   });
 
-app.listen(8000, () =>{
+app.listen(8080, () =>{
     console.log('Server is now running at post 8000 in localhost successfully');
 })
