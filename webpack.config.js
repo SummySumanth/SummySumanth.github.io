@@ -8,6 +8,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
     filename: '[name].[contenthash].js',
     clean: true,
     assetModuleFilename: '[name][ext]'
@@ -57,7 +58,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'summy.dev',
       filename: 'index.html',
-      template: path.resolve(__dirname, 'view/temp.html')
+      base: '/',
+      template: path.resolve(__dirname, 'view/temp.html'),
+      inject: 'body',
     })
   ]
 }
