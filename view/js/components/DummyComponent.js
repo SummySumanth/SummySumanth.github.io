@@ -40,7 +40,7 @@ class DummyComponent extends Component{
                     {this.createListItems()}
                 </ul>
                 <hr />
-                <h3>User Details</h3>
+                <h3>User Details ZZZZ</h3>
                 {this.getUserDetails()}
             </div>
         );
