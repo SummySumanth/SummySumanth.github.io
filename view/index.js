@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { applyMiddleware, createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { createLogger } from 'redux-logger';
 import allReducers from './reducers/index';
+
+import UnderConstruction from './underConstruction';
 import App from './app';
 
 import logo from './images/emoji.png';
@@ -16,9 +19,14 @@ const store = createStore(
 );
 
 ReactDOM.render(
-    <Provider store={store}>
-        <App />
-    </Provider>
+    <BrowserRouter>
+        <Provider store={store}>
+            <Routes>
+                <Route path="/" element={<UnderConstruction />} />
+                <Route path="/test" element={<App />} />
+            </Routes>
+        </Provider>
+    </BrowserRouter>
     ,document.getElementById('root')
 );
 

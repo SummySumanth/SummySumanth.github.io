@@ -1,0 +1,39 @@
+.main-container {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  font-family: 'Patrick Hand', cursive;
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  margin-top: -150px;
+  border: 10px solid #fff;
+}
+
+.texts-container {
+  text-align: center;
+}
+
+.greeting {
+ font-size: 45pt;
+}
+
+.message {
+  font-size: 35pt;
+}
+
+.logo {
+  font-size: 70px;
+  color: #fff;
+  font-family: 'Dancing Script', cursive;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
