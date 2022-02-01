@@ -30,8 +30,14 @@ module.exports = {
     rules: [
       {
         // css
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        test: /\.(scss|css)$/,
+        use: [
+
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+          'postcss-loader'
+        ]
       },
       {
         // images
@@ -61,6 +67,6 @@ module.exports = {
       base: '/',
       template: path.resolve(__dirname, 'view/temp.html'),
       inject: 'body',
-    })
+    }),
   ]
 }

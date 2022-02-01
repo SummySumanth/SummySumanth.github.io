@@ -1,32 +1,3 @@
-.app-container {
-  width: 100vw;
-  height: 100vh;
-  background-color: #000;
-  overflow: hidden;
-}
-
-.test-element {
-  width: 100%;
-  height: 100px;
-  background-color: red;
-  margin-top: 100px;
-}
-
-@media (--screen-tabletOrLower) {
-  .test-element {
-    background-color: green;
-  }
-}
-
-/* Media Query Screen Sizes */
-
-@custom-media  --screen-desktop: (min-width: 1184px);
-@custom-media  --screen-tabletOrLower: (max-width: 1183px);
-@custom-media  --screen-tablet: (min-width: 768px) and (max-width: 1183px);
-@custom-media  --screen-landscape: (min-width: 481px) and (max-width: 768px);
-@custom-media  --screen-mobile: (min-width: 360px) and (max-width: 480px);
-
-
 /* RESET CSS */
 
 html {
