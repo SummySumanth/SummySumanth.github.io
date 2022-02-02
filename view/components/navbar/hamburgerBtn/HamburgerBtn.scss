@@ -1,0 +1,78 @@
+.a {
+  margin: 100px;
+}
+
+#ham-checkbox-input {
+display: none;
+}
+
+.button {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  transition: 300ms ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover .hrow {
+  background: var(--button-highlight-color);
+}
+
+.button:hover .h1 {
+  transform: rotateZ(270deg) translate(-10%, 0);
+  width: 74%;
+}
+
+.button:hover .h2 {
+  transform: rotateZ(134deg) translate(9%, -453%);
+  width: 54%;
+}
+
+.button:hover .h3 {
+  transform: rotateZ(227deg) translate(0%, -398%);
+  width: 54%;
+}
+
+.hrow {
+  /*   width: 70%;
+  height: 10%; */
+  width: 53%;
+  height: 6%;
+  background: var(--button-highlight-color);
+  border-radius: 4px;
+  transition: 300ms ease-out;
+}
+
+.h1 {
+  transform: translate(0px, -150%);
+}
+
+.h3 {
+  transform: translate(0px, 150%);
+}
+
+#ham-checkbox {
+  display: none;
+}
+
+#ham-checkbox-input:checked ~ .button > .hrow {
+  background: var(--button-highlight-color);
+}
+
+#ham-checkbox-input:checked ~ .button > .h1 {
+  transform: rotateZ(270deg) translate(-14%, 0);
+  width: 74%;
+}
+
+#ham-checkbox-input:checked ~ .button > .h2 {
+  transform: rotateZ(44deg) translate(2%, -413%);
+  width: 54%;
+}
+
+#ham-checkbox-input:checked ~ .button > .h3 {
+  transform: rotateZ(314deg) translate(9%, -468%);
+  width: 54%;
+}

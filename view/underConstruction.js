@@ -3,9 +3,9 @@ import styles from './underconstruction.scss';
 
 export default function UnderConstruction() {
   return (
-    <div className='app-container'>
+    <div className='app-container' style={{ background: '#121212'}}>
       <div className='main-container'>
-        <img className='image' src='https://github.com/SummySumanth.png'/>
+        <img className='image hover' src='https://github.com/SummySumanth.png'/>
       
         <div className='texts-container'>
           <div className='greeting'> 

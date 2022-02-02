@@ -13,7 +13,7 @@
   height: 200px;
   border-radius: 100%;
   margin-top: -150px;
-  border: 10px solid #fff;
+  border: 10px solid rgb(216, 216, 216);
 }
 
 .texts-container {
@@ -30,10 +30,11 @@
 
 .logo {
   font-size: 70px;
-  color: #fff;
+  color: rgb(138, 138, 138);
   font-family: 'Dancing Script', cursive;
   position: fixed;
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
 }
+

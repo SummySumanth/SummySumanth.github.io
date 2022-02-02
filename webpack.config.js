@@ -11,7 +11,7 @@ module.exports = {
     publicPath: '/',
     filename: '[name].[contenthash].js',
     clean: true,
-    assetModuleFilename: '[name][ext]'
+    assetModuleFilename: '[name][ext]',
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -20,6 +20,7 @@ module.exports = {
     },
     port: '5000',
     open: true,
+    historyApiFallback: true,
     hot: true,
     watchFiles: {
       paths: [path.resolve(__dirname, 'dist')],
