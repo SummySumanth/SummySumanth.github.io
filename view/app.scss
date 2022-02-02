@@ -6,6 +6,7 @@
   transition-property: background-color color;
   transition-duration: 300ms;
   transition-timing-function: ease-out;
+  font-family: 'Roboto', sans-serif;
 }
 
 :root[data-theme="dark"] {
@@ -63,6 +64,9 @@
   height: 100vh;
   width: 100%;
   scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .p1 {
