@@ -4,6 +4,7 @@
 
 body {
   height: 100vh;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -63,15 +64,12 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: var(--primary-bg);
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
 }
 
 .page {
   font-size: 100pt;
   height: 100vh;
   width: 100%;
-  scroll-snap-align: start;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './blogs.scss';
 
-export default function profile(props) {
+export default React.forwardRef((props, ref) => {
   return (
-    <div className={props.className} styleName={`container`}>
+    <div ref={ref} className={props.className} styleName={`container`}>
       <div styleName='container-overlay'>
         <div styleName="page-title">
           Blogs
@@ -11,4 +11,4 @@ export default function profile(props) {
       </div>
     </div>
     );
-}
+});
