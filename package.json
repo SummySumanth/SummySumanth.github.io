@@ -27,6 +27,7 @@
     "@babel/preset-react": "^7.16.7",
     "autoprefixer": "^10.4.2",
     "babel-loader": "^8.2.3",
+    "babel-plugin-react-css-modules": "^5.2.6",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^6.5.1",
@@ -38,6 +39,7 @@
     "postcss-custom-properties": "^12.1.4",
     "postcss-import": "^14.0.2",
     "postcss-loader": "^6.2.1",
+    "postcss-scss": "^4.0.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "redux-logger": "^3.0.6",
@@ -48,6 +50,7 @@
     "webpack-dev-server": "^4.7.3"
   },
   "dependencies": {
+    "@dr.pogodin/babel-plugin-react-css-modules": "^6.6.0",
     "express": "^4.17.2",
     "react-redux": "^7.2.6",
     "react-router": "^6.2.1",

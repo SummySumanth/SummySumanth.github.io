@@ -2,41 +2,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 // Colors
-
 :root {
-// Dark theme
---dark-primary: #D53555;
---dark-secondary: #CE5959;
---dark-tertiary-accent: #D76276;
---dark-primary-bg: #121212;
---dark-secondary-bg: #FBFBFB;
---dark-navbar-bg-color:  rgba(12, 12, 12, 0.8);
---dark-button-highlight-color: #FBFBFB;
---dark-page-1-color: #FBFBFB;
---dark-page-2-color: #F56666;
---dark-page-3-color: #5C1F1F;
---dark-page-4-color: #FB4B4B;
---dark-page-5-color: #A30000;
---dark-page-6-color: #B81800;
---dark-page-7-color: #9D2F2F;
---dark-page-8-color: #121212;
+  // Dark theme
+  --dark-primary: #D53555;
+  --dark-secondary: #CE5959;
+  --dark-tertiary-accent: #D76276;
+  --dark-primary-bg: #121212;
+  --dark-secondary-bg: #FBFBFB;
+  --dark-navbar-bg-color:  rgba(255, 255, 255, 0.04);
+  --dark-container-overlay: rgba(12, 12, 12, 0.8);
+  --dark-button-highlight-color: #FBFBFB;
+  --dark-page-1-color: #FBFBFB;
+  --dark-page-2-color: #F56666;
+  --dark-page-3-color: #5C1F1F;
+  --dark-page-4-color: #FB4B4B;
+  --dark-page-5-color: #A30000;
+  --dark-page-6-color: #B81800;
+  --dark-page-7-color: #9D2F2F;
+  --dark-page-8-color: #121212;
+  --dark-font-color-1: #FBFBFB;
 
-// Light theme
---light-primary: #D53555;
---light-secondary: #ed5d5d;
---light-tertiary-accent: #ff6781;
---light-primary-bg: #FBFBFB;
---light-secondary-bg: #121212;
---light-navbar-bg-color:  rgba(255, 255, 255, 0.5);
---light-button-highlight-color: #2a2a2a;
---light-page-1-color: #121212;
---light-page-2-color: #F99E9E;
---light-page-3-color: #C43C3C;
---light-page-4-color: #FC7474;
---light-page-5-color: #ff7964;
---light-page-6-color: #FF4949;
---light-page-7-color: #892E2E;
---light-page-8-color: #f2f2f2;
+  // Light theme
+  --light-primary: #D53555;
+  --light-secondary: #ed5d5d;
+  --light-tertiary-accent: #ff6781;
+  --light-primary-bg: #FBFBFB;
+  --light-secondary-bg: #121212;
+  --light-navbar-bg-color:  rgba(12, 12, 12, 0.7);
+  --light-container-overlay: rgba(255, 255, 255, 0.8);
+  --light-button-highlight-color: #fbfbfb;
+  --light-page-1-color: #121212;
+  --light-page-2-color: #F99E9E;
+  --light-page-3-color: #C43C3C;
+  --light-page-4-color: #FC7474;
+  --light-page-5-color: #ff7964;
+  --light-page-6-color: #FF4949;
+  --light-page-7-color: #892E2E;
+  --light-page-8-color: #f2f2f2;
+  --light-font-color-1: #121212;
 }
 
 // Css Breakpoints

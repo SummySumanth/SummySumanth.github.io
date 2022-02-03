@@ -18,7 +18,7 @@ module.exports = {
     static: {
       directory: path.resolve(__dirname, 'dist'),
     },
-    port: '5000',
+    port: '4000',
     open: true,
     historyApiFallback: true,
     hot: true,
@@ -31,11 +31,19 @@ module.exports = {
     rules: [
       {
         // css
-        test: /\.(scss|css)$/,
+        test: /\.s[ac]ss$/i,
         use: [
-
           'style-loader',
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              url: true,
+              importLoaders: 1,
+              modules: {
+                localIdentName: '[name]__[local]__[hash:base64:5]',
+              },
+            },
+          },
           'sass-loader',
           'postcss-loader'
         ]

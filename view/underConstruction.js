@@ -3,20 +3,20 @@ import styles from './underconstruction.scss';
 
 export default function UnderConstruction() {
   return (
-    <div className='app-container' style={{ background: '#121212'}}>
-      <div className='main-container'>
-        <img className='image hover' src='https://github.com/SummySumanth.png'/>
+    <div style={{ background: '#121212', height: '100%'}}>
+      <div styleName={'main-container'}>
+        <img styleName='image' src='https://github.com/SummySumanth.png'/>
       
-        <div className='texts-container'>
-          <div className='greeting'> 
+        <div styleName='texts-container'>
+          <div styleName='greeting'> 
             Coming Soon !
           </div>
-          <div className='message'>
+          <div styleName='message'>
             Something awesome is being cooked !
           </div>
         </div>
       </div>
-      <div className='logo'>
+      <div styleName='logo'>
         Summy.dev
       </div>
     </div>

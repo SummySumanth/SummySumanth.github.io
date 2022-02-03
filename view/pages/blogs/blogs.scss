@@ -1,0 +1,23 @@
+.container {
+  background: url('../../images/6.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right;
+  color: var(--font-color-1);
+}
+
+.container-overlay {
+  height: 100%;
+  width: 100%;
+  background: var(--container-overlay);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.page-title {
+  position: absolute;
+  bottom: 4%;
+  right: 4%;
+}

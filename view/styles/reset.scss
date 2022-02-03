@@ -5,6 +5,11 @@ html {
   /* Nicer looking fonts for OS X and iOS */
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+body {
+  overflow: auto;
 }
 
 * {

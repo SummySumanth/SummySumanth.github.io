@@ -2,7 +2,7 @@
   margin: 100px;
 }
 
-#ham-checkbox-input {
+.ham-checkbox-input {
 display: none;
 }
 
@@ -54,25 +54,25 @@ display: none;
   transform: translate(0px, 150%);
 }
 
-#ham-checkbox {
+.ham-checkbox {
   display: none;
 }
 
-#ham-checkbox-input:checked ~ .button > .hrow {
+.ham-checkbox-input:checked ~ .button > .hrow {
   background: var(--button-highlight-color);
 }
 
-#ham-checkbox-input:checked ~ .button > .h1 {
+.ham-checkbox-input:checked ~ .button > .h1 {
   transform: rotateZ(270deg) translate(-14%, 0);
   width: 74%;
 }
 
-#ham-checkbox-input:checked ~ .button > .h2 {
+.ham-checkbox-input:checked ~ .button > .h2 {
   transform: rotateZ(44deg) translate(2%, -413%);
   width: 54%;
 }
 
-#ham-checkbox-input:checked ~ .button > .h3 {
+.ham-checkbox-input:checked ~ .button > .h3 {
   transform: rotateZ(314deg) translate(9%, -468%);
   width: 54%;
 }

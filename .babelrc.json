@@ -1,0 +1,26 @@
+{
+  "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+  ],
+  "plugins": [
+    [
+      "@dr.pogodin/react-css-modules",
+      {
+        // The default localIdentName in "css-loader" is "[hash:base64]",
+        // it is highly-recommended to explicitly specify the same value
+        // both here, and in "css-loader" options, including the hash length
+        // (the last digit in the template below).
+        "generateScopedName": "[name]__[local]__[hash:base64:5]",
+
+        // See below for all valid options.
+        "filetypes": {
+          ".scss": {
+            "syntax": "postcss-scss"
+          }
+        }
+      }
+      
+    ]
+  ]
+}

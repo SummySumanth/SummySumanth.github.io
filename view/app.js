@@ -1,5 +1,16 @@
 import React, { useEffect, useState} from 'react';
 import Navbar from './components/navbar/Navbar';
+
+import Blogs from './pages/blogs/blogs';
+import Certificates from './pages/certificates/certificates';
+import Contact from './pages/contact/contact';
+import Profile from './pages/profile/profile';
+import Projects from './pages/projects/projects';
+import SocialMedia from './pages/socialmedia/socialmedia';
+import Techstack from './pages/techstack/techstack';
+
+
+
 import styles from './app.scss';
 
 export default function App() {
@@ -47,31 +58,14 @@ export default function App() {
   return (
     <>
       <Navbar activeTheme={activeTheme === THEMES.dark} toggleTheme={toggleTheme}/>
-      <div className='app-container'>  
-        <div className='page p1'>
-          Profile
-        </div>
-        <div className='page p2'>
-          Tech Stack
-        </div>
-        <div className='page p3'>
-          Projects
-        </div>
-        <div className='page p4'>
-          Blogs
-        </div>
-        <div className='page p5'>
-          Social Media
-        </div>
-        <div className='page p6'>
-          Hire
-        </div>
-        <div className='pag p6'>
-          Contact
-        </div>
-        <div className='page p8'>
-          Certificates
-        </div>
+      <div styleName={'app-container'}>  
+        <Profile  styleName='page p1'/>
+        <Blogs styleName='page p1'/>
+        <Projects styleName='page p1'/>
+        <Techstack styleName='page p1'/>
+        <Certificates styleName='page p1'/>
+        <SocialMedia styleName='page p1'/>
+        <Contact styleName='page p1'/>
       </div>
     </>
   );

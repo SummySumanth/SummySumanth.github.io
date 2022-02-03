@@ -2,8 +2,12 @@
 @import "./styles/reset.scss";
 @import "./styles/variables.scss";
 
+body {
+  height: 100vh;
+}
+
 * {
-  transition-property: background-color color;
+  transition-property: background-color, color;
   transition-duration: 300ms;
   transition-timing-function: ease-out;
   font-family: 'Roboto', sans-serif;
@@ -15,8 +19,11 @@
  --tertiary-accent: var(--dark-tertiary-accent);
  --primary-bg: var(--dark-primary-bg);
  --secondary-bg: var(--dark-secondary-bg);
+
  --navbar-bg-color: var(--dark-navbar-bg-color);
+ --container-overlay: var(--dark-container-overlay);
  --button-highlight-color: var(--dark-button-highlight-color);
+ --font-color-1: var(--dark-font-color-1);
 
   --page-1-color: var(--dark-page-1-color);
   --page-2-color: var(--dark-page-2-color);
@@ -26,7 +33,6 @@
   --page-6-color: var(--dark-page-6-color);
   --page-7-color: var(--dark-page-7-color);
   --page-8-color: var(--dark-page-8-color);
-
 }
 
 :root[data-theme="light"] {
@@ -35,8 +41,11 @@
   --tertiary-accent: var(--light-tertiary-accent);
   --primary-bg: var(--light-primary-bg);
   --secondary-bg: var(--light-secondary-bg);
+  
   --navbar-bg-color: var(--light-navbar-bg-color);
+  --container-overlay: var(--light-container-overlay);
   --button-highlight-color: var(--light-button-highlight-color);
+  --font-color-1: var(--light-font-color-1);
 
   --page-1-color: var(--light-page-1-color);
   --page-2-color: var(--light-page-2-color);
@@ -59,7 +68,6 @@
 }
 
 .page {
-  color: rgb(158, 158, 158);
   font-size: 100pt;
   height: 100vh;
   width: 100%;
