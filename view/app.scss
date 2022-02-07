@@ -60,10 +60,13 @@ body {
 
 // App styles
 
+
 body {
   width: 100vw;
   height: 100vh;
   background-color: var(--primary-bg);
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 
 .page {
@@ -73,6 +76,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  scroll-snap-align: start;
 }
 
 .p1 {

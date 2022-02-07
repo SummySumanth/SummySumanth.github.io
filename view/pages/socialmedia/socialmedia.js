@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './socialmedia.scss';
 
-export default React.forwardRef((props, ref) => {
-  return (
-    <div ref={ref} className={props.className} styleName={`container`}>
+export default (props) => {
+return (
+  <div className={props.className} styleName={`container`}>
       <div styleName='container-overlay'>
         <div styleName="page-title">
           Social Media
@@ -11,4 +11,4 @@ export default React.forwardRef((props, ref) => {
       </div>
     </div>
     );
-});
+};

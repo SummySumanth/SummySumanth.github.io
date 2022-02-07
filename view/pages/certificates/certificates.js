@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './certificates.scss';
 
-export default React.forwardRef((props, ref) => {
+export default (props) => {
   return (
-    <div ref={ref} className={props.className} styleName={`container`}>
+    <div className={props.className} styleName={`container`}>
       <div styleName='container-overlay'>
         <div styleName="page-title">
           Certificates
@@ -11,4 +11,4 @@ export default React.forwardRef((props, ref) => {
       </div>
     </div>
     );
-});
+};
