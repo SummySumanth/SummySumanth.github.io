@@ -3,6 +3,7 @@ import useScrollSnap from 'react-use-scroll-snap';
 
 
 import Navbar from './components/navbar/Navbar';
+import NavList from './components/navbar/navList/NavList';
 
 import Blogs from './pages/blogs/blogs';
 import Certificates from './pages/certificates/certificates';
@@ -18,6 +19,7 @@ export default function App() {
   const html = document.querySelector('html');
   const localStorage = window.localStorage;
   const [activeTheme, setActiveTheme] = useState();
+  const [navListHidden, setNavListHidden] = useState();
 
   const THEMES = {
     dark: 'dark',
@@ -55,9 +57,18 @@ export default function App() {
     }
   }
 
+  const hideNavList = flag => {
+    setNavListHidden(flag);
+  }
+
   return (
     <>
-      <Navbar activeTheme={activeTheme === THEMES.dark} toggleTheme={toggleTheme}/>
+      <NavList />
+      <Navbar 
+        activeTheme={activeTheme === THEMES.dark}
+        toggleTheme={toggleTheme}
+        hideNavList={hideNavList}
+      />
       <Profile styleName='page p1'/>
       <Blogs styleName='page p1'/>
       <Projects styleName='page p1'/>

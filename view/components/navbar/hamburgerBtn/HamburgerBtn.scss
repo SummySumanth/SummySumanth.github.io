@@ -1,3 +1,7 @@
+.ham-checkbox-container {
+  position: relative;
+}
+
 .a {
   margin: 100px;
 }
@@ -75,4 +79,21 @@ display: none;
 .ham-checkbox-input:checked ~ .button > .h3 {
   transform: rotateZ(314deg) translate(9%, -468%);
   width: 54%;
+}
+
+.ham-checkbox-view {
+  position: absolute;
+  top: 70px;
+  left: 17%;
+  width: 400px;
+  background-color: var(--navbar-bg-color);
+  backdrop-filter: blur(12px);
+  color: var(--secondary-bg);
+}
+
+.ham-nav-item {
+  text-align: center;
+  font-size: 20pt;
+  padding: 10px;
+  white-space: nowrap;
 }

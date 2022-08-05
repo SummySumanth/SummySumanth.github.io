@@ -8,9 +8,9 @@ export default function Navbar({
   activeTheme,
 }) {
   return (
-    <div styleName='navbar-container'>
-      <HamburgerBtn />
+    <div styleName='navbar-container'>      
       <input type={'checkbox'} onChange={toggleTheme} checked={activeTheme}/>
+      <HamburgerBtn />
     </div>
   );
 }

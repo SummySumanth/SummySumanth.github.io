@@ -3,7 +3,7 @@ import styles from './HamburgerBtn.scss';
 
 export default function HamburgerBtn() {
   return (
-    <div>
+    <div styleName="ham-checkbox-container">
       <input styleName="ham-checkbox-input" type={'checkbox'} id="ham-checkbox-input"/>
       <label styleName="button" htmlFor="ham-checkbox-input">
         <div styleName="h1 hrow"></div>
@@ -13,3 +13,4 @@ export default function HamburgerBtn() {
     </div>
   );
 }
+  
