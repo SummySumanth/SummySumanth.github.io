@@ -1,0 +1,165 @@
+@import "../../../styles/breakpoints.scss";
+@import "../../../styles/reset.scss";
+@import "../../../styles/variables.scss";
+
+
+.pageContainer {
+  position: relative;
+  width: 100%;
+  height: 90%;
+  background-color: #fff;
+  padding: 12px;
+  margin: 230px 0px 50px 0px;
+  border-radius: 10px;
+}
+
+.avatar {
+  position: absolute;
+  border-radius: 100%;
+  top: -200px;
+  left: 80%;
+  border: 14px solid #fff;
+}
+
+.avatar-text {
+  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+  color: #fff;
+  position: absolute;
+  top: -221px;
+  left: 12px;
+  font-size: 140pt;
+}
+
+.avatar-text::after {
+  content: "";
+  background-color: red;
+
+}
+
+.navbar-container {
+  cursor: pointer;
+}
+
+.navbar {
+  font-family: "Patrick Hand", cursive;
+  font-weight: bold;
+  font-size: 25pt;
+  color: var(--dark-font-color-1);
+  width: 1000px;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 30px;
+  position: relative;
+  align-items: center;
+  padding: 4px;
+  transition: color 250ms ease-in-out  200ms;
+  background-color: rgb(224 224 224);
+  box-shadow: inset 0px 4px 29px #b6b6b6;
+  overflow: hidden;
+}
+
+@keyframes backgroundanimation {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
+
+.label {
+  text-align: center;
+  z-index: 2;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.slider {
+  width: 20%;
+  height: 80%;
+  background-color: #fff;
+  position: absolute;
+  z-index: 0;
+  border-radius: 20px;
+  margin: 0px 6px;
+  transition: left 250ms ease-in-out;
+  background-image: linear-gradient(
+    45deg,
+  #845EC2,
+  #D65DB1,
+  #FF6F91,
+  #FF9671,
+  #FFC75F,
+  #F9F871
+  );  
+  background-size: 500%;
+  animation-name: backgroundanimation;
+  animation-duration: 20s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.bio:checked ~ .navbar .slider {
+  left: 0%;
+}
+
+.contact:checked ~ .navbar .slider {
+  left: 20%;
+}
+
+.blogs:checked ~ .navbar .slider {
+  left: 40%;
+}
+
+.upi:checked ~ .navbar .slider {
+  left: 60%;
+}
+
+.sos:checked ~ .navbar .slider {
+  left: 79%;
+}
+
+// color of label text
+.bio:checked ~ .navbar .bio-label {
+  
+}
+
+.blogs:checked ~ .navbar .blogs-label {
+  
+}
+
+.upi:checked ~ .navbar .upi-label {
+  
+}
+
+.sos:checked ~ .navbar .sos-label {
+  
+}
+
+.sos:checked ~ .navbar .contact-label {
+  
+}
+
+@include media(">=phone") {
+  .avatar {
+    width: 200px;
+  }
+}
+
+@include media(">=tablet") {
+  .avatar {
+    width: 100px;
+  }
+}
+
+@include media(">=desktop") {
+  .avatar {
+    width: 260px;
+  }
+}

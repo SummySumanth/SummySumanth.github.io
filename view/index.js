@@ -8,6 +8,7 @@ import allReducers from './reducers/index';
 
 import UnderConstruction from './underConstruction';
 import App from './app';
+import FindSummy from './findSummy/findSummy';
 
 import logo from './images/emoji.png';
 
@@ -24,6 +25,7 @@ ReactDOM.render(
             <Routes>
                 <Route path="/" element={<UnderConstruction />} />
                 <Route path="/test" element={<App />} />
+                <Route path="/findSummy" element={<FindSummy />} />
             </Routes>
         </Provider>
     </BrowserRouter>

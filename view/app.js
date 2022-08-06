@@ -1,6 +1,4 @@
 import React, { useEffect, useState, useCallback, useRef} from 'react';
-import useScrollSnap from 'react-use-scroll-snap';
-
 
 import Navbar from './components/navbar/Navbar';
 import NavList from './components/navbar/navList/NavList';
@@ -26,23 +24,23 @@ export default function App() {
     light: 'light'
   }
 
-  useEffect(() => {
-    const cachedTheme = localStorage.getItem("theme");
-    if(cachedTheme !== null && cachedTheme !== 'undefined') {
-      html.dataset.theme = THEMES[cachedTheme];
-      setActiveTheme(cachedTheme);
-    } else {
-      if (window.matchMedia) {
-        if(window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          setActiveTheme(THEMES.dark);
-        } else {
-          setActiveTheme(THEMES.light);
-        }
-      } else {
-        setActiveTheme(THEMES.dark);
-      }
-    }
-  }, []);
+  // useEffect(() => {
+  //   const cachedTheme = localStorage.getItem("theme");
+  //   if(cachedTheme !== null && cachedTheme !== 'undefined') {
+  //     html.dataset.theme = THEMES[cachedTheme];
+  //     setActiveTheme(cachedTheme);
+  //   } else {
+  //     if (window.matchMedia) {
+  //       if(window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  //         setActiveTheme(THEMES.dark);
+  //       } else {
+  //         setActiveTheme(THEMES.light);
+  //       }
+  //     } else {
+  //       setActiveTheme(THEMES.dark);
+  //     }
+  //   }
+  // }, []);
 
   useEffect(() => {
     localStorage.setItem('theme', activeTheme);

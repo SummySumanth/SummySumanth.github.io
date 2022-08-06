@@ -25,7 +25,7 @@
     "@babel/eslint-parser": "^7.5.4",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
-    "autoprefixer": "^10.4.2",
+    "autoprefixer": "^10.4.8",
     "babel-loader": "^8.2.3",
     "babel-plugin-react-css-modules": "^5.2.6",
     "babel-preset-env": "^1.7.0",
@@ -39,7 +39,7 @@
     "postcss-custom-properties": "^12.1.4",
     "postcss-import": "^14.0.2",
     "postcss-loader": "^6.2.1",
-    "postcss-scss": "^4.0.3",
+    "postcss-scss": "^4.0.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "redux-logger": "^3.0.6",
@@ -52,9 +52,12 @@
   "dependencies": {
     "@dr.pogodin/babel-plugin-react-css-modules": "^6.6.0",
     "express": "^4.17.2",
+    "postcss": "^8.4.14",
+    "postcss-nested": "^5.0.6",
     "react-redux": "^7.2.6",
     "react-router": "^6.2.1",
     "react-router-dom": "^6.2.1",
-    "redux": "^4.1.2"
+    "redux": "^4.1.2",
+    "sass": "^1.54.3"
   }
 }
