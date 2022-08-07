@@ -15,7 +15,7 @@ export default function App() {
   };
 
   const initialState = {
-    navListShow: false,
+    navListShow: true,
     currentTab: listOfTabs.BIO
   }
 
@@ -139,7 +139,7 @@ export default function App() {
       </div>
       <div>
         
-
+        
         <div styleName="navbar-container">  
           <input 
             type="checkbox" 
@@ -148,15 +148,16 @@ export default function App() {
             checked={state.navListShow}
             readOnly
           />
+          <div styleName="hamburger-nav-overlay"  />
           <label 
               htmlFor="hamburger-nav" 
               styleName="hamburger-nav-label" 
               onClick={event =>{
                 console.log('main hamburger event reached', event)
                 // event.stopPropagation();
-                toggleNavList(event)} 
+                toggleNavList(event)}  
               } 
-          >
+          > 
             <div styleName="h1 hrow"></div>
             <div styleName="h2 hrow"></div>
             <div styleName="h3 hrow"></div>

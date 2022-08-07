@@ -81,8 +81,7 @@ input[type="radio"] {
   z-index: 0;
   border-radius: 20px;
   margin: 0px 6px;
-  transition: left 250ms ease-in-out;
-  transition-property: left,top;
+  transition: transform 250ms ease-in-out;
   background-image: linear-gradient(
     45deg,
   #845EC2,
@@ -101,23 +100,23 @@ input[type="radio"] {
 }
 
 .bio:checked ~ .navbar .slider {
-  left: 0%;
+  transform: translate(0%, 0);
 }
 
 .contact:checked ~ .navbar .slider {
-  left: 20%;
+  transform: translate(-100%, 0);
 }
 
 .blogs:checked ~ .navbar .slider {
-  left: 40%;
+  transform: translate(0, 0);
 }
 
 .upi:checked ~ .navbar .slider {
-  left: 60%;
+  transform: translate(100%, 0);
 }
 
 .sos:checked ~ .navbar .slider {
-  left: 78%;
+  transform: translate(200%, 0);
 }
 
 // color of label text
@@ -170,6 +169,24 @@ input[type="radio"] {
   .hamburger-nav-checkbox:checked ~ .hamburger-nav-label .h3 {
     transform: rotateZ(314deg) translate(9%, -468%);
     width: 54%;
+  }
+
+  .hamburger-nav-overlay {
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+  }
+
+  .hamburger-nav-checkbox:checked ~ .hamburger-nav-overlay {
+    background: rgba(0, 0, 0, 0.8196078431);
+    height: 100vh;
+    width: 100vw;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    transform: translate(14px, -88px);
+    margin: 0px -26px;
+    opacity: 1;
+    z-index: 0;
   }
 
 
@@ -260,16 +277,16 @@ input[type="radio"] {
 
   .navbar {
     flex-direction: column;
-    width: 300px;
+    width: 95%;
     border-radius: 10px;
     padding: 0px;
-    background-color: rgb(198 198 198 / 69%);
-    backdrop-filter: blur(7px);
+    background-color: rgb(0 0 0 / 32%);
+    backdrop-filter: blur(28px);
     top: 8px;
     position: fixed;
     right: 50%;
     box-shadow: var(--box-shadow-level-2);
-    transform: translate(50%,-140%);
+    transform: translate(50%, -140%);
     transition: transform 250ms ease-in-out;
   }
 
@@ -287,28 +304,23 @@ input[type="radio"] {
   }
 
   .bio:checked ~ .navbar .slider {
-    top: 0%;
-    left: 0%;
+    transform: translate(0, -200%);
   }
   
   .contact:checked ~ .navbar .slider {
-    top: 20%;
-    left: 0%;
+    transform: translate(0, -100%);
   }
   
   .blogs:checked ~ .navbar .slider {
-    top: 40%;
-    left: 0%;
+    transform: translate(0, 0%);
   }
   
   .upi:checked ~ .navbar .slider {
-    top: 60%;
-    left: 0%;
+    transform: translate(0, 100%);
   }
   
   .sos:checked ~ .navbar .slider {
-    top: 80%;
-    left: 0%;
+    transform: translate(0, 200%);
   }
 }
 
