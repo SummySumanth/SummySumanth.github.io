@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const resolutions = require('./view/styles/resolutions');
 
 module.exports = {
   mode: 'development', // production
@@ -51,7 +52,18 @@ module.exports = {
               implementation: require("sass"),
             },
           },
-          'postcss-loader'
+          {
+						loader: "postcss-loader",
+						options: {
+							postcssOptions: {
+								plugins: [
+									[
+										"postcss-custom-media",
+									],
+								],
+							},
+						},
+					},
         ]
       },
       {

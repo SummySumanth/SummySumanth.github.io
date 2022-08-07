@@ -35,7 +35,8 @@
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.5.3",
     "node-sass": "^7.0.1",
-    "postcss-custom-media": "^8.0.0",
+    "postcss": "^8.4.14",
+    "postcss-custom-media": "^8.0.2",
     "postcss-custom-properties": "^12.1.4",
     "postcss-import": "^14.0.2",
     "postcss-loader": "^6.2.1",
@@ -45,6 +46,7 @@
     "redux-logger": "^3.0.6",
     "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",
+    "stylelint-config-standard-scss": "^5.0.0",
     "webpack": "^5.67.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.3"
@@ -52,7 +54,6 @@
   "dependencies": {
     "@dr.pogodin/babel-plugin-react-css-modules": "^6.6.0",
     "express": "^4.17.2",
-    "postcss": "^8.4.14",
     "postcss-nested": "^5.0.6",
     "react-redux": "^7.2.6",
     "react-router": "^6.2.1",

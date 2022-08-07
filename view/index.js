@@ -11,6 +11,7 @@ import App from './app';
 import FindSummy from './findSummy/findSummy';
 
 import logo from './images/emoji.png';
+import styles from './index.scss';
 
 const loggerMiddleware = createLogger({ predicate: () => ({ logger: console, diff: true }) });
 

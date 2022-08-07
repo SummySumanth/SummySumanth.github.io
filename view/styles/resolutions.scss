@@ -1,0 +1,8 @@
+@custom-media --screen-desktop (min-width: 1184px);
+@custom-media --screen-tabletOrLower (max-width: 1183px);
+@custom-media --screen-tablet (min-width: 768px) and (max-width: 1183px);
+@custom-media --screen-landscape (min-width: 481px) and (max-width: 768px);
+@custom-media --screen-mobile (min-width: 360px) and (max-width: 480px);
+@custom-media --screen-smaller (max-width: 359px);
+@custom-media --screen-shorter (max-height: 570px);
+@custom-media --landscape (orientation: landscape);
