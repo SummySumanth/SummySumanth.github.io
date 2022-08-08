@@ -4,6 +4,7 @@
   "description": "Portfolio website of summy",
   "main": "server.js",
   "scripts": {
+    "startdev": "node server.js",
     "start": "node server.js",
     "prestart": "npm run build",
     "build": "webpack",
@@ -30,6 +31,7 @@
     "babel-plugin-react-css-modules": "^5.2.6",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "compression-webpack-plugin": "^10.0.0",
     "css-loader": "^6.5.1",
     "eslint": "^8.8.0",
     "html-webpack-plugin": "^5.5.0",
@@ -47,6 +49,7 @@
     "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",
     "stylelint-config-standard-scss": "^5.0.0",
+    "terser-webpack-plugin": "^5.3.3",
     "webpack": "^5.67.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.3"
@@ -54,6 +57,7 @@
   "dependencies": {
     "@dr.pogodin/babel-plugin-react-css-modules": "^6.6.0",
     "express": "^4.17.2",
+    "express-static-gzip": "^2.1.7",
     "postcss-nested": "^5.0.6",
     "react-redux": "^7.2.6",
     "react-router": "^6.2.1",
