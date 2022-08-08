@@ -1,2 +1,0 @@
-- name: Deploy to App Engine
-  uses: google-github-actions/deploy-appengine@v0.8.0
