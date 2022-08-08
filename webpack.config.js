@@ -1,9 +1,11 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const resolutions = require('./view/styles/resolutions');
+const webpack = require("webpack");
+const CompressionPlugin = require("compression-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
-  mode: 'development', // production
+  mode: 'production', // production
   entry: {
     main: path.resolve(__dirname, 'view/index.js'),
   },
@@ -26,6 +28,11 @@ module.exports = {
     watchFiles: {
       paths: [path.resolve(__dirname, 'dist')],
     }
+  },  
+  // Optimiztion and performance
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
   },
   // loaders
   module: {
@@ -88,6 +95,10 @@ module.exports = {
   },
   // plugins
   plugins: [
+    // new webpack.optimize.UglifyJsPlugin({
+    //   include: /\.min\.js$/,
+    //   minimize: true
+    // }),
     new HtmlWebpackPlugin({
       title: 'summy.dev',
       filename: 'index.html',
@@ -95,5 +106,12 @@ module.exports = {
       template: path.resolve(__dirname, 'view/temp.html'),
       inject: 'body',
     }),
+    new CompressionPlugin({
+      filename: "[path][base].gz",
+      algorithm: "gzip",
+      test: /\.js$|\.css$|\.html$/,
+      threshold: 10240,
+      minRatio: 0.8
+    })
   ]
 }
