@@ -33,6 +33,9 @@ module.exports = {
   optimization: {
     minimize: true,
     minimizer: [new TerserPlugin()],
+    splitChunks: {
+      chunks: 'all'
+    }
   },
   // loaders
   module: {
@@ -104,7 +107,7 @@ module.exports = {
       filename: 'index.html',
       base: '/',
       template: path.resolve(__dirname, 'view/temp.html'),
-      inject: 'body',
+      inject: 'head',
     }),
     new CompressionPlugin({
       filename: "[path][base].gz",
