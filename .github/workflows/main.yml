@@ -9,9 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install Dependencies
-        run: composer install -n --prefer-dist
-      - name: Generate key
-        run: php artisan key:generate
+        run: npm ci
+      - name: Build Frontend Files
+        run: npm run build
       - name: GCP Authenticate
         uses: google-github-actions/setup-gcloud@v0
         with:
