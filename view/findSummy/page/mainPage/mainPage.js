@@ -15,7 +15,7 @@ export default function App() {
   };
 
   const initialState = {
-    navListShow: true,
+    navListShow: false,
     currentTab: listOfTabs.BIO
   }
 
