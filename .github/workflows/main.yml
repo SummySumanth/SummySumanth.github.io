@@ -3,7 +3,7 @@ jobs:
     name: "Deploy to GAE"
     on:
       push:
-        branches: production
+        branches: 'production'
     jobs:
       deploy:
         runs-on: ubuntu-latest
