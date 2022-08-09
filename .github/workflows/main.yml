@@ -1,4 +1,4 @@
-name: "Deploy to Google App Engine v1"
+name: "Deploy to Google App Engine v2"
 on:
   push:
     branches: [production]
@@ -12,10 +12,11 @@ jobs:
         run: npm ci
       - name: Build Frontend Files
         run: npm run build
-      - name: GCP Authenticate
-        uses: google-github-actions/setup-gcloud@v0
+
+      - id: 'auth'
+        name: 'Authenticate to Google Cloud'
+        uses: 'google-github-actions/auth@v0'
         with:
-          project_id: '${{ env.GCP_PROJECT }}'
-          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          credentials_json: '${{ secrets.GOOGLE_CREDENTIALS }}'
       - name: Deploy to GAE
         run: gcloud app deploy app.yaml
