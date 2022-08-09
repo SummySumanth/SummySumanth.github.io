@@ -2,9 +2,9 @@ jobs:
   build_and_test:
     name: "Deploy to GAE"
     on:
-      push:
-        branches:
-          - 'production'
+    push:
+      tags:
+      - '*'
     jobs:
       deploy:
         runs-on: ubuntu-latest
