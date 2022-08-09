@@ -1,10 +1,12 @@
-const postcssCustomMedia = require('postcss-custom-media');
-const resolutions = require('./view/styles/resolutions.js');
+import postcssCustomMedia from 'postcss-custom-media';
+import resolutions from './view/styles/resolutions.js';
+import autoprefixer from 'autoprefixer';
+import postcssNested from 'postcss-nested';
 
 module.exports = {
   plugins: [
-    require('autoprefixer'),
-    require('postcss-nested'),
+    autoprefixer, 
+    postcssNested,
     postcssCustomMedia({
       importFrom: {
         customMedia: resolutions

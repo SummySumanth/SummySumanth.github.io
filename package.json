@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Portfolio website of summy",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "startdev": "node server.js",
     "start": "node server.js",

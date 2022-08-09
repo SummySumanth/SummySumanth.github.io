@@ -1,8 +1,9 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require("webpack");
-const CompressionPlugin = require("compression-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import webpack from "webpack";
+import CompressionPlugin from "compression-webpack-plugin";
+import TerserPlugin from "terser-webpack-plugin";
+import sass from "sass";
 
 module.exports = {
   mode: 'production', // production
@@ -59,7 +60,7 @@ module.exports = {
             loader: "sass-loader",
             options: {
               // Prefer `dart-sass`
-              implementation: require("sass"),
+              implementation: sass,
             },
           },
           {
