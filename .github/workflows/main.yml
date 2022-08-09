@@ -1,4 +1,4 @@
-name: "Deploy to GAE"
+name: "Deploy to Google App Engine"
 on:
   push:
     branches: [production]
