@@ -500,5 +500,5 @@ dist/public/*.html
 
 # End of https://www.gitignore.io/api/node,linux,macos,windows,intellij,visualstudio,visualstudiocode
 node_modules
-dist/*.js
-dist/*.html
+dist/*
+dist/*
