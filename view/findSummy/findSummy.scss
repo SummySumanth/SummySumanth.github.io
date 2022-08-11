@@ -1,4 +1,4 @@
-
+/*
 body {
   width: 100vw;
   height: 100vh;
@@ -27,6 +27,13 @@ body {
   to {
     background-position: right;
   }
+}
+*/
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
 }
 
 .page {

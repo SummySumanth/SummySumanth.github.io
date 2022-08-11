@@ -5,7 +5,7 @@ const CompressionPlugin = require("compression-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
-  mode: 'production', // production
+  mode: 'development', // production
   entry: {
     main: path.resolve(__dirname, 'view/index.js'),
   },

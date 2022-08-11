@@ -1,5 +1,5 @@
 import React from 'react';
-import HamburgerBtn from './hamburgerBtn/HamburgerBtn';
+import HamburgerBtn from '../hamburgerBtn/HamburgerBtn';
 
 import styles from './navbar.scss';
 

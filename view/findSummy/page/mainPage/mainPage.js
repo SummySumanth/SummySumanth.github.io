@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState, useCallback, useRef, useReducer} from 'react';
-import HamburgerBtn from './../../components/hamburgerBtn/HamburgerBtn';
 
+import helloImg from '../../../images/hello.png';
 import styles from './mainPage.scss';
 
 export default function App() {
@@ -132,52 +132,51 @@ export default function App() {
 
   
   return (
-    <div styleName="pageContainer">
-      <img styleName='avatar' src="https://avatars.githubusercontent.com/u/18090380?v=4" />
+    <>
+      <img styleName='avatar' src={helloImg} />
       <div styleName='avatar-text'>
         summy.dev
       </div>
-      <div>
-        
-        
-        <div styleName="navbar-container">  
-          <input 
-            type="checkbox" 
-            id="hamburger-nav" 
-            styleName="hamburger-nav-checkbox" 
-            checked={state.navListShow}
-            readOnly
-          />
-          <div styleName="hamburger-nav-overlay"  />
-          <label 
-              htmlFor="hamburger-nav" 
-              styleName="hamburger-nav-label" 
-              onClick={event =>{
-                console.log('main hamburger event reached', event)
-                // event.stopPropagation();
-                toggleNavList(event)}  
-              } 
-          > 
-            <div styleName="h1 hrow"></div>
-            <div styleName="h2 hrow"></div>
-            <div styleName="h3 hrow"></div>
-          </label>
+    
+      <div styleName="pageContainer">
+          <div styleName="navbar-container">  
+            <input 
+              type="checkbox" 
+              id="hamburger-nav" 
+              styleName="hamburger-nav-checkbox" 
+              checked={state.navListShow}
+              readOnly
+            />
+            <div styleName="hamburger-nav-overlay"  />
+            <label 
+                htmlFor="hamburger-nav" 
+                styleName="hamburger-nav-label" 
+                onClick={event =>{
+                  console.log('main hamburger event reached', event)
+                  // event.stopPropagation();
+                  toggleNavList(event)}  
+                } 
+            > 
+              <div styleName="h1 hrow"></div>
+              <div styleName="h2 hrow"></div>
+              <div styleName="h3 hrow"></div>
+            </label>
 
-          <input name='navbar' type="radio" id="bio" styleName="bio" readOnly checked={state.currentTab === listOfTabs.BIO}/>
-          <input name='navbar' type="radio" id="contact" styleName="contact" readOnly checked={state.currentTab === listOfTabs.CONTACT}/>
-          <input name='navbar' type="radio" id="blogs" styleName="blogs" readOnly checked={state.currentTab === listOfTabs.BLOGS}/>
-          <input name='navbar' type="radio" id="upi" styleName="upi" readOnly checked={state.currentTab === listOfTabs.UPI}/>
-          <input name='navbar' type="radio" id="sos" styleName="sos" readOnly checked={state.currentTab === listOfTabs.SOS}/>
-          <div styleName="navbar">
-            <label htmlFor="bio" styleName="label bio-label" onClick={e => changeCurrentTab(e, listOfTabs.BIO)}>😀 Bio</label>
-            <label htmlFor="contact" styleName="label contact-label"onClick={e => changeCurrentTab(e, listOfTabs.CONTACT)}>🤙🏻 Contact</label>
-            <label htmlFor="blogs" styleName="label blogs-label"onClick={e => changeCurrentTab(e, listOfTabs.BLOGS)}>💬 Blogs</label>
-            <label htmlFor="upi" styleName="label upi-label"onClick={e => changeCurrentTab(e, listOfTabs.UPI)}>💸 Upi</label>
-            <label htmlFor="sos" styleName="label sos-label"onClick={e => changeCurrentTab(e, listOfTabs.SOS)}>🆘 SOS</label>
-            <div styleName='slider' />
+            <input name='navbar' type="radio" id="bio" styleName="bio" readOnly checked={state.currentTab === listOfTabs.BIO}/>
+            <input name='navbar' type="radio" id="contact" styleName="contact" readOnly checked={state.currentTab === listOfTabs.CONTACT}/>
+            <input name='navbar' type="radio" id="blogs" styleName="blogs" readOnly checked={state.currentTab === listOfTabs.BLOGS}/>
+            <input name='navbar' type="radio" id="upi" styleName="upi" readOnly checked={state.currentTab === listOfTabs.UPI}/>
+            <input name='navbar' type="radio" id="sos" styleName="sos" readOnly checked={state.currentTab === listOfTabs.SOS}/>
+            <div styleName="navbar">
+              <label htmlFor="bio" styleName="label bio-label" onClick={e => changeCurrentTab(e, listOfTabs.BIO)}>😀 Bio</label>
+              <label htmlFor="contact" styleName="label contact-label"onClick={e => changeCurrentTab(e, listOfTabs.CONTACT)}>🤙🏻 Contact</label>
+              <label htmlFor="blogs" styleName="label blogs-label"onClick={e => changeCurrentTab(e, listOfTabs.BLOGS)}>💬 Blogs</label>
+              <label htmlFor="upi" styleName="label upi-label"onClick={e => changeCurrentTab(e, listOfTabs.UPI)}>💸 Upi</label>
+              <label htmlFor="sos" styleName="label sos-label"onClick={e => changeCurrentTab(e, listOfTabs.SOS)}>🆘 SOS</label>
+              <div styleName='slider' />
+            </div>
           </div>
-        </div>
-      </div>
-    </div> 
+      </div> 
+    </>
   );
 }

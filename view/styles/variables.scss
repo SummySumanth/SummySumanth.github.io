@@ -1,56 +1,179 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
-// Colors
+// Colors https://www.figma.com/file/QAWULvUv8ZH9ZjtWCtM1GR/iOS-Color-Collection-(Community)?node-id=106%3A45
 :root {
   // Dark theme
-  --dark-primary: #D53555;
-  --dark-secondary: #CE5959;
-  --dark-tertiary-accent: #D76276;
-  --dark-primary-bg: #121212;
-  --dark-secondary-bg: #FBFBFB;
-  --dark-navbar-bg-color:  rgba(255, 255, 255, 0.04);
-  --dark-container-overlay: rgba(12, 12, 12, 0.8);
-  --dark-button-highlight-color: #FBFBFB;
-  --dark-page-1-color: #FBFBFB;
-  --dark-page-2-color: #F56666;
-  --dark-page-3-color: #5C1F1F;
-  --dark-page-4-color: #FB4B4B;
-  --dark-page-5-color: #A30000;
-  --dark-page-6-color: #B81800;
-  --dark-page-7-color: #9D2F2F;
-  --dark-page-8-color: #121212;
-  --dark-font-color-1: #FBFBFB;
+  --dark-blue: #0A84FF;
+  --dark-brown: #AC8E68;
+  --dark-cyan: #64D2FF;
+  --dark-green: #30D158;
+  --dark-indigo: #5E5CE6;
+  --dark-mint: #66D4CF;
+  --dark-orange: #FF9F0A;
+  --dark-pink: #FF375F;
+  --dark-purple: #BF5AF2;
+  --dark-red: #FF453A;
+  --dark-teal: #40C8E0;
+  --dark-yellow: #FFD60A;
+  --dark-gray: #8E8E93;
+  --dark-gray-2: #636366;
+  --dark-gray-3: #48484A;
+  --dark-gray-4: #3A3A3C;
+  --dark-gray-5: #2C2C2E;
+  --dark-gray-6: #1C1C1E;
+  --dark-label: #FFFFFF;
+  --dark-secondary-label: #F3F3F8;
+  --dark-tertiary-label: #F8F8FC;
+  --dark-quaternary-label: #FBFBFD;
+  --dark-system-fill: #CECED1;
+  --dark-secondary-system-fill: #D3D3D6;
+  --dark-tertiary-system-fill: #DEDEE1;
+  --dark-quaternary-system-fill: #E6E6E8;
+  --dark-placeholder-text: #F8F8FC;
+  --dark-system-background: #000000;
+  --dark-secondary-system-background: #1C1C1E;
+  --dark-tertiary-system-background: #2C2C2E;
+  --dark-system-grouped-background: #000000;
+  --dark-secondary-system-grouped-background: #1C1C1E;
+  --dark-tertiary-system-grouped-background: #2C2C2E;
+  --dark-seperator: #98989B;
+  --dark-opaque-saparator: #38383A;
+  --dark-link: #0B84FF;
 
   // Light theme
-  --light-primary: #D53555;
-  --light-secondary: #ed5d5d;
-  --light-tertiary-accent: #ff6781;
-  --light-primary-bg: #FBFBFB;
-  --light-secondary-bg: #121212;
-  --light-navbar-bg-color:  rgba(12, 12, 12, 0.7);
-  --light-container-overlay: rgba(255, 255, 255, 0.8);
-  --light-button-highlight-color: #fbfbfb;
-  --light-page-1-color: #121212;
-  --light-page-2-color: #F99E9E;
-  --light-page-3-color: #C43C3C;
-  --light-page-4-color: #FC7474;
-  --light-page-5-color: #ff7964;
-  --light-page-6-color: #FF4949;
-  --light-page-7-color: #892E2E;
-  --light-page-8-color: #f2f2f2;
-  --light-font-color-1: #3c3c3c;
+  --light-blue: #007AFF;
+  --light-brown: #A2845E;
+  --light-cyan: #32ADE6;
+  --light-green: #34C759;
+  --light-indigo: #5856D6;
+  --light-mint: #00C7BE;
+  --light-orange: #FF9500;
+  --light-pink: #FF2D55;
+  --light-purple: #AF52DE;
+  --light-red: #FF3B30;
+  --light-teal: #30B0C7;
+  --light-yellow: #FFCC00;
+  --light-gray: #8E8E93;
+  --light-gray-2: #AEAEB2;
+  --light-gray-3: #C7C7CC;
+  --light-gray-4: #D1D1D6;
+  --light-gray-5: #E5E5EA;
+  --light-gray-6: #F2F2F7;
+  --light-label: #000000;
+  --light-secondary-label: #8A8A8E;
+  --light-tertiary-label: #C4C4C6;
+  --light-quaternary-label: #DCDCDD;
+  --light-system-fill: #E4E4E6;
+  --light-secondary-system-fill: #E9E9EA;
+  --light-tertiary-system-fill: #EEEEEF;
+  --light-quaternary-system-fill: #F4F4F5;
+  --light-placeholder-text: #C4C4C6;
+  --light-system-background: #FFFFFF;
+  --light-secondary-system-background: #F2F2F7;
+  --light-tertiary-system-background: #FFFFFF;
+  --light-system-grouped-background: #F2F2F7;
+  --light-secondary-system-grouped-background: #FFFFFF;
+  --light-tertiary-system-grouped-background: #F2F2F7;
+  --light-seperator: #C6C6C8;
+  --light-opaque-saparator: #C5C5C8;
+  --light-link: #007AFF;
+  
+
 
   // animation speed
   --animation-speed : 200ms;
 
   // Box shadow
   --box-shadow-level-2: -4px 8px 22px 4px #0000000f;
+
+  --transition-time: 375ms;
 }
 
+:root[data-theme="dark"] {
+  --color-blue: var(--dark-blue);
+  --color-brown: var(--dark-brown);
+  --color-cyan: var(--dark-cyan);
+  --color-green: var(--dark-green);
+  --color-indigo: var(--dark-indigo);
+  --color-mint: var(--dark-mint);
+  --color-orange: var(--dark-orange);
+  --color-pink: var(--dark-pink);
+  --color-purple: var(--dark-purple);
+  --color-red: var(--dark-red);
+  --color-teal: var(--dark-teal);
+  --color-yellow: var(--dark-yellow);
+  --color-gray: var(--dark-gray);
+  --color-gray-2: var(--dark-gray-2);
+  --color-gray-3: var(--dark-gray-3);
+  --color-gray-4: var(--dark-gray-4);
+  --color-gray-5: var(--dark-gray-5);
+  --color-gray-6: var(--dark-gray-6);
+  --color-label: var(--dark-label);
+  --color-secondary-label: var(--dark-secondary-label);
+  --color-tertiary-label: var(--dark-tertiary-label);
+  --color-quaternary-label: var(--dark-quaternary-label);
+  --color-system-fill: var(--dark-system-fill);
+  --color-secondary-system-fill: var(--dark-secondary=system-fill);
+  --color-tertiary-system-fill: var(--dark-tertiary-system-fill);
+  --color-quaternary-system-fill: var(--dark-quaternary-system-fill);
+  --color-placeholder-text: var(--dark-placeholder-text);
+  --color-system-background: var(--dark-system-background);
+  --color-secondary-system-background: var(--dark-secondary-system-background);
+  --color-tertiary-system-background: var(--dark-tertiary-system-background);
+  --color-system-grouped-background: var(--dark-system-grouped-background);
+  --color-secondary-system-grouped-background: var(--dark-secondary-system-grouped-background);
+  --color-tertiary-system-grouped-background: var(--dark-tertiary-system-grouped-background);
+  --color-seperator: var(--dark-seperator);
+  --color-opaque-saparator: var(--dark-opaque-saparator);
+  --color-link: var(--dark-link);
+ }
+ 
+ :root[data-theme="light"] {
+    --color-blue: var(--light-blue);
+    --color-brown: var(--light-brown);
+    --color-cyan: var(--light-cyan);
+    --color-green: var(--light-green);
+    --color-indigo: var(--light-indigo);
+    --color-mint: var(--light-mint);
+    --color-orange: var(--light-orange);
+    --color-pink: var(--light-pink);
+    --color-purple: var(--light-purple);
+    --color-red: var(--light-red);
+    --color-teal: var(--light-teal);
+    --color-yellow: var(--light-yellow);
+    --color-gray: var(--light-gray);
+    --color-gray-2: var(--light-gray-2);
+    --color-gray-3: var(--light-gray-3);
+    --color-gray-4: var(--light-gray-4);
+    --color-gray-5: var(--light-gray-5);
+    --color-gray-6: var(--light-gray-6);
+    --color-label: var(--light-label);
+    --color-secondary-label: var(--light-secondary-label);
+    --color-tertiary-label: var(--light-tertiary-label);
+    --color-quaternary-label: var(--light-quaternary-label);
+    --color-system-fill: var(--light-system-fill);
+    --color-secondary-system-fill: var(--light-secondary-system-fill);
+    --color-tertiary-system-fill: var(--light-tertiary-system-fill);
+    --color-quaternary-system-fill: var(--light-quaternary-system-fill);
+    --color-placeholder-text: var(--light-placeholder-text);
+    --color-system-background: var(--light-system-background);
+    --color-secondary-system-background: var(--light-secondary-system-background);
+    --color-tertiary-system-background: var(--light-tertiary-system-background);
+    --color-system-grouped-background: var(--light-system-grouped-background);
+    --color-secondary-system-grouped-background: var(--light-secondary-system-grouped-background);
+    --color-tertiary-system-grouped-background: var(--light-tertiary-system-grouped-background);
+    --color-seperator: var(--light-seperator);
+    --color-opaque-saparator: var(--light-opaque-saparator);
+    --color-link: var(--light-link);
+ }
 
 
 // Container divs
+* {
+  transition-property: color, background-color, background;
+  transition-duration: var(--transition-time);
+}
 
 .tablet-container-padded {
   display: flex;
@@ -60,3 +183,8 @@
   margin: 0px auto;
 }
 
+@media (--screen-mobile) {
+    .hide-in-mobile {
+      display: none;
+    }
+}
