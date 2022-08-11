@@ -1,16 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState} from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { applyMiddleware, createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { createLogger } from 'redux-logger';
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+
 import allReducers from './reducers/index';
 
-// import UnderConstruction from './underConstruction';
-// import App from './app';
-import FindSummy from './findSummy/findSummy';
+import App from './pages/App/app';
 
-import logo from './images/emoji.png';
 import styles from './index.scss';
 
 const loggerMiddleware = createLogger({ predicate: () => ({ logger: console, diff: true }) });
@@ -21,16 +19,8 @@ const store = createStore(
 );
 
 ReactDOM.render(
-    <BrowserRouter>
-        <Provider store={store}>
-            <Routes>
-                <Route path="/" element={<FindSummy />} />
-                <Route path='*' element={<FindSummy />} />
-            </Routes>
-        </Provider>
-    </BrowserRouter>
+    <Provider store={store}>
+        <App />
+    </Provider>
     ,document.getElementById('root')
 );
-
-
-console.log('Hello World !');

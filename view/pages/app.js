@@ -1,14 +1,22 @@
 import React, { useEffect, useState, useCallback, useRef} from 'react';
-import MainPage from './page/mainPage/mainPage';
-// import Welcome from './page/welcomePage/welcome';
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-import styles from './findSummy.scss';
+// import Navbar from './components/navbar/Navbar';
+// import NavList from './components/navbar/navList/NavList';
+
+// import Blogs from './pages/blogs/blogs';
+// import Certificates from './pages/certificates/certificates';
+// import Contact from './pages/contact/contact';
+// import Profile from './pages/profile/profile';
+// import Projects from './pages/projects/projects';
+// import SocialMedia from './pages/socialmedia/socialmedia';
+// import Techstack from './pages/techstack/techstack';
+
 
 export default function App() {
   const html = document.querySelector('html');
   const localStorage = window.localStorage;
   const [activeTheme, setActiveTheme] = useState();
-  const [navListHidden, setNavListHidden] = useState();
 
   const THEMES = {
     dark: 'dark',
@@ -51,9 +59,24 @@ export default function App() {
   }
 
   return (
-    <div styleName='main-app-container'>
-      {/* <Welcome /> */}
-    </div>
+    <>
+      {/* <NavList />
+      <Navbar 
+        activeTheme={activeTheme === THEMES.dark}
+        toggleTheme={toggleTheme}
+        hideNavList={hideNavList}
+      />
+      <Profile styleName='page p1'/>
+      <Blogs styleName='page p1'/>
+      <Projects styleName='page p1'/>
+      <Techstack styleName='page p1'/>
+      <Certificates styleName='page p1'/>
+      <SocialMedia styleName='page p1'/>
+      <Contact styleName='page p1'/> */}
+    </>
   );
 }
- 
+{/* <Routes>
+                <Route path="/" element={<FindSummy />} />
+                <Route path='*' element={<FindSummy />} />
+            </Routes> */}

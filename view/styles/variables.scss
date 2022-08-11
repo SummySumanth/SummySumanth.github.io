@@ -48,6 +48,49 @@
   --box-shadow-level-2: -4px 8px 22px 4px #0000000f;
 }
 
+:root[data-theme="dark"] {
+  --primary: var(--dark-primary);
+  --secondary: var(--dark-secondary);
+  --tertiary-accent: var(--dark-tertiary-accent);
+  --primary-bg: var(--dark-primary-bg);
+  --secondary-bg: var(--dark-secondary-bg);
+ 
+  --navbar-bg-color: var(--dark-navbar-bg-color);
+  --container-overlay: var(--dark-container-overlay);
+  --button-highlight-color: var(--dark-button-highlight-color);
+  --font-color-1: var(--dark-font-color-1);
+ 
+   --page-1-color: var(--dark-page-1-color);
+   --page-2-color: var(--dark-page-2-color);
+   --page-3-color: var(--dark-page-3-color);
+   --page-4-color: var(--dark-page-4-color);
+   --page-5-color: var(--dark-page-5-color);
+   --page-6-color: var(--dark-page-6-color);
+   --page-7-color: var(--dark-page-7-color);
+   --page-8-color: var(--dark-page-8-color);
+ }
+ 
+ :root[data-theme="light"] {
+   --primary: var(--light-primary);
+   --secondary: var(--light-secondary);
+   --tertiary-accent: var(--light-tertiary-accent);
+   --primary-bg: var(--light-primary-bg);
+   --secondary-bg: var(--light-secondary-bg);
+   
+   --navbar-bg-color: var(--light-navbar-bg-color);
+   --container-overlay: var(--light-container-overlay);
+   --button-highlight-color: var(--light-button-highlight-color);
+   --font-color-1: var(--light-font-color-1);
+ 
+   --page-1-color: var(--light-page-1-color);
+   --page-2-color: var(--light-page-2-color);
+   --page-3-color: var(--light-page-3-color);
+   --page-4-color: var(--light-page-4-color);
+   --page-5-color: var(--light-page-5-color);
+   --page-6-color: var(--light-page-6-color);
+   --page-7-color: var(--light-page-7-color);
+   --page-8-color: var(--light-page-8-color);
+ }
 
 
 // Container divs
@@ -60,3 +103,8 @@
   margin: 0px auto;
 }
 
+@media (--screen-mobile) {
+    .hide-in-mobile {
+      display: none;
+    }
+}
