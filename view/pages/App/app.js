@@ -13,11 +13,12 @@ import styles from './app.scss';
 const App = (props) => {
   Object.defineProperty(window, 'localStorage', { value: global.localStorage,configurable:true,enumerable:true,writable:true });
   const { theme, changeTheme } = props;
+  localStorage = window.localStorage;
 
   useEffect(() => {
-    localStorage = window.localStorage;
 
     const cachedTheme = localStorage.getItem("theme");
+    console.log('cached theme is ', cachedTheme);
     if(cachedTheme !== null && cachedTheme !== 'undefined') {      
       changeTheme(cachedTheme);
     } else {
@@ -52,10 +53,14 @@ const App = (props) => {
           Ey yo! Thanks for hopping in, I have got some lit stuff to show you.. <span styleName="description-text-enter">Get in -></span>
         </div>
       </div>
-      <input type="checkbox" onChange={toggleTheme}/>
+      <input id="theme-checkbox" styleName="theme-checkbox" type="checkbox" onChange={toggleTheme}/>
+      <label for="theme-checkbox" styleName="theme-container">
+          <img styleName="theme-icons sun"  src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/sun_2600-fe0f.png' />
+          <img styleName="theme-icons moon" src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/crescent-moon_1f319.png' />
+      </label>
     </div>
   );
-} 
+}  
 
 const mapStateToProps = state => ({
   theme: state.appSettings.theme,
