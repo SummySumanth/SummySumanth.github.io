@@ -3,12 +3,7 @@ let routes = require('./routes');
 
 let app = express();
 
-
-
-
 app.use('/api', routes);
-
-
 
 app.get('*.js', function(req, res, next) {
   console.log('got request for JS');
@@ -33,10 +28,6 @@ app.use(express.static('dist'));
 app.get('*', function(req, res){
   res.sendFile(__dirname + '/dist/index.html');
 });
-
-
-
-
 
 app.listen(8080, () =>{
     console.log('Server is now running at post 8080 in localhost successfully');

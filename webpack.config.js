@@ -1,120 +1,108 @@
 const path = require('path');
+const webpack = require('webpack');
+const TerserPlugin = require('terser-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require("webpack");
-const CompressionPlugin = require("compression-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
-  mode: 'development', // production
-  entry: {
-    main: path.resolve(__dirname, 'view/index.js'),
-  },
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
-    filename: '[name].[contenthash].js',
-    clean: true,
-    assetModuleFilename: '[name][ext]',
-  },
-  devtool: 'inline-source-map',
-  devServer: {
-    static: {
-      directory: path.resolve(__dirname, 'dist'),
+    entry: './app/view/index.js',
+    output: {
+        filename: 'assets/js/bundle.[contenthash].js',
+        path: path.resolve(__dirname, './dist'),
+        publicPath:  path.resolve(__dirname, './dist'),
+        clean: true
     },
-    port: '4000',
-    open: true,
-    historyApiFallback: true,
-    hot: true,
-    watchFiles: {
-      paths: [path.resolve(__dirname, 'dist')],
-    }
-  },  
-  // Optimiztion and performance
-  optimization: {
-    minimize: true,
-    minimizer: [new TerserPlugin()],
-    splitChunks: {
-      chunks: 'all'
-    }
-  },
-  // loaders
-  module: {
-    rules: [
-      {
-        // css
-        test: /\.s[ac]ss$/i,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              url: true,
-              importLoaders: 1,
-              modules: {
-                localIdentName: '[name]__[local]__[hash:base64:5]',
-              },
+    mode: 'development',
+    devServer: {
+        port: 5001,
+        open: true,
+        static: {
+            directory: path.resolve(__dirname, './dist'),
+        },
+        devMiddleware: {
+            index: 'index.html',
+            writeToDisk: true,
+        },
+        client: {
+            overlay: true,
+        },
+    },
+    module: {
+        rules: [
+            {
+                test: /\.(ttf)$/,
+                type: 'asset/resource',
+                generator: {
+                    name: 'dist/assets/fonts/[hash][ext][query]'
+                }
             },
-          },
-          {
-            loader: "sass-loader",
-            options: {
-              // Prefer `dart-sass`
-              implementation: require("sass"),
+            {
+                test: /\.(png|jpg|jpeg)$/,
+                type: 'asset',
+                parser: {
+                    dataUrlCondition: {
+                        maxSize: 3 * 1024
+                    }
+                },
+                generator: {
+                    filename: 'assets/images/[hash][ext][query]'
+                }
             },
-          },
-          {
-						loader: "postcss-loader",
-						options: {
-							postcssOptions: {
-								plugins: [
-									[
-										"postcss-custom-media",
-									],
-								],
-							},
-						},
-					},
+            {
+                test: /\.txt/,
+                type: 'asset/source'
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: {
+                                localIdentName:"[path]__[name]__[local]__[hash:base64:5]",
+                            }
+                        },
+                    },                          
+                    'postcss-loader',           
+                ],
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: [ 
+                                '@babel/env',
+                                '@babel/preset-react',
+                            ],
+                            configFile: path.resolve(__dirname, 'babel.config.js')
+                        },                        
+                    }
+                ]
+            },
+            {
+                test: /\.hbs$/,
+                use: [
+                    'handlebars-loader'
+                ]
+            }
         ]
-      },
-      {
-        // images
-        test: /\.(svg|ico|png|webp|gif|jpeg|jpg)$/,
-        type: 'asset/resource'
-      },
-      {
-        // js for babel
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              '@babel/preset-env',
-            ]
-          }
-        }
-      }
+    },
+    plugins: [
+        new TerserPlugin(),
+        new MiniCssExtractPlugin({
+            filename: 'assets/css/style.[contenthash].css'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'hello world',
+            template: 'app/view/index.hbs',
+            description: 'Some Description',
+        }),
+        new webpack.ProvidePlugin({
+            process: 'process/browser',
+        }),
     ]
-  },
-  // plugins
-  plugins: [
-    // new webpack.optimize.UglifyJsPlugin({
-    //   include: /\.min\.js$/,
-    //   minimize: true
-    // }),
-    new HtmlWebpackPlugin({
-      title: 'summy.dev',
-      filename: 'index.html',
-      base: '/',
-      template: path.resolve(__dirname, 'view/temp.html'),
-      inject: 'head',
-    }),
-    new CompressionPlugin({
-      filename: "[path][base].gz",
-      algorithm: "gzip",
-      test: /\.js$|\.css$|\.html$/,
-      threshold: 10240,
-      minRatio: 0.8
-    })
-  ]
 }
