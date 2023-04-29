@@ -4,6 +4,7 @@ import { applyMiddleware, createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { createLogger } from 'redux-logger';
 import { BrowserRouter, useLocation } from "react-router-dom";
+import axios from 'axios';
 
 import AppRoutes from './routes';
 
@@ -19,6 +20,12 @@ const store = createStore(
 );
 
 console.log(' REACT STARTED');
+
+axios
+    .get('api/test')
+    .then(response => {
+        console.log('received response is ', response);
+    })
 
 ReactDOM.render(
     <Provider store={store}>

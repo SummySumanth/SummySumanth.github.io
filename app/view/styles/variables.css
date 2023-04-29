@@ -1,9 +1,8 @@
-// Fonts
+/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
-// Colors https://www.figma.com/file/QAWULvUv8ZH9ZjtWCtM1GR/iOS-Color-Collection-(Community)?node-id=106%3A45
 :root {
-  // Dark theme
+   /* Dark theme */
   --dark-blue: #0A84FF;
   --dark-brown: #AC8E68;
   --dark-cyan: #64D2FF;
@@ -41,7 +40,7 @@
   --dark-opaque-saparator: #38383A;
   --dark-link: #0B84FF;
 
-  // Light theme
+  /* Light Theme */
   --light-blue: #007AFF;
   --light-brown: #A2845E;
   --light-cyan: #32ADE6;
@@ -81,10 +80,10 @@
   
 
 
-  // animation speed
+  /* animation speed */
   --animation-speed : 200ms;
 
-  // Box shadow
+ /* Box shadow */
   --box-shadow-level-2: -4px 8px 22px 4px #0000000f;
 
   --transition-time: 375ms;
@@ -169,7 +168,7 @@
  }
 
 
-// Container divs
+/* Container divs */
 * {
   transition-property: color, background-color, background;
   transition-duration: var(--transition-time);

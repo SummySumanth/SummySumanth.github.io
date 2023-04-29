@@ -1,8 +1,12 @@
-let express = require('express');
-let router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-router.get('/api', (request, response) =>{
-    response.send('<h1> router working </h1>');
+const downloads = require('./downloads');
+
+router.get('/test', (request, response) =>{
+    response.send('Hello from the other side !');
 });
+
+router.get('/download', downloads);
 
 module.exports = router;

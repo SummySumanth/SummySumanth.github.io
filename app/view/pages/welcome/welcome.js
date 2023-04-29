@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState, useCallback, useRef, useReducer} from 'react';
+import React, { useEffect } from 'react';
 import { connect, Connect } from 'react-redux';
 // import HamburgerBtn from '../../components/navbar/hamburgerBtn/HamburgerBtn';
 // import Links from '../../components/links/Links';
@@ -8,7 +8,8 @@ import { setTheme } from '../../actions/index';
 
 import THEMES from '../../utils/constants';
 
-import fistBump from '../../images/fist_bump.png';
+import { fistBump, moon, sun} from "../../images/index";
+
 import './welcome.css';
 
 const App = (props) => {
@@ -97,8 +98,8 @@ const App = (props) => {
       </div>
       <input id="theme-checkbox" styleName="theme-checkbox" type="checkbox" onChange={toggleTheme}/>
       <label htmlFor="theme-checkbox" styleName="theme-container">
-          <img styleName="theme-icons sun"  src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/sun_2600-fe0f.png' />
-          <img styleName="theme-icons moon" src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/crescent-moon_1f319.png' />
+          <img styleName="theme-icons sun"  src={sun} />
+          <img styleName="theme-icons moon" src={moon} />
       </label>
       {/* <Links 
         links={links}

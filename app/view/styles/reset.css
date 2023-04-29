@@ -24,10 +24,10 @@ body {
   box-sizing: inherit;
 }
 
-// input[type],
-// [contenteditable] {
-//   user-select: text;
-// }
+/* input[type],
+[contenteditable] {
+   user-select: text;
+} */
 
 body,
 h1,
@@ -81,34 +81,34 @@ button {
   border: 0;
   padding: 0;
 }
+/* 
+input,
+fieldset {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+  font-size: 1rem;
+  font-family: inherit;
+}
 
-// input,
-// fieldset {
-//   appearance: none;
-//   border: 0;
-//   padding: 0;
-//   margin: 0;
-//   min-width: 0;
-//   font-size: 1rem;
-//   font-family: inherit;
-// }
+input::-ms-clear {
+  display: none;
+}
 
-// input::-ms-clear {
-//   display: none;
-// }
+input:focus {
+  outline: 0;
+}
 
-// input:focus {
-//   outline: 0;
-// }
+input[type='number'] {
+  -moz-appearance: textfield;
+}
 
-// input[type='number'] {
-//   -moz-appearance: textfield;
-// }
-
-// input[type='number']::-webkit-inner-spin-button,
-// input[type='number']::-webkit-outer-spin-button {
-//   appearance: none;
-// }
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  appearance: none;
+} */
 
 svg {
   display: block;
