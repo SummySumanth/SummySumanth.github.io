@@ -36,6 +36,7 @@
     "compression-webpack-plugin": "^10.0.0",
     "css-loader": "^6.5.1",
     "eslint": "^8.8.0",
+    "eslint-plugin-react": "^7.32.2",
     "handlebars": "^4.7.7",
     "handlebars-loader": "^1.7.3",
     "html-loader": "^4.1.0",
@@ -62,6 +63,7 @@
     "webpack-dev-server": "^4.7.3"
   },
   "dependencies": {
+    "axios": "^1.4.0",
     "express": "^4.17.2",
     "express-static-gzip": "^2.1.7",
     "postcss-nested": "^5.0.6",
