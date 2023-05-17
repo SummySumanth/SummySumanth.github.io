@@ -49,6 +49,17 @@ module.exports = {
                 }
             },
             {
+                test: /\.svg$/,
+                use: [
+                  {
+                    loader: 'svg-url-loader',
+                    options: {
+                      limit: 10000,
+                    },
+                  },
+                ],
+            },
+            {
                 test: /\.txt/,
                 type: 'asset/source'
             },
@@ -68,7 +79,7 @@ module.exports = {
                 ],
             },
             {
-                test: /\.js$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: [
                     {

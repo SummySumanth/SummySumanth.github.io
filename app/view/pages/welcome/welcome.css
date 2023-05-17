@@ -89,6 +89,13 @@
 
 }
 
+.downloadBtn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 12px;
+}
+
 @media (--screen-tablet) { 
   .avatar-img {
     max-width: 200px;

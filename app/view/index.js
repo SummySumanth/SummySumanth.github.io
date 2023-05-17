@@ -21,11 +21,11 @@ const store = createStore(
 
 console.log(' REACT STARTED');
 
-axios
-    .get('api/test')
-    .then(response => {
-        console.log('received response is ', response);
-    })
+// axios
+//     .get('api/test')
+//     .then(response => {
+//         console.log('received response is ', response);
+//     })
 
 ReactDOM.render(
     <Provider store={store}>

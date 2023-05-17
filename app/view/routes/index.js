@@ -2,7 +2,7 @@
 import React, { useEffect, useState} from 'react';
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 
-import Welcome from '../pages/welcome/welcome';
+import Welcome from '../pages/welcome/welcome.jsx';
 // import TestPage from '../pages/testPage/testPage';
 
 function AppRoutes() {

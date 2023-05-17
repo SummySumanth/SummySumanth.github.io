@@ -1,17 +1,26 @@
 const fs = require('fs');
 const path = require('path');
 
-const resumeDownloader = (req,res, next) => {
-    const src = fs.createReadStream(path.join(__dirname, '../../storage/pdf/sumanth_resume.pdf'));
-    res.writeHead(200, {
-        'Content-Type': 'application/pdf',
-        'Content-Disposition': 'attachment; filename=sample.pdf',
-        'Content-Transfer-Encoding': 'Binary'
-    });
-
-    src.pipe(res); 
+const downloader = (req,res) => {   
+    let src;
+    switch (req.params.filename) {
+        case 'resume':
+            
+            src = fs.createReadStream(path.join(__dirname, '../../storage/pdf/sumanth_resume.pdf'));
+            res.writeHead(200, {
+                'Content-Type': 'application/pdf',
+                'Content-Disposition': 'attachment; filename=sumanth-react-dev-resume.pdf',
+                'Content-Transfer-Encoding': 'Binary'
+            });
+        
+            src.pipe(res); 
+            break;
+        default:
+            res.status(404).send('Requested file not found');
+            break;
+    }
 };
 
 module.exports = {
-    resumeDownloader
+    downloader
 }

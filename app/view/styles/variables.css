@@ -109,6 +109,7 @@
   --color-gray-5: var(--dark-gray-5);
   --color-gray-6: var(--dark-gray-6);
   --color-label: var(--dark-label);
+  --color-label-inverted: var(--light-label);
   --color-secondary-label: var(--dark-secondary-label);
   --color-tertiary-label: var(--dark-tertiary-label);
   --color-quaternary-label: var(--dark-quaternary-label);
@@ -148,6 +149,7 @@
     --color-gray-5: var(--light-gray-5);
     --color-gray-6: var(--light-gray-6);
     --color-label: var(--light-label);
+    --color-label-inverted: var(--dark-label);
     --color-secondary-label: var(--light-secondary-label);
     --color-tertiary-label: var(--light-tertiary-label);
     --color-quaternary-label: var(--light-quaternary-label);
