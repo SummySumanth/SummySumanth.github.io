@@ -3,10 +3,11 @@ import React, { useEffect } from 'react';
 import { connect, Connect } from 'react-redux';
 // import HamburgerBtn from '../../components/navbar/hamburgerBtn/HamburgerBtn';
 // import Links from '../../components/links/Links';
+import RoundedBtn from '../../components/RoundedBtn/RoundedBtn.jsx';
 
 import { setTheme } from '../../actions/index';
 
-import THEMES from '../../utils/constants';
+import THEMES from '../../utils/constants.js';
 
 import { fistBump, moon, sun} from "../../images/index";
 
@@ -81,6 +82,11 @@ const App = (props) => {
 
   console.log('rendering welcome .js ');
 
+  const downloadResume = () => {
+    console.log('window.location, ', window.location.origin);
+    window.location.assign(`http://localhost:8000/api/download/resume`);
+  }
+
   return (
     <div
       styleName="container"
@@ -101,6 +107,7 @@ const App = (props) => {
           <img styleName="theme-icons sun"  src={sun} />
           <img styleName="theme-icons moon" src={moon} />
       </label>
+      <RoundedBtn styleName={'downloadBtn'} ctaText="Download Resume" cta={downloadResume}/>
       {/* <Links 
         links={links}
       /> */}

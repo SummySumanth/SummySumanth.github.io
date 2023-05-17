@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    background: var(--color-gray);
+    color: white;
+    border-radius: 100px;
+    padding: 4px 12px;
+    cursor: pointer;
+}
+
+.icon {
+    max-width: 20px;
+}
+
+.text {
+    font-family: "Ubuntu", sans-serif;
+    color: var(--color-label-inverted);
+    margin-left: 8px;
+}

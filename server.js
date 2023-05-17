@@ -29,7 +29,8 @@ app.get('*.css', function(req, res, next) {
 app.use(express.static(path.join(__dirname, 'dist/assets')));
 
 app.get('*', function(req, res){
-  console.log('###### sending file');
+  
+  console.log('###### sending file ', req.url);
   res.sendFile(__dirname + '/dist/' + req.url);
 });
 

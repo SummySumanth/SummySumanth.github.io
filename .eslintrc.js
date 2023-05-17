@@ -18,5 +18,6 @@ module.exports = {
         "react"
     ],
     "rules": {
+        "react/no-unknown-property": ["error", { "ignore": ["styleName"] }]
     }
 }
