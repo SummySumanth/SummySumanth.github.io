@@ -5,3 +5,5 @@ steps:
 - name: node
   entrypoint: npm
   args: ['run', 'build']
+options:
+  logging: CLOUD_LOGGING_ONLY
