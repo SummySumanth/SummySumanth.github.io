@@ -96,7 +96,8 @@
   margin: 12px;
 }
 
-@media (--screen-tablet) { 
+
+@media (--screen-tabletOrLower) { 
   .avatar-img {
     max-width: 200px;
     display: inline;
@@ -107,6 +108,7 @@
   }
   .welcome-text {
     font-size: 40pt;
+    /* color: red; */
   }
   .description-text {
     font-size: 23pt;
@@ -116,8 +118,12 @@
     display: block;
     font-size: 30pt;
   }
+  .downloadBtn {
+    left: 50%;
+    transform: translateX(-50%)
+  }
 }
-
+/* 
 @media (--screen-mobile) { 
   .avatar-img {
     max-width: 200px;
@@ -158,4 +164,4 @@
     display: block;
     font-size: 30pt;
   }
-}
+} */

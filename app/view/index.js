@@ -10,6 +10,7 @@ import AppRoutes from './routes';
 
 import allReducers from './reducers/index';
 
+import './styles/resolutions.css';
 import './index.css';
 
 const loggerMiddleware = createLogger({ predicate: () => ({ logger: console, diff: true }) });

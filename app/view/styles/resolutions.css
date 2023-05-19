@@ -1,3 +1,5 @@
+@use postcss-custom-media;
+
 @custom-media --screen-desktop (min-width: 1184px);
 @custom-media --screen-tabletOrLower (max-width: 1183px);
 @custom-media --screen-tablet (min-width: 768px) and (max-width: 1183px);

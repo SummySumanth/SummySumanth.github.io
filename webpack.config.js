@@ -74,8 +74,18 @@ module.exports = {
                                 localIdentName:"[path]__[name]__[local]__[hash:base64:5]",
                             }
                         },
-                    },                          
-                    'postcss-loader',           
+                    },
+                    {
+                        loader:'postcss-loader',           
+                        options: {
+                            postcssOptions: {
+                              plugins: [
+                                require('postcss-import'),
+                                // Add other PostCSS plugins if needed
+                              ]
+                            }
+                        }
+                    }                                              
                 ],
             },
             {
