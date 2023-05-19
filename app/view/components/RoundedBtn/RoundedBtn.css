@@ -9,7 +9,11 @@
     cursor: pointer;
 }
 
-.icon {
+.container:hover {
+    background: var(--color-gray-2);
+}
+
+.icon { 
     max-width: 20px;
 }
 
@@ -17,4 +21,5 @@
     font-family: "Ubuntu", sans-serif;
     color: var(--color-label-inverted);
     margin-left: 8px;
+    white-space: nowrap;
 }

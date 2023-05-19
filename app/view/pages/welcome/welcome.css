@@ -119,8 +119,13 @@
     font-size: 30pt;
   }
   .downloadBtn {
-    left: 50%;
-    transform: translateX(-50%)
+    margin: 0;
+    border-radius: 0px;
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    background: var(--color-label);
   }
 }
 /* 

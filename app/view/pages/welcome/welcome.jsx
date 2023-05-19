@@ -84,7 +84,7 @@ const App = (props) => {
 
   const downloadResume = () => {
     console.log('window.location, ', window.location.origin);
-    window.location.assign(`http://localhost:8000/api/download/resume`);
+    window.location.assign(`http://${window.location.origin}/api/download/resume`);
   }
 
   return (
