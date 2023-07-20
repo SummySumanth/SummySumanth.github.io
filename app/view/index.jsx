@@ -7,6 +7,7 @@ import { createLogger } from 'redux-logger';
 import AppRoutes from './routes';
 
 import allReducers from './reducers/index';
+import BackgroundAnimationCanvas from './components/backgroundAnimationCanvas/BackgroundAnimationCanvas';
 
 import './styles/resolutions.css';
 import './index.css';
@@ -14,17 +15,16 @@ import './index.css';
 const loggerMiddleware = createLogger({ predicate: () => ({ logger: console, diff: true }) });
 
 const store = createStore(
-    allReducers,
-    applyMiddleware(loggerMiddleware)
+  allReducers,
+  applyMiddleware(loggerMiddleware),
 );
 
-console.log(' REACT STARTED');
-
 ReactDOM.render(
-    <Provider store={store}>
-        <div styleName={'container'}>
-            <AppRoutes/>
-        </div>        
-    </Provider>
-    ,document.getElementById('root')
+  <Provider store={store}>
+    <BackgroundAnimationCanvas />
+    <div styleName="container">
+      <AppRoutes />
+    </div>
+  </Provider>,
+  document.getElementById('root'),
 );

@@ -6,5 +6,9 @@
     padding: 16px 0px;
     font-family: "Ubuntu", sans-serif;
     font-size: 24pt;
+    cursor: pointer;
 }
 
+.container:hover {
+    background-color: var(--color-tertiary-system-fill);
+}

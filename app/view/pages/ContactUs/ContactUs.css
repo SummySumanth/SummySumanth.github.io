@@ -1,20 +1,26 @@
-.container {
-    /* background: red; */
-    width: auto;
-    height:40px;
-    padding-top: 20px;
+.page-container {
+  width:100%;
+  height: 100%;
 }
 
 .header {
   color: var(--color-label);
   font-size: 28pt;
   font-family: "Ubuntu", sans-serif;
-  position: sticky;
+  position: absolute;
   top: 0;
+  width: 100%;
+	padding: 16px 0px;
   text-align: center;
-  padding: 16px 0px;
-  background: #34343465;
+  background: rgb(46 46 46 / 36%);
   backdrop-filter: blur(10px);
+}
+
+.container {
+  width: 100%;
+  height:100vh;
+  padding-top: 20px;
+  overflow-y: scroll;
 }
 
 .avatar-img {
@@ -34,13 +40,13 @@
 }
 
 .social-links-container {
-  padding-bottom: 300px;
+  padding: 71px 0px 200px 0px;
+  text-align: center;
 }
 
 .tablet-container-padded {
     max-width: 1020px;
     width: 100%;
-    height: 100%;
     margin: 0 auto;
     text-align: center;
   }

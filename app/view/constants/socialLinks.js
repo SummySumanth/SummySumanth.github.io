@@ -1,35 +1,38 @@
-
-export const socialLinks = [
-    {
-      link: 'Github',
-      icon: ''
-    },
-    {
-      link: 'Stack Overflow',
-      icon: ''
-    },
-    {
-      link: 'Leet Code',
-      icon: ''
-    },
-    {
-      link: 'Linkedin',
-      icon: ''
-    },
-    {
-      link: 'Twitter',
-      icon: ''
-    },
-    {
-      link: 'Facebook',
-      icon: ''
-    },
-    {
-      link: 'Instagram',
-      icon: ''
-    },
-    {
-      link: 'Youtube',
-      icon: ''
-    },
-  ];
+export default [
+  {
+    link: 'Github',
+    icon: '',
+  },
+  {
+    link: 'Twitter',
+    icon: '',
+  },
+  {
+    link: 'Linkedin',
+    icon: '',
+  },
+  {
+    link: 'Instagram',
+    icon: '',
+  },
+  {
+    link: 'Youtube',
+    icon: '',
+  },
+  {
+    link: 'Facebook',
+    icon: '',
+  },
+  {
+    link: 'Stack Overflow',
+    icon: '',
+  },
+  {
+    link: 'discord',
+    icon: '',
+  },
+  {
+    link: 'Leet Code',
+    icon: '',
+  },
+];

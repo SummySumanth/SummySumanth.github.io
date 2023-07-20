@@ -1,38 +1,38 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ringmeup } from '../../images';
 
-import {socialLinks} from '../../constants/socialLinks';
-import SocialLinkChip from './components/SocialLinkChip.jsx';
+import socialLinks from '../../constants/socialLinks';
+import SocialLinkChip from './components/SocialLinkChip';
 
 import './ContactUs.css';
 
 function ContactUs() {
-
-  console.log('social links are ', socialLinks);
-  return (<>
-          <header styleName="header">
-                Contact Me !
-          </header>
-          <div styleName='container tablet-container-padded'>
-            <div styleName="social-links-container">
-              
-              {
-                socialLinks.map(item => (
-                  <>
-                    <SocialLinkChip
-                        siteName={item.link}
-                    />
-                  </>
+  return (
+    <div styleName="page-container">
+      <Link to="/">
+        <header styleName="header">
+          Summy.Dev
+        </header>
+      </Link>
+      <div styleName="container ">
+        <div styleName="social-links-container">
+          {
+                socialLinks.map((item) => (
+                  <SocialLinkChip
+                    key={item.link}
+                    siteName={item.link}
+                  />
                 ))
               }
-            </div>  
-          <div styleName={'imageContainer'}>
-            <img styleName='avatar-img' src={ringmeup} />
-          </div>      
-        </div>  
-      </>
-    
-  )
+        </div>
+        <div styleName="imageContainer">
+          <img draggable={false} styleName="avatar-img" src={ringmeup} alt="emoji" />
+        </div>
+      </div>
+    </div>
+
+  );
 }
 
 export default ContactUs;
