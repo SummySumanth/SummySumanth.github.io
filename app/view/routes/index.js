@@ -1,18 +1,52 @@
 
-import React, { useEffect, useState} from 'react';
-import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import React, {useEffect} from 'react';
+import {
+  Route,
+  BrowserRouter,
+  Routes,
+} from "react-router-dom";
+import ThemeContext,{ toggleTheme } from '../ThemeContext.js';
+import THEMES from '../utils/constants.js';
 
+import ContactUs from '../pages/ContactUs/ContactUs.jsx';
 import Welcome from '../pages/welcome/welcome.jsx';
-// import TestPage from '../pages/testPage/testPage';
 
 function AppRoutes() {
-  const location = useLocation();
+
+  useEffect(() => {
+    let theme;
+  
+    const html = document.querySelector('html');
+    const localStorage = window.localStorage;
+    const cachedTheme = localStorage.getItem("theme");
+    
+    if(cachedTheme !== null && cachedTheme !== 'undefined') {      
+        theme = cachedTheme;
+      } else {
+        if (window.matchMedia) {
+          if(window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            theme = THEMES.dark;
+          } else {
+            theme = THEMES.light;
+          }
+        } else {
+          theme = THEMES.dark;
+        }
+      }
+      html.dataset.theme = theme;
+      localStorage.setItem("theme", theme);
+  }, []);
 
   return (
-    <Routes location={location} key={location.pathname}>
-      <Route path="*" element={<Welcome />}/>
-      {/* <Route path="/test" element={<TestPage />} /> */}
-    </Routes>
+    <ThemeContext.Provider value={toggleTheme}>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Welcome />} />
+          <Route path='contact-us' element={<ContactUs />} />
+          <Route path='*' element={<h1>404 Uh Oh! it seems nothing here</h1>} />
+        </Routes>
+      </BrowserRouter>
+    </ThemeContext.Provider>
   )
 }
 

@@ -1,96 +1,26 @@
 
-import React, { useEffect } from 'react';
+import React, { useContext } from 'react';
 import { connect, Connect } from 'react-redux';
 // import HamburgerBtn from '../../components/navbar/hamburgerBtn/HamburgerBtn';
 // import Links from '../../components/links/Links';
 import RoundedBtn from '../../components/RoundedBtn/RoundedBtn.jsx';
+import ThemeContext from '../../ThemeContext';
 
 import { setTheme } from '../../actions/index';
-
-import THEMES from '../../utils/constants.js';
 
 import { fistBump, moon, sun} from "../../images/index";
 
 import './welcome.css';
 
 const App = (props) => {
-  Object.defineProperty(window, 'localStorage', { value: global.localStorage,configurable:true,enumerable:true,writable:true });
-  const { theme, changeTheme } = props;
-  localStorage = window.localStorage;
-
-  useEffect(() => {
-
-    const cachedTheme = localStorage.getItem("theme");
-    console.log('cached theme is ', cachedTheme);
-    if(cachedTheme !== null && cachedTheme !== 'undefined') {      
-      changeTheme(cachedTheme);
-    } else {
-      if (window.matchMedia) {
-        if(window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          changeTheme(THEMES.dark);
-        } else {
-          changeTheme(THEMES.light);
-        }
-      } else {
-        changeTheme(THEMES.dark);
-      }
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    if(theme === THEMES.dark) {
-      changeTheme(THEMES.light);
-    } else {
-      changeTheme(THEMES.dark);
-    }
-  }
-
-  const links = [
-    {
-      link: 'Github',
-      icon: ''
-    },
-    {
-      link: 'Stack Overflow',
-      icon: ''
-    },
-    {
-      link: 'Leet Code',
-      icon: ''
-    },
-    {
-      link: 'Linkedin',
-      icon: ''
-    },
-    {
-      link: 'Twitter',
-      icon: ''
-    },
-    {
-      link: 'Facebook',
-      icon: ''
-    },
-    {
-      link: 'Instagram',
-      icon: ''
-    },
-    {
-      link: 'Youtube',
-      icon: ''
-    },
-  ]
-
-  console.log('rendering welcome .js ');
+  const toggleTheme = useContext(ThemeContext);
 
   const downloadResume = () => {
-    console.log('window.location, ', window.location.origin);
-    window.location.assign(`http://${window.location.origin}/api/download/resume`);
+    window.location.assign(`${window.location.origin}/api/download/resume`);
   }
 
   return (
-    <div
-      styleName="container"
-    >
+    <div>
       <div styleName="welcome-banner">          
         <div styleName='welcome-text'>
           <img styleName='avatar-img' src={fistBump} />

@@ -9,7 +9,7 @@ module.exports = {
     output: {
         filename: 'assets/js/bundle.[contenthash].js',
         path: path.resolve(__dirname, './dist'),
-        publicPath:  './',
+        publicPath:  '/',
         clean: true
     },
     mode: 'development',
@@ -26,6 +26,7 @@ module.exports = {
         client: {
             overlay: true,
         },
+        historyApiFallback: true
     },
     module: {
         rules: [

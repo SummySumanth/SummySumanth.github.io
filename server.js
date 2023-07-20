@@ -1,39 +1,24 @@
 const express = require('express');
-const routes = require('./app/backend/routes');
 const path = require('path');
 
-let app = express();
+const apiRoutes = require('./app/backend/routes');
 
-app.use('/api', routes);
+const app = express();
+const PORT = 8080;
 
+// Serve static assets (CSS, JS, images, etc.) from the 'dist' folder
+app.use(express.static(path.join(__dirname, 'dist')));
 
+// API routes
+app.use('/api', apiRoutes);
 
-app.get('*.js', function(req, res, next) {
-  console.log('got request for JS');
-  console.log('requested url is', req.url);
-  // req.url = req.url + '.gz';
-  // res.set('Content-Encoding', 'gzip');
-  res.set('Content-Type', 'text/javascript');
-  next();
+// Middleware to serve 'index.html' for all other routes
+app.get('*', (req, res) => {
+  console.log('Reached wild request -> ', req.url);
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
-app.get('*.css', function(req, res, next) {
-  console.log('got request for CSS');
-  // req.url = req.url + '.gz';
-  // res.set('Conten/t-Encoding', 'gzip');
-  console.log('requested url is', req.url);
-  res.set('Content-Type', 'text/css');
-  next();
+app.listen(PORT, () => {
+  console.clear();
+  console.log(`Server is now running at port ${PORT} on localhost successfully`);
 });
-
-app.use(express.static(path.join(__dirname, 'dist/assets')));
-
-app.get('*', function(req, res){
-  
-  console.log('###### sending file ', req.url);
-  res.sendFile(__dirname + '/dist/' + req.url);
-});
-
-app.listen(8080, () =>{
-    console.log('Server is now running at post 8080 in localhost successfully');
-})

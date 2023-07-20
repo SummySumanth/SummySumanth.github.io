@@ -4,6 +4,8 @@ import hello from './hello.png';
 import fistBump from './fist_bump.png';
 import emoji from './emoji.png';
 import downloadIcon from './download.svg';
+import thumbsup from './thumbsup.png';
+import ringmeup from './ringme.png';
 
 export {
     sun,
@@ -11,5 +13,7 @@ export {
     hello,
     fistBump,
     emoji,
-    downloadIcon
+    downloadIcon,
+    thumbsup,
+    ringmeup
 }
