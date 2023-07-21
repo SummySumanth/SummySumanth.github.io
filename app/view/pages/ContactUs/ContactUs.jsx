@@ -12,7 +12,7 @@ function ContactUs() {
     <div styleName="page-container">
       <Link to="/">
         <header styleName="header">
-          Summy.Dev
+          Reach me !
         </header>
       </Link>
       <div styleName="container ">
@@ -20,8 +20,7 @@ function ContactUs() {
           {
                 socialLinks.map((item) => (
                   <SocialLinkChip
-                    key={item.link}
-                    siteName={item.link}
+                    social={item}
                   />
                 ))
               }

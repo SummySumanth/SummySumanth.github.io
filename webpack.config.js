@@ -34,11 +34,15 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(ttf)$/,
-        type: 'asset/resource',
-        generator: {
-          name: 'dist/assets/fonts/[hash][ext][query]',
-        },
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'fonts/[name].[ext]',
+            },
+          },
+        ],
       },
       {
         test: /\.(png|jpg|jpeg)$/,

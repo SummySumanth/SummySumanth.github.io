@@ -1,14 +1,36 @@
 .container {
-    background-color: var(--color-label);
-    margin: 34px auto;
-    border-radius: 2px;
-    max-width: 300px;
-    padding: 16px 0px;
-    font-family: "Ubuntu", sans-serif;
-    font-size: 24pt;
     cursor: pointer;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 12px 0px;
+    flex-basis: 20%;
+    justify-content: flex-start;
 }
 
-.container:hover {
-    background-color: var(--color-tertiary-system-fill);
+.logo {
+    width: 66px;
+    margin: 0 auto;
+}
+
+.siteName {
+    margin-top: 12px;
+    font-size: 12pt;
+    color: var(--color-label);
+    font-family: "sfproregular", sans-serif;
+}
+
+@media (--screen-mobile){
+    .container {
+        flex-basis: 25%;
+    }
+   
+}
+
+@media (--screen-smaller){
+    .container {
+        flex-basis: 25%;
+    }
+    .logo {
+        width: 52px;
+    }
 }

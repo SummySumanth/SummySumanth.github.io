@@ -41,7 +41,8 @@
 
 .social-links-container {
   padding: 71px 0px 200px 0px;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .tablet-container-padded {
