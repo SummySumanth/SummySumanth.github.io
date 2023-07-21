@@ -19,12 +19,15 @@ const store = createStore(
   applyMiddleware(loggerMiddleware),
 );
 
-ReactDOM.render(
+// document.body.requestFullscreen();
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(
   <Provider store={store}>
     <BackgroundAnimationCanvas />
     <div styleName="container">
       <AppRoutes />
     </div>
   </Provider>,
-  document.getElementById('root'),
 );
