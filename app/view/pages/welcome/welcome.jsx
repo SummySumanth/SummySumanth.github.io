@@ -37,7 +37,7 @@ function App() {
         <img styleName="theme-icons sun" alt="light mode" src={sun} />
         <img styleName="theme-icons moon" src={moon} alt="dark mode" />
       </label>
-      <RoundedBtn styleName="downloadBtn" ctaText="Download Resume" cta={downloadResume} />
+      <RoundedBtn className="downloadBtn" ctaText="Download Resume" cta={downloadResume} />
       {/* <Links
         links={links}
       /> */}

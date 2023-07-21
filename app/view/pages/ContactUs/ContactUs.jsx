@@ -4,10 +4,15 @@ import { ringmeup } from '../../images';
 
 import socialLinks from '../../constants/socialLinks';
 import SocialLinkChip from './components/SocialLinkChip';
+import RoundedBtn from '../../components/RoundedBtn/RoundedBtn';
 
 import './ContactUs.css';
 
 function ContactUs() {
+  const downloadVcard = () => {
+    window.location.assign(`${window.location.origin}/api/download/vcard`);
+  };
+
   return (
     <div styleName="page-container">
       <Link to="/">
@@ -25,6 +30,7 @@ function ContactUs() {
                 ))
               }
         </div>
+        <RoundedBtn styleName="downloadBtn" ctaText="Download VCard" cta={downloadVcard} />
         <div styleName="imageContainer">
           <img draggable={false} styleName="avatar-img" src={ringmeup} alt="emoji" />
         </div>

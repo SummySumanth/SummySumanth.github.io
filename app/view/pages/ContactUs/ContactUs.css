@@ -40,7 +40,7 @@
 }
 
 .social-links-container {
-  padding: 71px 0px 200px 0px;
+  padding: 71px 0px 50px 0px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -50,7 +50,11 @@
     width: 100%;
     margin: 0 auto;
     text-align: center;
-  }
+}
+
+.downloadBtn {
+  margin: 0 auto;
+}
 
   @media (--screen-tabletOrLower){
     .tablet-container-padded {
