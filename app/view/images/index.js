@@ -3,9 +3,13 @@ import moon from './Moon.png';
 import hello from './hello.png';
 import fistBump from './fist_bump.png';
 import emoji from './emoji.png';
-import downloadIcon from './download.svg';
+
+import downloadDark from './download-dark.png';
+import downloadLight from './download-light.png';
+
 import thumbsup from './thumbsup.png';
 import ringmeup from './ringme.png';
+
 import discord from './discord.png';
 import facebook from './facebook.png';
 import github from './github.png';
@@ -20,10 +24,14 @@ import youtube from './youtube.png';
 export {
   sun,
   moon,
+
   hello,
   fistBump,
   emoji,
-  downloadIcon,
+
+  downloadDark,
+  downloadLight,
+
   thumbsup,
   ringmeup,
   discord,

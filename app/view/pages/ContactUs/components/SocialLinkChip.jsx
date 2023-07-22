@@ -1,14 +1,18 @@
 import React from 'react';
-import linkedin from '../linkedin.png';
 import './SocialLinkChip.css';
 
-function SocialLinkChip(props) {
+function SocialLinkChip({ social, onImageLoadCallback }) {
   const {
-    siteName, name, link, icon,
-  } = props.social;
+    siteName, link, icon,
+  } = social;
   return (
     <a key={siteName} styleName="container" href={link} target="_blank" rel="noreferrer">
-      <img styleName="logo" src={icon} alt={siteName} />
+      <img
+        styleName="logo"
+        src={icon}
+        alt={siteName}
+        onLoad={onImageLoadCallback}
+      />
       <div styleName="siteName">{siteName}</div>
     </a>
   );

@@ -1,10 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import { downloadIcon } from '../../images';
+
+import ThemeContext from '../../ThemeContext';
+import { downloadDark, downloadLight } from '../../images';
 import './RoundedBtn.css';
 
+function RoundedBtn(props) {
+  const values = useContext(ThemeContext);
+  const theme = window.localStorage.getItem('theme');
+  const { ctaText, cta, className } = props;
+  return (
+    <button type="button" className={className} styleName="container" onClick={cta}>
+      <img styleName="icon" src={(theme === 'dark') ? downloadDark : downloadLight} alt="download btn" />
+      <div styleName="text">
+        {ctaText}
+      </div>
+    </button>
+  );
+}
+
 RoundedBtn.propTypes = {
-  link: PropTypes.string.isRequired,
   ctaText: PropTypes.string,
   cta: PropTypes.func.isRequired,
   className: PropTypes.string,
@@ -12,19 +27,7 @@ RoundedBtn.propTypes = {
 
 RoundedBtn.defaultProps = {
   ctaText: 'Download',
+  className: null,
 };
-
-function RoundedBtn(props) {
-  console.log('props are ', props);
-  const { ctaText, cta } = props;
-  return (
-    <button className={props.className} styleName="container" onClick={cta}>
-      <img styleName="icon" src={downloadIcon} />
-      <div styleName="text">
-        {ctaText}
-      </div>
-    </button>
-  );
-}
 
 export default RoundedBtn;

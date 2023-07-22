@@ -1,12 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useContext } from 'react';
-import { connect, Connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 // import HamburgerBtn from '../../components/navbar/hamburgerBtn/HamburgerBtn';
 // import Links from '../../components/links/Links';
-import RoundedBtn from '../../components/RoundedBtn/RoundedBtn.jsx';
+import { motion } from 'framer-motion';
+import RoundedBtn from '../../components/RoundedBtn/RoundedBtn';
 import ThemeContext from '../../ThemeContext';
-
-import { setTheme } from '../../actions/index';
 
 import { fistBump, moon, sun } from '../../images/index';
 
@@ -20,16 +19,32 @@ function App() {
   };
 
   return (
-    <div>
+    <motion.div
+      initial={{
+        opacity: 0,
+      }}
+      animate={{
+        opacity: 1,
+      }}
+      exit={{
+        opacity: 0,
+      }}
+    >
       <div styleName="welcome-banner">
         <div styleName="welcome-text">
           <img styleName="avatar-img" src={fistBump} alt="avatar" />
-          summy.dev
+          {'<summy.dev />'}
         </div>
         <div styleName="description-text">
-          Ey yo! Thanks for hopping in, I'm preparing some lit stuff to show you soon !
+          Ey yo! Thanks for showing interest in getting to know me !
           {/* Ey yo! Thanks for hopping in, I have got some lit stuff to show you..  */}
-          {/* <span styleName="description-text-enter">Get in -></span> */}
+          <Link to="/contact-us">
+            <span styleName="description-text-enter">
+              Get in
+              {' '}
+              {'->'}
+            </span>
+          </Link>
         </div>
       </div>
       <input id="theme-checkbox" styleName="theme-checkbox" type="checkbox" onChange={toggleTheme} />
@@ -37,20 +52,12 @@ function App() {
         <img styleName="theme-icons sun" alt="light mode" src={sun} />
         <img styleName="theme-icons moon" src={moon} alt="dark mode" />
       </label>
-      <RoundedBtn className="downloadBtn" ctaText="Download Resume" cta={downloadResume} />
+      <RoundedBtn styleName="downloadBtn" ctaText="Download Resume" cta={downloadResume} />
       {/* <Links
         links={links}
       /> */}
-    </div>
+    </motion.div>
   );
 }
 
-const mapStateToProps = (state) => ({
-  theme: state.appSettings.theme,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  changeTheme: (theme) => dispatch(setTheme(theme)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;

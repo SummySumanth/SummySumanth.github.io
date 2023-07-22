@@ -43,7 +43,24 @@
   padding: 71px 0px 50px 0px;
   display: flex;
   flex-wrap: wrap;
+  /* transform: translateY(168%) scale(0.1); */
+  opacity: 0;
 }
+
+.pop-in-animation {
+  animation: iconsPopIn 800ms ease-in-out 0ms 1  forwards;
+}
+
+@keyframes iconsPopIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
 
 .tablet-container-padded {
     max-width: 1020px;
