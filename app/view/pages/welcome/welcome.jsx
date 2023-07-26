@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import RoundedBtn from '../../components/RoundedBtn/RoundedBtn';
 import ThemeContext from '../../ThemeContext';
+import BrandLogo from '../../components/brandLogo/BrandLogo';
 
 import { fistBump, moon, sun } from '../../images/index';
 
@@ -31,19 +32,17 @@ function App() {
       }}
     >
       <div styleName="welcome-banner">
-        <div styleName="welcome-text">
-          <img styleName="avatar-img" src={fistBump} alt="avatar" />
-          {'<summy.dev />'}
-        </div>
+        <img styleName="avatar-img" src={fistBump} alt="avatar" />
+        <BrandLogo styleName="banner-text" />
+
         <div styleName="description-text">
           Ey yo! Thanks for showing interest in getting to know me !
           {/* Ey yo! Thanks for hopping in, I have got some lit stuff to show you..  */}
-          <Link to="/contact-us">
-            <span styleName="description-text-enter">
-              Get in
-              {' '}
-              {'->'}
-            </span>
+
+          <Link to="/contact-us" styleName="description-text-enter">
+            Get in
+            {' '}
+            {'->'}
           </Link>
         </div>
       </div>

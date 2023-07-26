@@ -11,14 +11,12 @@
   max-width: 240px;
   display: inline;
   position: absolute;
-  top: 0px;
-  transform: translate(-200px, -50px);
+  transform: translateX(-50%);
+  left: 50%;
+  top: -88%;
 }
 
-.welcome-text {
-  font-family: "Roboto", sans-serif;
-  font-family: "Ubuntu", sans-serif;
-  color: var(--color-label);
+.banner-text {
   font-size: 98pt;
 }
 
@@ -30,10 +28,12 @@
 
 .description-text-enter {
   display: block;
-  font-size: 13pt;
+  font-size: 22pt;
   color: #c20000;
   cursor: pointer;
   transition: color 250ms ease-in-out;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .description-text-enter:hover {
@@ -100,18 +100,15 @@
     left: 50%;
     transform: translate(-50%, -200px);
   }
-  .welcome-text {
-    font-size: 40pt;
+  .banner-text {
+    font-size: 26pt;
     /* color: red; */
   }
   .description-text {
-    font-size: 23pt;
-    padding: 0px 16px;
+    font-size: 18pt;
+    padding: 22px 0 16px 0;
   }
-  .description-text-enter {
-    display: block;
-    font-size: 30pt;
-  }
+
   .downloadBtn {
     margin: 0;
     border-radius: 0px;

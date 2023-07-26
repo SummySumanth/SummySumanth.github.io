@@ -1,6 +1,123 @@
 .navbar {
-  background: #fff;
-  height: 30px;
+  background: rgb(18 18 18 / 52%);
   display: flex;
   align-items: center;
+  color: #fff;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  font-size: 16pt;
+  justify-content: space-between;
 }
+
+.welcome-text {
+  font-family: "Ubuntu", sans-serif;
+  cursor: pointer;
+}
+
+input[name=nav-tabs] {
+  display: none;
+}
+
+.navbar-container {
+  /* background-color: white; */
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navbar-container nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.navbar-container nav label {
+  position: relative;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  padding: 4px 0;
+}
+.navItems {
+  position: absolute;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+}
+
+.navItems:hover {
+  background-color: rgb(53 53 53 / 81%);
+}
+
+.link-bio:checked ~ nav .navItem-bio {
+  background-color: rgb(72 72 72 / 22%)
+} 
+
+.link-blogs:checked ~ nav .navItem-blogs {
+  background-color: rgb(72 72 72 / 22%)
+} 
+
+.link-projects:checked ~ nav .navItem-projects {
+  background-color: rgb(72 72 72 / 22%)
+} 
+
+.link-certificates:checked ~ nav .navItem-certificates {
+  background-color: rgb(72 72 72 / 22%)
+} 
+
+.link-techstack:checked ~ nav .navItem-techstack {
+  background-color: rgb(72 72 72 / 22%)
+} 
+
+.link-uses:checked ~ nav .navItem-uses {
+  background-color: rgb(72 72 72 / 22%)
+} 
+
+.link-contact:checked ~ nav .navItem-contact {
+  background-color: rgb(72 72 72 / 22%)
+} 
+
+.navbar-container nav .slider {
+position: absolute;
+height: 2px;
+background-color: #fff;
+border-radius: 2px;
+width: calc(100%/7);
+z-index: 1;
+left: 0;
+bottom: 0;
+transition: transform 0.2s ease;
+}
+
+.link-bio:checked ~ nav .slider {
+  transform: translateX(0%);
+} 
+
+.link-blogs:checked ~ nav .slider {
+  transform: translateX(100%);
+} 
+
+.link-projects:checked ~ nav .slider {
+  transform: translateX(200%);
+} 
+
+.link-certificates:checked ~ nav .slider {
+  transform: translateX(300%);
+} 
+
+.link-techstack:checked ~ nav .slider {
+  transform: translateX(400%);
+} 
+
+.link-uses:checked ~ nav .slider {
+  transform: translateX(500%);
+} 
+
+.link-contact:checked ~ nav .slider {
+  transform: translateX(600%);
+} 
