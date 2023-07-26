@@ -3,6 +3,7 @@
     color: transparent;
     background: var(--color-label);
     background-clip: text;
+    white-space: nowrap;
     /* transition: background 10s linear; */
 }
 
