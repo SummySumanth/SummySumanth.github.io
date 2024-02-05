@@ -33,7 +33,7 @@ export default [
   {
     siteName: 'Whatsapp',
     name: 'whatsapp me ',
-    link: 'https://wa.me/+919060000493',
+    link: 'https://wa.me/+919060000493?text=Hey%20Summy%20%21%20Got%20your%20contact%20from%20your%20site%20summy.dev',
     icon: whatsapp,
   },
   {

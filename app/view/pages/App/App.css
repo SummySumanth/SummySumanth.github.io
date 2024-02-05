@@ -150,7 +150,7 @@ width: calc(100%/7);
 z-index: 1;
 left: 0;
 bottom: 0;
-transition: transform 0.2s ease;
+transition: transform 400ms ease-out;
 }
 
 .link-bio:checked ~ nav .slider {
@@ -193,13 +193,16 @@ transition: transform 0.2s ease;
     opacity: 1;
     /* transform: translateY(0%) !important; */
   }
+  input[name=nav-tabs]:checked ~ nav .navItems{
+    background-color: transparent !important;
+  }
   .navItems-container{
     position: absolute !important;
     z-index: -1 !important;
     display: none;
     height: 100svh;
     width: 100svw;
-    background-color: #36363653;
+    background-color: rgb(39 39 39 / 33%);
     top: 0;
     display: flex;
     flex-direction: column;
@@ -224,6 +227,7 @@ transition: transform 0.2s ease;
     top: 0;
   }
 
+  .link-bio:checked
 
   .link-bio:checked ~ nav .slider {
     transform: translateY(0%);
