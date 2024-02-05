@@ -18,7 +18,7 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.clear();
   console.log(`Server is now running at port ${PORT} on localhost successfully`);
 });

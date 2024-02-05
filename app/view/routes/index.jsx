@@ -5,15 +5,13 @@ import {
 import ThemeContext, { toggleTheme } from '../ThemeContext';
 import THEMES from '../utils/constants';
 
-import AnimatedRoutes from '../components/AnimatedRoutes/AnimatedRoutes';
+import AnimatedRoutes from './AnimatedRoutes/AnimatedRoutes';
 
 function AppRoutes() {
   useEffect(() => {
     let theme;
-
     const html = document.querySelector('html');
-    const { localStorage } = window;
-    const cachedTheme = localStorage.getItem('theme');
+    const cachedTheme = window.localStorage.getItem('theme');
 
     if (cachedTheme !== null && cachedTheme !== 'undefined') {
       theme = cachedTheme;
@@ -27,7 +25,7 @@ function AppRoutes() {
       theme = THEMES.dark;
     }
     html.dataset.theme = theme;
-    localStorage.setItem('theme', theme);
+    window.localStorage.setItem('theme', theme);
   }, []);
 
   return (

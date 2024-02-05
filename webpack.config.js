@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './app/view/index.jsx',
@@ -33,17 +34,6 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: 'fonts/[name].[ext]',
-            },
-          },
-        ],
-      },
       {
         test: /\.(png|jpg|jpeg)$/,
         type: 'asset',
@@ -130,6 +120,7 @@ module.exports = {
       template: 'app/view/index.hbs',
       description: 'Some Description',
     }),
+    new CleanWebpackPlugin(),
     new webpack.ProvidePlugin({
       process: 'process/browser',
     }),
