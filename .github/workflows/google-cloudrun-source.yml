@@ -51,7 +51,7 @@ on:
     tags: [ 'v*.*.*' ]
 
 env:
-  PROJECT_ID: summy-portfolio-live # TODO: update Google Cloud project id
+  PROJECT_ID: 392632175768 # TODO: update Google Cloud project id
   SERVICE: ttl-18h-00001-625 # TODO: update Cloud Run service name
   REGION: us-central1 # TODO: update Cloud Run service region
 
