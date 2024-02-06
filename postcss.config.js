@@ -3,14 +3,14 @@ module.exports = {
     [
       'postcss-preset-env',
       {
-        "generateScopedName": "[path]__[name]__[local]__[hash:base64:5]"
+        generateScopedName: '[path]__[name]__[local]__[hash:base64:5]',
       },
     ],
     [
       'postcss-custom-media',
       {
-        "importFrom": './app/view/styles/resolutions.css'
+        importFrom: './app/view/styles/resolutions.css',
       },
     ],
-  ]
-}
+  ],
+};
