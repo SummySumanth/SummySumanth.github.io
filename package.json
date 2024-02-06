@@ -5,7 +5,6 @@
   "main": "server.js",
   "scripts": {
     "startdev": "node server.js",
-    "start": "node server.js",
     "prestart": "npm run build",
     "build": "webpack --config webpack.config.js",
     "be": "nodemon server.js",
