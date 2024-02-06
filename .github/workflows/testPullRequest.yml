@@ -6,6 +6,7 @@ on:
 
 jobs:
   backend_tests:
+    name: backend_test_cases
     runs-on: ubuntu-latest
 
     steps:
