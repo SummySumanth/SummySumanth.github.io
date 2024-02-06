@@ -71,7 +71,7 @@ jobs:
         id: auth
         uses: 'google-github-actions/auth@v2'
         with:
-          audience: 'iam.googleapis.com/projects/392632175768/locations/global/workloadIdentityPools/github-actions-authenticator2/providers/github'
+          audience: 'github-summy-portfolio-deployer'
           workload_identity_provider: 'projects/392632175768/locations/global/workloadIdentityPools/github-actions-authenticator2/subject/SUBJECT_ATTRIBUTE_VALUE' # e.g. - projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider
           service_account: 'summy-portfolio-service@summy-portfolio-live.iam.gserviceaccount.com' # e.g. - my-service-account@my-project.iam.gserviceaccount.com
 
