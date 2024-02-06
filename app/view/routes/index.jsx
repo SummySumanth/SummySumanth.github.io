@@ -27,7 +27,6 @@ function AppRoutes() {
     html.dataset.theme = theme;
     window.localStorage.setItem('theme', theme);
   }, []);
-  console.log('test');
   return (
     <ThemeContext.Provider value={toggleTheme}>
       <BrowserRouter>
