@@ -71,7 +71,7 @@ jobs:
         id: auth
         uses: 'google-github-actions/auth@v2'
         with:
-          audience: '${{ secrets.AUDIANCE }}'
+          audience: '//iam.googleapis.com/projects/392632175768/locations/global/workloadIdentityPools/github-actions-authenticator2/providers/github'
           workload_identity_provider: '${{ secrets.WIF_PROVIDER }}' # e.g. - projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider
           service_account: '${{ secrets.WIF_SERVICE_ACCOUNT }}' # e.g. - my-service-account@my-project.iam.gserviceaccount.com
 
