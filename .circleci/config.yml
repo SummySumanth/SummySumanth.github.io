@@ -1,5 +1,9 @@
 version: 2.1
 
+orbs:
+  node: circleci/node@5.0.2
+  gcp-cli: circleci/gcp-cli@3.1.1
+
 workflows:
   version: 2
   build_and_deploy_workflow:
@@ -15,8 +19,24 @@ jobs:
     docker:
       - image: ubuntu
     steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: npm
+      - run:
+          name: Run tests
+          command: npm run test
+      - run:
+          name: Build app
+          command: npm run build
+      - persist_to_workspace:
+          root: ~/project
+          paths:
+            - .
       - run: 
-          name: hello world
+          name: Hello world
           command: echo "hello world"
+      - run: 
+          name: CHeck Local files
+          command: ls
 
      
