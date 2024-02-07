@@ -11,6 +11,7 @@ jobs:
       contents: 'read'
       id-token: 'write'
 
+    runs-on: ubuntu-latest
     steps:
     - id: 'auth'
       uses: 'google-github-actions/auth@v2'
