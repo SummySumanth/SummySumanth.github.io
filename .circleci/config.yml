@@ -16,9 +16,13 @@ jobs:
       - run: node --version
       - node/install-packages:
           pkg-manager: yarn
+      - run: npm run build
       - run:
           name: deploy to app engine
           command: |
+            echo ${GCLOUD_SERVICE_KEY} > /tmp/sa_key.json
+            gcloud auth activate-service-account --key-file=/tmp/sa_key.json
+            rm /tmp/sa_key.json
             gcloud config set project summy-portfolio-live
             gcloud config set compute/region asia-south1
             gcloud app deploy
