@@ -6,7 +6,7 @@ workflows:
     jobs:
       - build_and_deploy_job:
           filters:
-            branch:
+            branches:
               only:
                 - production
 
