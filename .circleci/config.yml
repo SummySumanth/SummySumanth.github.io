@@ -18,6 +18,10 @@ jobs:
           pkg-manager: yarn
 
 workflows:
+  test:
+    jobs:
+      - node/test:
+          test-results-for: jest
   build_and_deploy_workflow:
     jobs:
       - build_and_deploy_job:
