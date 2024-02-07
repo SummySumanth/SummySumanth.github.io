@@ -18,8 +18,9 @@ jobs:
   build_and_deploy_job:
     docker:
       - image: ubuntu
+    executor: node/default
     steps:
-      - checkout
+      - checkout      
       - node/install-packages:
           pkg-manager: yarn
       - run:
