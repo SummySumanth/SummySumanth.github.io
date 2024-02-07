@@ -10,6 +10,7 @@ jobs:
       - image: ubuntu
     steps:
       - checkout      
+      - run: sudo apt-get install curl
       - node/install:
           install-yarn: true
           node-version: 'latest'
