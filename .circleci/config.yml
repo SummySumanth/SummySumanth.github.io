@@ -11,7 +11,9 @@ jobs:
     steps:
       - checkout      
       - node/install:
-
+          install-yarn: true
+          node-version: 'latest'
+      - run: node --version
 
 workflows:
   build_and_deploy_workflow:
