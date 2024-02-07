@@ -4,11 +4,11 @@ workflows:
   version: 2
   build_and_deploy_workflow:
     jobs:
-      build_and_deploy_job:
-        filters:
-          branch:
-            only:
-            - production
+      - build_and_deploy_job:
+          filters:
+            branch:
+              only:
+                - production
 
 jobs:
   build_and_deploy_job:
