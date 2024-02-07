@@ -11,25 +11,7 @@ jobs:
     steps:
       - checkout      
       - node/install:
-          node-version: 14.15.4
-      - node/install-packages:
-          pkg-manager: npm
-      - run:
-          name: Run tests
-          command: npm run test
-      - run:
-          name: Build app
-          command: npm run build
-      - persist_to_workspace:
-          root: ~/
-          paths:
-            - .
-      - run: 
-          name: Hello world
-          command: echo "hello world"
-      - run: 
-          name: CHeck Local files
-          command: ls
+
 
 workflows:
   build_and_deploy_workflow:
