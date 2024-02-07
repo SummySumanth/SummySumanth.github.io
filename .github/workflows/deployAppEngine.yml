@@ -1,6 +1,10 @@
 name: Deploy to App Engine
 run-name: Deploying application to App Engine
 
+on:
+  push:
+    tags: [ 'v*.*.*' ]
+
 jobs:
   job_id:
     permissions:
