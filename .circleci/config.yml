@@ -16,6 +16,12 @@ jobs:
       - run: node --version
       - node/install-packages:
           pkg-manager: yarn
+      - run:
+          name: deploy to app engine
+          command: |
+            gcloud config set project summy-portfolio-live
+            gcloud config set compute/region asia-south1
+            gcloud app deploy
 
 workflows:
   test:
