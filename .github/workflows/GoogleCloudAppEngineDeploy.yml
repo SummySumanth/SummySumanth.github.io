@@ -16,22 +16,22 @@ jobs:
       - name: Checking out repository
         uses: actions/checkout@v3
 
-      - name: Use Node.js 
+      - name: Setting up Node.js 
         uses: actions/setup-node@v3
         with:
           node-version: 20.x
           cache: 'npm'
 
-      - name: Clean Installing NPM Packages
+      - name: Installing NPM Packages
         run: npm ci
 
       - name: Building Frontend Files
         run: npm run build
 
-      - name: Run Tests
+      - name: Runing Tests
         run: npm test
 
-      - name: Deploy to App Engine
+      - name: Deploying to App Engine
         id: deploy
         uses: google-github-actions/deploy-appengine@v0.2.0
         with:
@@ -40,5 +40,5 @@ jobs:
           project_id: ${{ secrets.GCP_PROJECT }}
           credentials: ${{ secrets.GCP_CREDENTIALS }}  
           
-      - name: Test Deployment Job
+      - name: Testing Deployment Job
         run: curl "${{ steps.deploy.outputs.url }}"
