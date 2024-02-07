@@ -22,13 +22,13 @@ jobs:
     steps:
       - checkout      
       - node/install-packages:
-          pkg-manager: yarn
+          pkg-manager: npm
       - run:
           name: Run tests
-          command: yarn test
+          command: npm run test
       - run:
           name: Build app
-          command: yarn build
+          command: npm run build
       - persist_to_workspace:
           root: ~/
           paths:
