@@ -1,5 +1,5 @@
 name: App Engine Deployer
-run-name: Deployment in progress
+run-name: Deploy to App Engine
 
 on:
   pull_request:
