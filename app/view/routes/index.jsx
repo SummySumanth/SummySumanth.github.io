@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import {
-  BrowserRouter,
+  BrowserRouter as Router,
 } from 'react-router-dom';
 import ThemeContext, { toggleTheme } from '../ThemeContext';
 import THEMES from '../utils/constants';
 
 import AnimatedRoutes from './AnimatedRoutes/AnimatedRoutes';
 
-function AppRoutes() {
+const Routes = () => {
   useEffect(() => {
     let theme;
     const html = document.querySelector('html');
@@ -29,11 +29,11 @@ function AppRoutes() {
   }, []);
   return (
     <ThemeContext.Provider value={toggleTheme}>
-      <BrowserRouter>
+      <Router>
         <AnimatedRoutes />
-      </BrowserRouter>
+      </Router>
     </ThemeContext.Provider>
   );
 }
 
-export default AppRoutes;
+export default Routes;

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
 import ThemeContext from '../../ThemeContext';
-import { downloadDark, downloadLight } from '../../images';
+
 import './RoundedBtn.css';
 
 function RoundedBtn(props) {
@@ -11,7 +11,7 @@ function RoundedBtn(props) {
   const { ctaText, cta, className } = props;
   return (
     <button type="button" className={className} styleName="container" onClick={cta}>
-      <img styleName="icon" src={(theme === 'dark') ? downloadDark : downloadLight} alt="download btn" />
+      
       <div styleName="text">
         {ctaText}
       </div>

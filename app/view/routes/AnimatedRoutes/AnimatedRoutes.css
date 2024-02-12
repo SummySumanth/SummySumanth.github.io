@@ -1,0 +1,282 @@
+.navbar {
+    background: rgba(35, 35, 35, 0.272);
+    /* background: blue; */
+    position: absolute;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    font-size: 16pt;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 2;
+  }
+  
+  input[name=toggle-navbar] {
+    display: none;
+  }
+  
+  input[name=toggle-navbar]:checked ~ label .barTop {
+    transform: rotateZ(45deg) translate(4px, 5px);
+  }
+  
+  input[name=toggle-navbar]:checked ~ label .barMiddle{
+    background-color: transparent;
+  }
+  
+  input[name=toggle-navbar]:checked ~ label .barBottom{
+    transform: rotateZ(-45deg) translate(4px, -4px)
+  }
+  
+  .toggle-label {
+    margin: 16px;
+    display: none;
+  }
+  
+  .barTop {
+    content: '';
+    position: relative;
+    display: block;
+    top: -4px;
+    width: 20px;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: transform 400ms ease;
+  }
+  
+  .barMiddle {
+    width: 20px;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: background 400ms ease;
+  }
+  
+  .barBottom {
+    content: '';
+    position: relative;
+    display: block;
+    bottom: -4px;
+    width: 20px;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: transform 400ms ease;
+  }
+  
+  
+  .welcome-text { 
+    font-family: "Ubuntu", sans-serif;
+    cursor: pointer;
+    margin-left: 8px;
+  }
+
+  .resumeDownloadBtn {
+    display: flex;
+    align-items: center;
+  }
+
+  .downloadText {
+    margin-left: 12px;
+  }
+
+  .downloadicon {
+    max-width: 16px;
+  }
+  
+  input[name=nav-tabs] {
+    display: none;
+  }
+  
+  .navbar-desktop {
+    /* background-color: white; */
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .navbar-desktop nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  
+  .navbar-desktop nav label {
+    position: relative;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    padding: 8px 0;
+  }
+
+  .navbar-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .navItems {
+    position: absolute;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+  }
+  
+  .navItems:hover {
+    background-color: rgb(53 53 53 / 81%);
+  }
+  
+  .link-bio:checked ~ nav .navItem-bio {
+    background-color: rgb(72 72 72 / 22%)
+  } 
+  
+  .link-blogs:checked ~ nav .navItem-blogs {
+    background-color: rgb(72 72 72 / 22%)
+  } 
+  
+  .link-projects:checked ~ nav .navItem-projects {
+    background-color: rgb(72 72 72 / 22%)
+  } 
+  
+  .link-certificates:checked ~ nav .navItem-certificates {
+    background-color: rgb(72 72 72 / 22%)
+  } 
+  
+  .link-techstack:checked ~ nav .navItem-  {
+    background-color: rgb(72 72 72 / 22%)
+  } 
+  
+  .link-uses:checked ~ nav .navItem-uses {
+    background-color: rgb(72 72 72 / 22%)
+  } 
+  
+  .link-contact:checked ~ nav .navItem-contact {
+    background-color: rgb(72 72 72 / 22%)
+  } 
+  
+  .navbar-desktop nav .slider {
+  position: absolute;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 2px;
+  width: calc(100%/7);
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  transition: transform 400ms ease-out;
+  }
+  
+  .link-bio:checked ~ nav .slider {
+    transform: translateX(0%);
+  } 
+  
+  .link-blogs:checked ~ nav .slider {
+    transform: translateX(100%);
+  } 
+  
+  .link-projects:checked ~ nav .slider {
+    transform: translateX(200%);
+  } 
+  
+  .link-certificates:checked ~ nav .slider {
+    transform: translateX(300%);
+  } 
+  
+  .link-techstack:checked ~ nav .slider {
+    transform: translateX(400%);
+  } 
+  
+  .link-uses:checked ~ nav .slider {
+    transform: translateX(500%);
+  } 
+  
+  .link-contact:checked ~ nav .slider {
+    transform: translateX(600%);
+  } 
+
+  .resumeDownloadBtn {
+    margin-right: 48px;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  @media (--screen-tabletOrLower) {
+    .toggle-label {
+      display: block;
+    }
+    .navItems-container {
+      opacity: 0;
+      /* transform: translateY(-120%) !important; */
+    }
+    .toggle-navbar:checked ~ .navItems-container{
+      opacity: 1;
+      /* transform: translateY(0%) !important; */
+    }
+    input[name=nav-tabs]:checked ~ nav .navItems{
+      background-color: transparent !important;
+    }
+    .navItems-container{
+      position: absolute !important;
+      z-index: -1 !important;
+      display: none;
+      height: 100svh;
+      width: 100svw;
+      background-color: rgb(39 39 39 / 33%);
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      backdrop-filter: blur(5px);
+      z-index: 1;
+      margin-top: 38px;
+      transition: opacity 400ms ease-in-out;
+    }
+    .navItems {
+      height: 100%;
+      display: flex !important;
+      padding: 0 !important;
+      justify-content: center;
+      align-items: center;
+  
+    }
+    .slider {
+      width: 100% !important;
+      height: calc(100%/7) !important;
+      z-index: -1 !important;
+      background: #32323275 !important;
+      top: 0;
+    }
+  
+    .link-bio:checked ~ nav .slider {
+      transform: translateY(0%);
+    } 
+    
+    .link-blogs:checked ~ nav .slider {
+      transform: translateY(100%);
+    } 
+    
+    .link-projects:checked ~ nav .slider {
+      transform: translateY(200%);
+    } 
+    
+    .link-certificates:checked ~ nav .slider {
+      transform: translateY(300%);
+    } 
+    
+    .link-techstack:checked ~ nav .slider {
+      transform: translateY(400%);
+    } 
+    
+    .link-uses:checked ~ nav .slider {
+      transform: translateY(500%);
+    } 
+    
+    .link-contact:checked ~ nav .slider {
+      transform: translateY(600%);
+    } 
+  }

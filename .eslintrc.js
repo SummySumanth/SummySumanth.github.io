@@ -23,5 +23,6 @@ module.exports = {
         ignore: ['styleName'],
       },
     ],
+    'react/function-component-definition: ["arrow-function"]',
   },
 };

@@ -4,7 +4,7 @@ import { applyMiddleware, createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { createLogger } from 'redux-logger';
 
-import AppRoutes from './routes';
+import Routes from './routes';
 
 import allReducers from './reducers/index';
 import BackgroundAnimationCanvas from './components/backgroundAnimationCanvas/BackgroundAnimationCanvas';
@@ -27,7 +27,7 @@ root.render(
   <Provider store={store}>
     <BackgroundAnimationCanvas />
     <div styleName="container">
-      <AppRoutes />
+      <Routes />
     </div>
   </Provider>,
 );

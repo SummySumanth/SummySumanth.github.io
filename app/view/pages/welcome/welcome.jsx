@@ -13,9 +13,6 @@ import { fistBump } from '../../images';
 import './welcome.css';
 
 function App() {
-  const downloadResume = () => {
-    window.location.assign(`${window.location.origin}/api/download/resume`);
-  };
 
   return (
     <motion.div
@@ -29,6 +26,7 @@ function App() {
         opacity: 0,
       }}
     >
+      <ThemeSwitcher />
       <div styleName="welcome-banner">
         <img styleName="avatar-img" src={fistBump} alt="avatar" />
         <BrandLogo styleName="banner-text" />
@@ -36,14 +34,13 @@ function App() {
         <div styleName="description-text">
           Ey yo! Thanks for showing interest in getting to know me !
 
-          <Link to="/contact-us" styleName="description-text-enter">
+          <Link to="/app" styleName="description-text-enter">
             Get in
             {' '}
             {'->'}
           </Link>
         </div>
       </div>
-      <ThemeSwitcher />
 
       <RoundedBtn styleName="downloadBtn" ctaText="Download Resume" cta={downloadResume} />
       {/* <Links

@@ -1,20 +1,25 @@
+.toggle-theme-container {
+  margin: 0px 12px;
+  background-color: red;
+}
+
 .theme-container {
-    position: fixed;
-    top: 16px;
-    right: 46px;
     cursor: pointer;
   }
   
 .theme-icons {
     position: absolute;
-    max-width: 34px;
+    max-width: 28px;
+    right: 12px;
+    top: 6px;
 }
   
 .theme-checkbox {
     display: none;
 }
+
 .sun {
-  transform: translateY(40px);
+  transform: translateY(-40px);
   opacity: 0;
   transition-property: transform, opacity;
   transition-duration: var(--transition-time);
@@ -27,7 +32,7 @@
 }
 
 .moon {
-    transform: translateY(0);
+    transform: translateY(0px);
     opacity: 1;
     transition-property: transform, opacity;
     transition-duration: var(--transition-time);
@@ -35,7 +40,6 @@
 }
 
 .theme-checkbox:checked ~ .moon {
-transform: translateY(-40px);
-opacity: 0;
-
+  transform: translateY(-40px);
+  opacity: 0;
 }
