@@ -4,13 +4,14 @@
     position: absolute;
     display: flex;
     align-items: center;
-    color: #fff;
+    color: var(--color-label);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     font-size: 16pt;
     justify-content: space-between;
     width: 100%;
     z-index: 2;
+    transition: none;
   }
   
   input[name=toggle-navbar] {

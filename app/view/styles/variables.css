@@ -172,7 +172,7 @@
 
 /* Container divs */
 * {
-  transition-property: color, background-color, background;
+  transition-property: background-color, background;
   transition-duration: var(--transition-time);
 }
 
