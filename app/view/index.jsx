@@ -19,8 +19,6 @@ const store = createStore(
   applyMiddleware(loggerMiddleware),
 );
 
-// document.body.requestFullscreen();
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(

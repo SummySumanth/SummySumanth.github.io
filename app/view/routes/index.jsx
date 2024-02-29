@@ -34,6 +34,6 @@ const Routes = () => {
       </Router>
     </ThemeContext.Provider>
   );
-}
+};
 
 export default Routes;

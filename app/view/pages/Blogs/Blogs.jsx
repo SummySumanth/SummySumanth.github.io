@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
+import './Blogs.css';
+import WorkInProgress from '../../components/WorkInProgress';
 
-function Blogs() {
-  return (
-    <div>Blogs</div>
-  )
-}
+const Blogs = () => (
+  <WorkInProgress />
+);
 
-export default Blogs
+export default Blogs;

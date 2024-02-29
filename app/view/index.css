@@ -7,22 +7,23 @@ body{
 .container {
   height: 100svh;
   width: 100svw;
-  overflow-y: hidden;
+  overflow-y: scroll;
   position: absolute;
   top: 0;
-  }
-  
- 
-  canvas{
-    border: 1px solid var(--color-system-background);
-    background-color: var(--color-system-background);
-  }
+}
 
-  *::-webkit-scrollbar {
-    display: none;
-  }
 
-  * {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
+canvas{
+  border: 1px solid var(--color-system-background);
+  background-color: var(--color-system-background);
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
-function BackgroundAnimationCanvas() {
+const BackgroundAnimationCanvas = () => {
   function getWindowDimensions() {
     const { innerWidth: width, innerHeight: height } = window;
     return {
       width,
-      height,
+      height: height - 5,
     };
   }
 
@@ -116,6 +116,6 @@ function BackgroundAnimationCanvas() {
   init();
 
   return (<div />);
-}
+};
 
 export default BackgroundAnimationCanvas;

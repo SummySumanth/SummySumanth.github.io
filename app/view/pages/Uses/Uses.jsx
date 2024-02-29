@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
+import WorkInProgress from '../../components/WorkInProgress';
 
-function Uses() {
-  return (
-    <div>Uses</div>
-  )
-}
+const Uses = () => (
+  <WorkInProgress />
+);
 
-export default Uses
+export default Uses;

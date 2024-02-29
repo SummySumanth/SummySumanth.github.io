@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
+import WorkInProgress from '../../components/WorkInProgress';
 
-function Projects() {
-  return (
-    <div>Projects</div>
-  )
-}
+const Projects = () => (
+  <WorkInProgress />
+);
 
-export default Projects
+export default Projects;

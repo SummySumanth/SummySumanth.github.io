@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
+import WorkInProgress from '../../components/WorkInProgress';
 
-function TechStack() {
-  return (
-    <div>TechStack</div>
-  )
-}
+const TechStack = () => (
+  <WorkInProgress />
+);
 
 export default TechStack;

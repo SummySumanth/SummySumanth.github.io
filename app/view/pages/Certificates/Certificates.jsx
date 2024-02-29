@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
+import WorkInProgress from '../../components/WorkInProgress';
+import './Certificates.css';
 
-function Certificates() {
-  return (
-    <div>Certificates</div>
-  )
-}
+const Certificates = () => (
+  <WorkInProgress />
+);
 
-export default Certificates
+export default Certificates;

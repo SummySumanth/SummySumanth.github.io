@@ -2,3 +2,8 @@
 @import './reset.css';
 @import './resolutions.css';
 @import './variables.css';
+
+* {
+    color: var(--color-label);
+    font-family: "Ubuntu", sans-serif;
+  }

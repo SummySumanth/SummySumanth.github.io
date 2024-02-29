@@ -6,6 +6,7 @@ import emoji from './emoji.png';
 
 import downloadDark from './download-dark.png';
 import downloadLight from './download-light.png';
+import DownloadSvg from './download.svg';
 
 import thumbsup from './thumbsup.png';
 import ringmeup from './ringme.png';
@@ -21,6 +22,10 @@ import twitter from './twitter.png';
 import whatsapp from './whatsapp.png';
 import youtube from './youtube.png';
 
+import bioBg from './bio/bg.png';
+import bioBgLow from './bio/bglow.png';
+import bioFg from './bio/fg.png';
+
 export {
   sun,
   moon,
@@ -31,6 +36,7 @@ export {
 
   downloadDark,
   downloadLight,
+  DownloadSvg,
 
   thumbsup,
   ringmeup,
@@ -44,4 +50,8 @@ export {
   twitter,
   whatsapp,
   youtube,
+
+  bioBg,
+  bioBgLow,
+  bioFg,
 };
