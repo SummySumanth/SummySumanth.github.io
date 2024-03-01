@@ -5,7 +5,7 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
-const apiRoutes = require('./app/backend/routes');
+const apiRoutes = require('./backend/routes');
 
 const app = express();
 const PORT = 8080;
@@ -36,14 +36,14 @@ const initializeServer = () => {
 initializeServer();
 
 // Serve static assets (CSS, JS, images, etc.) from the 'dist' folder
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, './../dist')));
 
 // API routes
 app.use('/api', apiRoutes);
 
 // Middleware to serve 'index.html' for all other routes
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+  res.sendFile(path.join(__dirname, './../dist', 'index.html'));
 });
 
 app.listen(process.env.PORT || PORT, () => {
