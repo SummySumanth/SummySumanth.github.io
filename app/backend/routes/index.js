@@ -8,6 +8,11 @@ router.get('/test', (request, response) => {
   response.send('Hello from the other side !');
 });
 
+router.get('/test-env-keys', (request, response) => {
+  console.log('###### PRINTING ENV KEYS ######', process.env.FOO);
+  response.send(process.env);
+});
+
 router.get('/download/:filename', downloader);
 
 module.exports = router;

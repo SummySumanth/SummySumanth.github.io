@@ -491,7 +491,10 @@ __pycache__/
 
 # dist files
 ## ignore all files and folders in distww
+# dist folder
 dist/*
+/dist/*
+
 
 ### VisualStudio Patch ###
 # By default, sensitive information, such as encrypted password

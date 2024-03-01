@@ -39,6 +39,9 @@ jobs:
           version: v1
           project_id: ${{ secrets.GCP_PROJECT }}
           credentials: ${{ secrets.GCP_CREDENTIALS }}  
+          env_vars: |-
+            FOO=bar
+            ZIP=zap
           
       - name: Testing Deployment Job
         run: curl "${{ steps.deploy.outputs.url }}"
