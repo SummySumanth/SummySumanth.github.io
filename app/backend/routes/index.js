@@ -9,7 +9,7 @@ router.get('/test', (request, response) => {
 });
 
 router.get('/test-env-keys', (request, response) => {
-  console.log('###### PRINTING ENV KEYS ######', process.env.FOO);
+  console.log('###### PRINTING ENV KEYS ######', process.env);
   response.send(process.env);
 });
 
