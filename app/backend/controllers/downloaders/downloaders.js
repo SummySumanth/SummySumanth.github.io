@@ -3,10 +3,8 @@ const path = require('path');
 
 const downloader = (req, res) => {
   let src;
-  console.log('file name is ', req.params.filename);
   switch (req.params.filename) {
     case 'resume':
-      console.log('downloading resume');
       src = fs.createReadStream(path.join(__dirname, '../../storage/pdf/sumanth_resume.pdf'));
       res.writeHead(200, {
         'Content-Type': 'application/pdf',
@@ -17,7 +15,6 @@ const downloader = (req, res) => {
       src.pipe(res);
       break;
     case 'vcard':
-      console.log('downloading vcard');
       src = fs.createReadStream(path.join(__dirname, '../../storage/vcard/vcard.vcf'));
       res.writeHead(200, {
         'Content-Type': 'application/pdf',

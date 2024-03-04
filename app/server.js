@@ -1,55 +1,21 @@
 const express = require('express');
 const path = require('path');
-const axios = require('axios');
 const dotenv = require('dotenv');
-const { SecretManagerServiceClient } = require('@google-cloud/secret-manager');
+
+global.applicationSecrets = require('./backend/utils/secrets');
 
 dotenv.config();
-
+const app = express();
 const apiRoutes = require('./backend/routes');
 
-const app = express();
 const PORT = 8080;
-
-const mediumToken = '216323bc4436c388b91c0be265435515d0ed253a492cfc1d5673a942d1b602a58';
-
-const client = new SecretManagerServiceClient();
-
-async function accessSecret() {
-  const [version] = await client.accessSecretVersion({
-    name: 'projects/392632175768/secrets/medium-api-token/versions/latest',
-  });
-  const payload = version.payload.data.toString('utf8');
-  console.log(`Secret data: ${payload}`);
-}
-
-accessSecret();
-
-const initializeServer = () => {
-  console.log('🏁 ### INITIALISING SERVER');
-
-  console.log('📡 ### Fetching Medium User Profile');
-  axios({
-    method: 'get',
-    url: 'https://api.medium.com/v1/me',
-    headers: {
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
-      'Accept-Charset': 'utf-8',
-      authorization: `Bearer ${mediumToken}`,
-    },
-    // : `Bearer ${mediumToken}`,
-  }).then((response) => {
-    console.log('🟢 Medium API response:', response.data);
-  }).catch((error) => {
-    console.log('❗️ Medium API error:', error);
-  });
-};
-
-initializeServer();
 
 // Serve static assets (CSS, JS, images, etc.) from the 'dist' folder
 app.use(express.static(path.join(__dirname, './../dist')));
+
+app.get('/health', (req, res) => {
+  res.send('Server is healthy');
+});
 
 // API routes
 app.use('/api', apiRoutes);
@@ -60,6 +26,10 @@ app.get('*', (req, res) => {
 });
 
 app.listen(process.env.PORT || PORT, () => {
-  console.clear();
-  console.log(`Server is now running at port ${PORT} on localhost successfully`);
+  console.log(`🚀 Server is now running at port ${PORT} on localhost successfully - Current Environment Mode: ${global.applicationSecrets.NODE_ENV}`);
+
+  console.table({
+    PORT,
+    'Environment Type': global.applicationSecrets.NODE_ENV,
+  });
 });
