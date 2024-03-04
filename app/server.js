@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const axios = require('axios');
 const dotenv = require('dotenv');
+const { SecretManagerServiceClient } = require('@google-cloud/secret-manager');
 
 dotenv.config();
 
@@ -11,6 +12,18 @@ const app = express();
 const PORT = 8080;
 
 const mediumToken = '216323bc4436c388b91c0be265435515d0ed253a492cfc1d5673a942d1b602a58';
+
+const client = new SecretManagerServiceClient();
+
+async function accessSecret() {
+  const [version] = await client.accessSecretVersion({
+    name: 'projects/392632175768/secrets/medium-api-token/versions/latest',
+  });
+  const payload = version.payload.data.toString('utf8');
+  console.log(`Secret data: ${payload}`);
+}
+
+accessSecret();
 
 const initializeServer = () => {
   console.log('🏁 ### INITIALISING SERVER');
