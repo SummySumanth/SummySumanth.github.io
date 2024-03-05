@@ -1,17 +1,26 @@
 const express = require('express');
 const path = require('path');
 const dotenv = require('dotenv');
+const cors = require('cors');
 
-global.applicationSecrets = require('./backend/utils/secrets');
+global.applicationSecrets = require('./app/backend/utils/secrets');
 
 dotenv.config();
 const app = express();
-const apiRoutes = require('./backend/routes');
+
+const corsOptions = {
+  origin: ['http://localhost:5001', 'https://summy.dev', 'https://www.summy.dev', 'https://summydev.github.io', 'https://summydev.github.io/summy.dev/'],
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
+
+const apiRoutes = require('./app/backend/routes');
 
 const PORT = 8080;
 
 // Serve static assets (CSS, JS, images, etc.) from the 'dist' folder
-app.use(express.static(path.join(__dirname, './../dist')));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 app.get('/health', (req, res) => {
   res.send('Server is healthy');
@@ -22,7 +31,8 @@ app.use('/api', apiRoutes);
 
 // Middleware to serve 'index.html' for all other routes
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, './../dist', 'index.html'));
+  console.log('reaching WILDCARD route', req);
+  res.sendFile(path.join(__dirname, './dist', 'index.html'));
 });
 
 app.listen(process.env.PORT || PORT, () => {

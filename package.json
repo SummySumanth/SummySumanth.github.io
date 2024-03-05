@@ -4,12 +4,11 @@
   "description": "Portfolio website of summy",
   "main": "server.js",
   "scripts": {
-    "watch": "nodemon ./app/server.js",
-    "start": "node ./app/server.js",
+    "watch": "nodemon server.js",
+    "start": "node server.js",
     "prestart": "npm run build",
-    "build": "webpack --config webpack.config.js",
-    "be": "nodemon server.js",
-    "fe": "webpack serve --hot",
+    "build": "NODE_ENV=production webpack --config webpack.config.js",
+    "fe": "NODE_ENV=development webpack serve --hot",
     "test": "jest"
   },
   "repository": {
@@ -38,6 +37,7 @@
     "clean-webpack-plugin": "^4.0.0",
     "compression-webpack-plugin": "^10.0.0",
     "css-loader": "^6.5.1",
+    "dotenv-webpack": "^8.0.1",
     "eslint": "^8.45.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-import-resolver-webpack": "^0.13.2",
@@ -74,11 +74,13 @@
   "dependencies": {
     "@google-cloud/secret-manager": "^5.1.0",
     "axios": "^1.4.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "dotenv-expand": "^11.0.6",
     "express": "^4.17.2",
     "express-static-gzip": "^2.1.7",
     "framer-motion": "^10.13.0",
+    "html-to-json-converter-44": "^1.0.2",
     "postcss-nested": "^5.0.6",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",

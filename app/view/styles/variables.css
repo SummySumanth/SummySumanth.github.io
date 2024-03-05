@@ -90,6 +90,7 @@
 }
 
 :root[data-theme="dark"] {
+  color-scheme: dark;
   --color-blue: var(--dark-blue);
   --color-brown: var(--dark-brown);
   --color-cyan: var(--dark-cyan);
@@ -130,6 +131,7 @@
  }
  
  :root[data-theme="light"] {
+    color-scheme: light;
     --color-blue: var(--light-blue);
     --color-brown: var(--light-brown);
     --color-cyan: var(--light-cyan);
