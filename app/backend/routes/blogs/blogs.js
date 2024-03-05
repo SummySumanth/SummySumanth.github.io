@@ -1,18 +1,16 @@
 const express = require('express');
-const fetchBlogDetails = require('../../controllers/blogs/fetchBlogDetails');
+
+const { fetchBlogsList } = require('../../controllers/blogs/fetchBlogDetails');
 
 const router = express.Router({ mergeParams: true });
 
 router.get('/getBlogsList', (request, response) => {
-  fetchBlogDetails()
+  fetchBlogsList()
     .then((res) => {
-      response.send(res.data);
+      response.send(res);
     })
     .catch((err) => {
-      response.send({
-        message: 'Error in fetching blog details',
-        errorFromApi: err,
-      });
+      response.send(new Error(err));
     });
 });
 

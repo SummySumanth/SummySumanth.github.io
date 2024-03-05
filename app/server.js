@@ -26,6 +26,9 @@ app.get('*', (req, res) => {
 });
 
 app.listen(process.env.PORT || PORT, () => {
+  if (global.applicationSecrets.NODE_ENV === 'development') {
+    console.clear();
+  }
   console.log(`🚀 Server is now running at port ${PORT} on localhost successfully - Current Environment Mode: ${global.applicationSecrets.NODE_ENV}`);
 
   console.table({
