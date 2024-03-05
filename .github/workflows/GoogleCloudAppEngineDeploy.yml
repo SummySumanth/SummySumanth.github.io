@@ -39,9 +39,6 @@ jobs:
           version: v1
           project_id: ${{ secrets.GCP_PROJECT }}
           credentials: ${{ secrets.GCP_CREDENTIALS }}  
-          env_vars:
-            summy:helloworld
-            summyKEY:hellopluto
           
       - name: Testing Deployment Job
         run: curl "${{ steps.deploy.outputs.url }}"

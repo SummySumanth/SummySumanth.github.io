@@ -13,14 +13,17 @@ const corsOptions = {
   optionsSuccessStatus: 200,
 };
 
-app.use(cors(corsOptions));
-
 const apiRoutes = require('./app/backend/routes');
 
 const PORT = 8080;
 
+
 // Serve static assets (CSS, JS, images, etc.) from the 'dist' folder
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, './dist')));
+
+
+// To allow cross-origin requests and safely handle CORS - Cross-Origin Resource Sharing
+app.use(cors(corsOptions));
 
 app.get('/health', (req, res) => {
   res.send('Server is healthy');
