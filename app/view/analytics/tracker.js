@@ -8,7 +8,7 @@ const trackEvent = ({ eventName, values }) => {
 
   console.log('Tracking event 📡 ', eventName, values);
   window.gtag('event', eventName, {
-    values,
+    ...values,
   });
 };
 
