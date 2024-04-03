@@ -9,7 +9,7 @@ dotenv.config();
 const app = express();
 
 const corsOptions = {
-  origin: ['http://localhost:5001', 'https://summy.dev', 'https://www.summy.dev', 'https://summydev.github.io', 'https://summydev.github.io/summy.dev/'],
+  origin: ['http://localhost:5001', 'http://localhost:8080', 'https://summy.dev', 'https://www.summy.dev', 'https://summydev.github.io', 'https://summydev.github.io/summy.dev/'],
   optionsSuccessStatus: 200,
 };
 
@@ -17,10 +17,8 @@ const apiRoutes = require('./app/backend/routes');
 
 const PORT = 8080;
 
-
 // Serve static assets (CSS, JS, images, etc.) from the 'dist' folder
 app.use(express.static(path.join(__dirname, './dist')));
-
 
 // To allow cross-origin requests and safely handle CORS - Cross-Origin Resource Sharing
 app.use(cors(corsOptions));

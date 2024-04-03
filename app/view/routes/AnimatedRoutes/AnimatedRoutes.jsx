@@ -7,6 +7,8 @@ import {
 } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
+import trackEvent, { EVENT_TYPES } from '../../analytics/tracker';
+
 import TopBar from '../../components/TopBar/TopBar';
 
 import Blogs from '../../pages/Blogs/Blogs';
@@ -28,6 +30,13 @@ const AnimatedRoutes = () => {
 
   const downloadResume = () => {
     window.location.assign(`${window.location.origin}/api/download/resume`);
+
+    trackEvent({
+      eventName: EVENT_TYPES.DOWNLOAD,
+      values: {
+        type: 'resume',
+      },
+    });
   };
 
   useEffect(() => {

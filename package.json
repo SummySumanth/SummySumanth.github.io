@@ -8,6 +8,7 @@
     "start": "node server.js",
     "prestart": "npm run build",
     "build": "NODE_ENV=production webpack --config webpack.config.js",
+    "buildforlocal": "NODE_ENV=production webpack --config webpack.config.js",
     "fe": "NODE_ENV=development webpack serve --hot",
     "test": "jest"
   },
