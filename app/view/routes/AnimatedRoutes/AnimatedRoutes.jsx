@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
-import trackEvent, { EVENT_TYPES } from '../../analytics/tracker';
+import { trackEvent, EVENT_TYPES } from '../../analytics/tracker';
 
 import TopBar from '../../components/TopBar/TopBar';
 
@@ -33,9 +33,7 @@ const AnimatedRoutes = () => {
 
     trackEvent({
       eventName: EVENT_TYPES.DOWNLOAD,
-      values: {
-        type: 'resume',
-      },
+      values: 'Resume',
     });
   };
 

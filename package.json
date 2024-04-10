@@ -82,6 +82,7 @@
     "express-static-gzip": "^2.1.7",
     "framer-motion": "^10.13.0",
     "html-to-json-converter-44": "^1.0.2",
+    "mixpanel-browser": "^2.49.0",
     "postcss-nested": "^5.0.6",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",

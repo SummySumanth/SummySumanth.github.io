@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import { applyMiddleware, createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { createLogger } from 'redux-logger';
+import { ENV } from './configs/configs';
+import { initializeMixpanel } from './analytics/tracker';
 
 import Routes from './routes';
 
@@ -20,6 +22,10 @@ const store = createStore(
 );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+if (ENV === 'production') {
+  initializeMixpanel();
+}
 
 root.render(
   <Provider store={store}>
