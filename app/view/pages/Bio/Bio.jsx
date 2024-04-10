@@ -1,5 +1,6 @@
 import React, { useLayoutEffect } from 'react';
 import { motion } from 'framer-motion';
+import useScreenWidth from '../../hooks/useScreenDetails';
 import BrandLogo from '../../components/brandLogo/BrandLogo';
 import ParallexImage from '../../components/ParallexImage/ParallexImage';
 import { DownArrow } from '../../images/svgComponents';
@@ -11,6 +12,8 @@ import {
 import './Bio.css';
 
 const Bio = ({ showNavbar }) => {
+  const screenWidth = useScreenWidth();
+
   useLayoutEffect(() => {
     const handleScroll = (e) => {
       if (e.target.scrollTop > 400 || typeof e.target.scrollTop === 'undefined') {
@@ -41,7 +44,10 @@ const Bio = ({ showNavbar }) => {
           <BrandLogo styleName="banner-text" />
 
           <div styleName="description-text">
-            Ey yo! Thanks for showing interest in getting to know me !
+            Ey yo!
+            <br />
+            {' '}
+            Thanks for showing interest in getting to know me !
 
             <div styleName="description-text-enter">
               Scroll Down

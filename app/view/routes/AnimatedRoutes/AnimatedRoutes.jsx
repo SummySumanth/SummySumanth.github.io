@@ -49,12 +49,12 @@ const AnimatedRoutes = () => {
 
   return (
     <AnimatePresence>
-      <TopBar
+      {/* <TopBar
         changeRoute={changeRoute}
         showNavbar={showNavbar}
         downloadResume={downloadResume}
         currentRoute={location.pathname}
-      />
+      /> */}
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Bio showNavbar={setShowNavbar} />} />
         <Route path="bio" element={<Bio showNavbar={setShowNavbar} />} />

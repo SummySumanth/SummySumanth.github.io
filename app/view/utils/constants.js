@@ -1,10 +1,5 @@
-  const THEMES = {
-    dark: 'dark',
-    light: 'light'
-  }
-
-  const name = {
-    
-  };
-
-  export default THEMES;
+const THEMES = {
+  dark: 'dark',
+  light: 'light',
+};
+export default THEMES;
