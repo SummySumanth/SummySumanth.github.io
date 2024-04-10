@@ -218,7 +218,7 @@
     max-width: 200px;
     position: unset;
     transform: unset;
-    margin: 30% auto 0 auto;
+    margin: 100px auto 0 auto;
   }
   .banner-text {
     font-size: 28pt;
@@ -234,6 +234,8 @@
   }
   .bio-details-text {
     padding-left: 0;
+    margin: 100px 0 35% 0;
+    text-align: center;
   }
 
   .bio-text-header {
@@ -243,6 +245,11 @@
   .bio-text-body {
     font-size: 14pt;
     max-width: 100%;
+    text-align: center;
+  }
+
+  .bio-details-image-container {
+    margin-top: 100px
   }
   .downloadBtn {
     /* margin: 0;

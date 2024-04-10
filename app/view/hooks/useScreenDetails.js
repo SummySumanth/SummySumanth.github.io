@@ -1,7 +1,15 @@
 import { useState, useEffect } from 'react';
 
+export const deviceTypes = {
+  DESKTOP: 'desktop',
+  TABLET_OR_LOWER: 'tabletOrLower',
+};
+
 const useScreenDetails = () => {
-  const [screenDetails, setScreenDetails] = useState(window.innerWidth);
+  const [screenDetails, setScreenDetails] = useState({
+    screenWidth: window.innerWidth,
+    deviceType: window.innerWidth < 1183 ? 'tabletOrLower' : 'desktop',
+  });
 
   useEffect(() => {
     const handleResize = () => {

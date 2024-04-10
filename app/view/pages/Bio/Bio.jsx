@@ -1,6 +1,6 @@
 import React, { useLayoutEffect } from 'react';
 import { motion } from 'framer-motion';
-import useScreenWidth from '../../hooks/useScreenDetails';
+import useScreenDetails, { deviceTypes } from '../../hooks/useScreenDetails';
 import BrandLogo from '../../components/brandLogo/BrandLogo';
 import ParallexImage from '../../components/ParallexImage/ParallexImage';
 import { DownArrow } from '../../images/svgComponents';
@@ -12,8 +12,7 @@ import {
 import './Bio.css';
 
 const Bio = ({ showNavbar }) => {
-  const screenWidth = useScreenWidth();
-
+  const screenDetails = useScreenDetails();
   useLayoutEffect(() => {
     const handleScroll = (e) => {
       if (e.target.scrollTop > 400 || typeof e.target.scrollTop === 'undefined') {
@@ -62,7 +61,9 @@ const Bio = ({ showNavbar }) => {
       <div styleName="details-block">
         <div styleName="bio-details-image-container">
           <div styleName="parallex-image-container">
-            <ParallexImage size={400} />
+            <ParallexImage
+              size={screenDetails.deviceType === deviceTypes.TABLET_OR_LOWER ? 200 : 400}
+            />
           </div>
         </div>
         <div styleName="bio-details-text">

@@ -2,8 +2,7 @@ import React from 'react';
 
 import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
 
-import { downloadDark, downloadLight, DownloadSvg } from '../../images';
-import { Download, DownloadIcon } from '../../images/svgComponents';
+import { Download } from '../../images/svgComponents';
 
 import './TopBar.css';
 
@@ -25,7 +24,7 @@ const TopBar = ({
       <input type="radio" name="nav-tabs" defaultChecked={(currentRoute === '/techstacks')} onClick={((e) => changeRoute(e.target.value))} value="techstacks" styleName="link-techstack" id="link-techstack" />
       <input type="radio" name="nav-tabs" defaultChecked={(currentRoute === '/uses')} onClick={((e) => changeRoute(e.target.value))} value="uses" styleName="link-uses" id="link-uses" />
       <input type="radio" name="nav-tabs" defaultChecked={(currentRoute === '/contact')} onClick={((e) => changeRoute(e.target.value))} value="contact" styleName="link-contact" id="link-contact" />
-      <nav styleName="navItems-container">
+      <nav id="navItems-container" styleName="navItems-container">
         <label htmlFor="link-bio" styleName="navItems navItem-bio">Bio</label>
         <label htmlFor="link-blogs" styleName="navItems navItem-blogs">Blogs</label>
         <label htmlFor="link-projects" styleName="navItems navItem-projects">Projects</label>
