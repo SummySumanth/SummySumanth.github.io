@@ -211,30 +211,53 @@
 
 
 @media (--screen-tabletOrLower) { 
+  .welcome-block {
+    align-items: flex-start;
+  }
   .avatar-img {
     max-width: 200px;
-    display: inline;
-    position: absolute;
-    top: 0px;
-    left: 50%;
-    transform: translate(-50%, -200px);
+    position: unset;
+    transform: unset;
+    margin: 100px auto 0 auto;
   }
   .banner-text {
-    font-size: 26pt;
-    /* color: red; */
+    font-size: 28pt;
   }
   .description-text {
-    font-size: 18pt;
-    padding: 22px 0 16px 0;
+    position: unset;
+    transform: unset;
+    margin: 10% 5%;
   }
 
+  .details-block {
+    flex-direction: column;
+  }
+  .bio-details-text {
+    padding-left: 0;
+    margin: 100px 0 35% 0;
+    text-align: center;
+  }
+
+  .bio-text-header {
+    font-size: 38pt;
+  }
+
+  .bio-text-body {
+    font-size: 14pt;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .bio-details-image-container {
+    margin-top: 100px
+  }
   .downloadBtn {
-    margin: 0;
+    /* margin: 0;
     border-radius: 0px;
     width: 100%;
     height: 5%;
     display: flex;
     justify-content: center;
-    background: var(--color-label);
+    background: var(--color-label); */
   }
 }
