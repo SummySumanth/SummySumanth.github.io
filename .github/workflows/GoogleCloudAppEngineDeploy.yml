@@ -42,3 +42,9 @@ jobs:
           
       - name: Testing Deployment Job
         run: curl "${{ steps.deploy.outputs.url }}"
+
+      - name: Send Push Notification
+        uses: techulus/push-github-action@1.0.0
+        env:
+          API_KEY: ${{ secrets.PUSH_NOTIFICATION_KEY }}
+          MESSAGE: "Deployment of version ${{ steps.deploy.outputs.version }} is successful"
