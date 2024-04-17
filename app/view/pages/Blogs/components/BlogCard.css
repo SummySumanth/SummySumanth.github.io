@@ -55,3 +55,25 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
+
+@media (--screen-tabletOrLower) { 
+    .container {
+        min-height: 282px;
+        height: 100%;
+    }
+    .detailsContainer {
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+        align-items: center;
+    }
+    .image {
+        max-width: 100%;
+        margin-right: 0;
+    } 
+    .textContainer {
+        padding: 14px 14px;
+        line-height: 24pt;
+    }
+}

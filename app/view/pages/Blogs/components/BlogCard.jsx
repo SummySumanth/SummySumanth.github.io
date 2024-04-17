@@ -1,4 +1,5 @@
 import React from 'react';
+import useScreenDetails, { deviceTypes } from '../../../hooks/useScreenDetails';
 import './BlogCard.css';
 
 const BlogCard = (props) => {
@@ -14,15 +15,19 @@ const BlogCard = (props) => {
           <div>
             {title}
           </div>
-          <div styleName="categoriesContainer">
-            {
-            categories.map((category) => (
-              <div styleName="category" key={category}>
-                {category}
+          {
+            (deviceTypes.TABLET_OR_LOWER === useScreenDetails().deviceType) ? null : (
+              <div styleName="categoriesContainer">
+                {
+              categories.map((category) => (
+                <div styleName="category" key={category}>
+                  {category}
+                </div>
+              ))
+            }
               </div>
-            ))
+            )
           }
-          </div>
 
         </div>
       </div>
