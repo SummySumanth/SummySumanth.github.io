@@ -5,7 +5,7 @@ const downloader = (req, res) => {
   let src;
   switch (req.params.filename) {
     case 'resume':
-      src = fs.createReadStream(path.join(__dirname, '../../storage/pdf/sumanth_resume.pdf'));
+      src = fs.createReadStream(path.join(__dirname, '../../storage/pdf/sumanth_react_dev_resume_2024.pdf'));
       res.writeHead(200, {
         'Content-Type': 'application/pdf',
         'Content-Disposition': 'attachment; filename=sumanth-react-dev-resume.pdf',
