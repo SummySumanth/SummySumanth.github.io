@@ -105,7 +105,7 @@
   
   .navbar-desktop {
     /* background-color: white; */
-    max-width: 800px;
+    max-width: 340px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -179,7 +179,7 @@
   height: 2px;
   background-color: var(--color-label);
   border-radius: 2px;
-  width: calc(100%/7);
+  width: calc(100%/3);
   z-index: 1;
   left: 0;
   bottom: 0;
@@ -193,7 +193,7 @@
   .link-blogs:checked ~ nav .slider {
     transform: translateX(100%);
   } 
-  
+/*   
   .link-projects:checked ~ nav .slider {
     transform: translateX(200%);
   } 
@@ -208,10 +208,10 @@
   
   .link-uses:checked ~ nav .slider {
     transform: translateX(500%);
-  } 
+  }  */
   
   .link-contact:checked ~ nav .slider {
-    transform: translateX(600%);
+    transform: translateX(200%);
   } 
 
   .resumeDownloadBtn {

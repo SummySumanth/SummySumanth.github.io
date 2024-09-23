@@ -115,10 +115,10 @@ const TopBar = ({
         <nav id="navItems-container" styleName="navItems-container">
           <label htmlFor="link-bio" styleName="navItems navItem-bio">Bio</label>
           <label htmlFor="link-blogs" styleName="navItems navItem-blogs">Blogs</label>
-          <label htmlFor="link-projects" styleName="navItems navItem-projects">Projects</label>
+          {/* <label htmlFor="link-projects" styleName="navItems navItem-projects">Projects</label>
           <label htmlFor="link-certificates" styleName="navItems navItem-certificates">Certificates</label>
           <label htmlFor="link-techstack" styleName="navItems navItem-techstack">Tech</label>
-          <label htmlFor="link-uses" styleName="navItems navItem-uses">Uses</label>
+          <label htmlFor="link-uses" styleName="navItems navItem-uses">Uses</label> */}
           <label htmlFor="link-contact" styleName="navItems navItem-contact">Contact</label>
           <div styleName="slider" />
         </nav>

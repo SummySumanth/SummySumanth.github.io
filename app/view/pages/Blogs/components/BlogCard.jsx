@@ -9,7 +9,7 @@ const BlogCard = (props) => {
   } = props;
   return (
     <a target="_blank" styleName="container" href={link} rel="noreferrer">
-      
+      {/* <img styleName="imageBG" src={imageSrc} alt={title} /> */}
       <div styleName="detailsContainer">
         <img styleName="image" src={imageSrc} alt={title} />
         <div styleName="textContainer">
