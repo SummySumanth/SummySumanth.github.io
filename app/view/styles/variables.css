@@ -21,6 +21,7 @@
   --dark-gray-4: #3A3A3C;
   --dark-gray-5: #2C2C2E;
   --dark-gray-6: #1C1C1E;
+  --dark-gray-6-translusent: #0f0f0fd6;
   --dark-label: #FFFFFF;
   --dark-secondary-label: #F3F3F8;
   --dark-tertiary-label: #F8F8FC;
@@ -59,6 +60,7 @@
   --light-gray-4: #D1D1D6;
   --light-gray-5: #E5E5EA;
   --light-gray-6: #F2F2F7;
+  --light-gray-6-translusent: #f2f2f787;
   --light-label: #000000;
   --light-secondary-label: #8A8A8E;
   --light-tertiary-label: #C4C4C6;
@@ -109,6 +111,7 @@
   --color-gray-4: var(--dark-gray-4);
   --color-gray-5: var(--dark-gray-5);
   --color-gray-6: var(--dark-gray-6);
+  --color-gray-6-translusent: var(--dark-gray-6-translusent);
   --color-label: var(--dark-label);
   --color-label-inverted: var(--light-label);
   --color-secondary-label: var(--dark-secondary-label);
@@ -150,6 +153,7 @@
     --color-gray-4: var(--light-gray-4);
     --color-gray-5: var(--light-gray-5);
     --color-gray-6: var(--light-gray-6);
+    --color-gray-6-translusent: var(--light-gray-6-translusent);
     --color-label: var(--light-label);
     --color-label-inverted: var(--dark-label);
     --color-secondary-label: var(--light-secondary-label);

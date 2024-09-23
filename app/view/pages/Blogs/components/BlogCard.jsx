@@ -1,6 +1,7 @@
 import React from 'react';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import useScreenDetails, { deviceTypes } from '../../../hooks/useScreenDetails';
-import './BlogCard.css';
+import styles from './BlogCard.css';
 
 const BlogCard = (props) => {
   const {
@@ -12,9 +13,13 @@ const BlogCard = (props) => {
       <div styleName="detailsContainer">
         <img styleName="image" src={imageSrc} alt={title} />
         <div styleName="textContainer">
+          <div styleName="topLineText">
           <div>
             {title}
           </div>
+          <OpenInNewIcon alt="Open Blog" className={styles.openInNewIcon}/>
+          </div>
+          
           {
             (deviceTypes.TABLET_OR_LOWER === useScreenDetails().deviceType) ? null : (
               <div styleName="categoriesContainer">

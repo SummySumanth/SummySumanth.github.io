@@ -73,8 +73,11 @@
     "webpack-dev-server": "^4.7.3"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
     "@google-cloud/secret-manager": "^5.1.0",
     "@mui/icons-material": "^6.1.1",
+    "@mui/material": "^6.1.1",
     "axios": "^1.4.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
