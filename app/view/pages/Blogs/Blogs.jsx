@@ -11,7 +11,6 @@ const Blogs = () => {
     setLoading(true);
     getBlogsList()
       .then((response) => {
-        console.log('blogs list is ', response);
         setBlogsList(response);
       })
       .catch((error) => {
