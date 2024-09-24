@@ -4,13 +4,12 @@
     margin-top: 100px;
     height: 100vh;
     font-size: 3rem;
-    /* background-color: #f5f5f5; */
     padding: 0 25%;
 }
 
 @media (--screen-tabletOrLower) {
     .page-container {
-        padding: 0 10%;
+        padding: 0 5%;
         height: unset;
     }
 }

@@ -27,3 +27,6 @@ canvas{
   scrollbar-width: none;  /* Firefox */
 }
 
+* {
+  box-sizing: border-box;
+}
