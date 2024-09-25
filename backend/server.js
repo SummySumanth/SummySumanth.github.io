@@ -3,7 +3,7 @@ const path = require('path');
 const dotenv = require('dotenv');
 const cors = require('cors');
 
-global.applicationSecrets = require('./app/backend/utils/secrets');
+global.applicationSecrets = require('./utils/secrets');
 
 dotenv.config();
 const app = express();
@@ -13,7 +13,7 @@ const corsOptions = {
   optionsSuccessStatus: 200,
 };
 
-const apiRoutes = require('./app/backend/routes');
+const apiRoutes = require('./routes');
 
 const PORT = 8080;
 
