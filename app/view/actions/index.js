@@ -1,6 +1,9 @@
 export const actionTypes = {
   SET_THEME: 'SET_THEME',
 };
+if (typeof global === 'undefined') {
+  window.global = window;
+}
 
 Object.defineProperty(window, 'localStorage', {
   value: global.localStorage, configurable: true, enumerable: true, writable: true,

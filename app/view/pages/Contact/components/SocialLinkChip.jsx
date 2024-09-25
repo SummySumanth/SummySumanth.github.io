@@ -6,14 +6,14 @@ function SocialLinkChip({ social, onImageLoadCallback }) {
     siteName, link, icon,
   } = social;
   return (
-    <a key={siteName} styleName="container" href={link} target="_blank" rel="noreferrer">
+    <a key={siteName} className="container" href={link} target="_blank" rel="noreferrer">
       <img
-        styleName="logo"
+        className="logo"
         src={icon}
         alt={siteName}
         onLoad={onImageLoadCallback}
       />
-      <div styleName="siteName">{siteName}</div>
+      <div className="siteName">{siteName}</div>
     </a>
   );
 }

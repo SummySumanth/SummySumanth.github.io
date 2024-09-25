@@ -3,7 +3,7 @@ import './Links.css';
 
 function Links({links}) {
   return (
-    <div styleName="links-container">
+    <div className="links-container">
       {
         links.map(item => (
           <a key={item.link}>

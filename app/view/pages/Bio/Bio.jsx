@@ -37,44 +37,44 @@ const Bio = ({ showNavbar }) => {
         opacity: 0,
       }}
     >
-      <div styleName="welcome-block">
-        <div styleName="welcome-banner">
-          <img styleName="avatar-img" src={fistBump} alt="avatar" />
-          <BrandLogo styleName="banner-text" />
+      <div className="welcome-block">
+        <div className="welcome-banner">
+          <img className="avatar-img" src={fistBump} alt="avatar" />
+          <BrandLogo className="banner-text" />
 
-          <div styleName="description-text">
+          <div className="description-text">
             Ey yo!
             <br />
             {' '}
             Thanks for showing interest in getting to know me !
 
-            <div styleName="description-text-enter">
+            <div className="description-text-enter">
               Scroll Down
             </div>
           </div>
         </div>
-        <div styleName="down-arrow-icon anim-fade-in ">
+        <div className="down-arrow-icon anim-fade-in ">
           <DownArrow />
         </div>
 
       </div>
-      <div styleName="details-block">
-        <div styleName="bio-details-image-container">
-          <div styleName="parallex-image-container">
+      <div className="details-block">
+        <div className="bio-details-image-container">
+          <div className="parallex-image-container">
             <ParallexImage
               size={screenDetails.deviceType === deviceTypes.TABLET_OR_LOWER ? 200 : 400}
             />
           </div>
         </div>
-        <div styleName="bio-details-text">
-          <div styleName="bio-text-header">
+        <div className="bio-details-text">
+          <div className="bio-text-header">
             about me
           </div>
-          <div styleName="bio-text-body">
-            <div styleName="bio-text-body-block">
+          <div className="bio-text-body">
+            <div className="bio-text-body-block">
               I&apos;m a Frontend Dev and UX Enthusiast From Bengaluru, India.
             </div>
-            <div styleName="bio-text-body-block">
+            <div className="bio-text-body-block">
               I love quirky designs, minimalistic interfaces, and clean code.
               I&apos;ve have been working in the industry for over 6 years now.
               Currently working at
@@ -83,7 +83,7 @@ const Bio = ({ showNavbar }) => {
               {' '}
               as a Software Engineer.
             </div>
-            <div styleName="bio-text-body-block">
+            <div className="bio-text-body-block">
               Apart from work, I love to take photos and make video contents,
               That&apos;s where my first love for designing and building things started I believe.
             </div>

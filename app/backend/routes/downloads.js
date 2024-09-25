@@ -1,4 +1,4 @@
 
-const { downloader } = require('../controllers/downloaders/downloaders');
+import { downloader } from '../controllers/downloaders/downloaders';
 
-module.exports = downloader;
+export default downloader;

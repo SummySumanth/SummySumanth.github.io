@@ -1,9 +1,16 @@
-const express = require('express');
-const path = require('path');
-const dotenv = require('dotenv');
-const cors = require('cors');
+// Libs
+import express from 'express';
+import path from 'path';
+import dotenv from 'dotenv';
+import cors from 'cors';
 
-global.applicationSecrets = require('./app/backend/utils/secrets');
+// Utils
+import secrets from './app/backend/utils/secrets.js';
+import apiRoutes from './app/backend/routes/index.js';
+
+const global = {
+  applicationSecrets: secrets,
+};
 
 dotenv.config();
 const app = express();
@@ -13,7 +20,6 @@ const corsOptions = {
   optionsSuccessStatus: 200,
 };
 
-const apiRoutes = require('./app/backend/routes');
 
 const PORT = 8080;
 

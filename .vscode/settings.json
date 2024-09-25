@@ -26,5 +26,15 @@
         "titleBar.inactiveBackground": "#1a1a1a99",
         "titleBar.inactiveForeground": "#e7e7e799"
     },
-    "peacock.color": "#1a1a1a"
+    "peacock.color": "#1a1a1a",
+    "eslint.options": {
+        "overrideConfigFile": "./eslint.config.js"  // Path to your ESLint configuration file
+    },
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",  // Enable ESLint for React JSX files
+        "typescript",   // Enable ESLint for TypeScript files
+        "typescriptreact"  // Enable ESLint for React TSX files
+    ],
+    "eslint.run": "onSave"  // Run ESLint on save
 }

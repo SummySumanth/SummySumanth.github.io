@@ -1,4 +1,4 @@
-const { SecretManagerServiceClient } = require('@google-cloud/secret-manager');
+import { SecretManagerServiceClient } from '@google-cloud/secret-manager';
 
 const client = new SecretManagerServiceClient();
 
@@ -27,5 +27,5 @@ function Environment(NODE_ENV) {
   }
   this.NODE_ENV = NODE_ENV || 'development';
 }
-
-module.exports = new Environment(process.env.NODE_ENV);
+const env = new Environment(process.env.NODE_ENV);
+export default env;

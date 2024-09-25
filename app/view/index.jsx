@@ -30,7 +30,7 @@ if (ENV === 'production') {
 root.render(
   <Provider store={store}>
     <BackgroundAnimationCanvas />
-    <div styleName="container">
+    <div className="container">
       <Routes />
     </div>
   </Provider>,

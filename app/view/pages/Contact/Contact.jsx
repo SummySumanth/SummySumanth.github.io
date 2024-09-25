@@ -24,9 +24,9 @@ const Contact = () => {
   };
 
   return (
-    <div styleName="page-container">
-      <div styleName="container ">
-        <div styleName={`social-links-container ${showContentFlag ? 'pop-in-animation ' : ''}`}>
+    <div className="page-container">
+      <div className="container ">
+        <div className={`social-links-container ${showContentFlag ? 'pop-in-animation ' : ''}`}>
           {
                 socialLinks.map((item) => (
                   <SocialLinkChip
@@ -38,12 +38,12 @@ const Contact = () => {
               }
         </div>
         <RoundedBtn
-          styleName={`downloadBtn  ${showContentFlag ? 'pop-in-animation ' : ''}`}
+          className={`downloadBtn  ${showContentFlag ? 'pop-in-animation ' : ''}`}
           ctaText="Download VCard"
           cta={() => downloadVcard}
         />
-        <div styleName="imageContainer">
-          <img draggable={false} styleName="avatar-img" src={ringmeup} alt="emoji" />
+        <div className="imageContainer">
+          <img draggable={false} className="avatar-img" src={ringmeup} alt="emoji" />
         </div>
       </div>
     </div>

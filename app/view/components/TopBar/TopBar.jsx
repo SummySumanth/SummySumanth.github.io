@@ -11,22 +11,22 @@ const TopBar = ({
 }) => {
   const [showNavItems, setShowNavItems] = useState(false);
   return (
-    <div styleName={`navbar ${showNavbar ? 'show' : ''}`}>
-      <div styleName="navbar-desktop">
+    <div className={`navbar ${showNavbar ? 'show' : ''}`}>
+      <div className="navbar-desktop">
         <input
           type="checkbox"
           name="toggle-navbar"
           id="toggle-navbar"
-          styleName="toggle-navbar"
+          className="toggle-navbar"
           checked={showNavItems}
           onChange={(e) => {
             setShowNavItems(!showNavItems);
           }}
         />
-        <label htmlFor="toggle-navbar" styleName="toggle-label">
-          <div styleName="barTop" />
-          <div styleName="barMiddle" />
-          <div styleName="barBottom" />
+        <label htmlFor="toggle-navbar" className="toggle-label">
+          <div className="barTop" />
+          <div className="barMiddle" />
+          <div className="barBottom" />
         </label>
         <input
           type="radio"
@@ -37,7 +37,7 @@ const TopBar = ({
             changeRoute(e.target.value);
           })}
           value="bio"
-          styleName="link-bio"
+          className="link-bio"
           id="link-bio"
         />
         <input
@@ -49,7 +49,7 @@ const TopBar = ({
             changeRoute(e.target.value);
           })}
           value="blogs"
-          styleName="link-blogs"
+          className="link-blogs"
           id="link-blogs"
         />
         <input
@@ -61,7 +61,7 @@ const TopBar = ({
             changeRoute(e.target.value);
           })}
           value="projects"
-          styleName="link-projects"
+          className="link-projects"
           id="link-projects"
         />
         <input
@@ -73,7 +73,7 @@ const TopBar = ({
             changeRoute(e.target.value);
           })}
           value="certificates"
-          styleName="link-certificates"
+          className="link-certificates"
           id="link-certificates"
         />
         <input
@@ -85,7 +85,7 @@ const TopBar = ({
             changeRoute(e.target.value);
           })}
           value="techstacks"
-          styleName="link-techstack"
+          className="link-techstack"
           id="link-techstack"
         />
         <input
@@ -97,7 +97,7 @@ const TopBar = ({
             changeRoute(e.target.value);
           })}
           value="uses"
-          styleName="link-uses"
+          className="link-uses"
           id="link-uses"
         />
         <input
@@ -109,32 +109,32 @@ const TopBar = ({
             changeRoute(e.target.value);
           })}
           value="contact"
-          styleName="link-contact"
+          className="link-contact"
           id="link-contact"
         />
-        <nav id="navItems-container" styleName="navItems-container">
-          <label htmlFor="link-bio" styleName="navItems navItem-bio">Bio</label>
-          <label htmlFor="link-blogs" styleName="navItems navItem-blogs">Blogs</label>
-          {/* <label htmlFor="link-projects" styleName="navItems navItem-projects">Projects</label>
-          <label htmlFor="link-certificates" styleName="navItems navItem-certificates">Certificates</label>
-          <label htmlFor="link-techstack" styleName="navItems navItem-techstack">Tech</label>
-          <label htmlFor="link-uses" styleName="navItems navItem-uses">Uses</label> */}
-          <label htmlFor="link-contact" styleName="navItems navItem-contact">Contact</label>
-          <div styleName="slider" />
+        <nav id="navItems-container" className="navItems-container">
+          <label htmlFor="link-bio" className="navItems navItem-bio">Bio</label>
+          <label htmlFor="link-blogs" className="navItems navItem-blogs">Blogs</label>
+          {/* <label htmlFor="link-projects" className="navItems navItem-projects">Projects</label>
+          <label htmlFor="link-certificates" className="navItems navItem-certificates">Certificates</label>
+          <label htmlFor="link-techstack" className="navItems navItem-techstack">Tech</label>
+          <label htmlFor="link-uses" className="navItems navItem-uses">Uses</label> */}
+          <label htmlFor="link-contact" className="navItems navItem-contact">Contact</label>
+          <div className="slider" />
         </nav>
       </div>
 
-      <div styleName="navbar-actions">
-        <div styleName="resumeDownloadBtn">
-          {/* <img styleName="downloadicon" src={downloadSvg} alt="download btn" /> */}
+      <div className="navbar-actions">
+        <div className="resumeDownloadBtn">
+          {/* <img className="downloadicon" src={downloadSvg} alt="download btn" /> */}
           {/* <DownloadSvg /> */}
-          <div styleName="downloadicon">
+          <div className="downloadicon">
 
             <Download />
             {/* <DownloadSvg /> */}
           </div>
 
-          <div styleName="downloadText" onClick={downloadResume}>Download Resume</div>
+          <div className="downloadText" onClick={downloadResume}>Download Resume</div>
         </div>
         <ThemeSwitcher />
       </div>

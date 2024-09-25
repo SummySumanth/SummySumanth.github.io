@@ -1,29 +1,28 @@
 import React from 'react';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-import styles from './BlogCard.css';
+import styles from './BlogCard.module.css';
 
 const BlogCard = (props) => {
   const {
     categories, link, title, imageSrc,
   } = props;
   return (
-    <a target="_blank" styleName="container" href={link} rel="noreferrer">
-      <div styleName="detailsContainer">        
-        <img styleName="image" src={imageSrc} alt={title} />        
-        <div styleName="textContainer">
-          <div styleName="topLineText">
-          <div styleName="blogTitle">
+    <a target="_blank" className={styles.container} href={link} rel="noreferrer">
+      <div className={styles.detailsContainer}>        
+        <img className="image" src={imageSrc} alt={title} />        
+        <div className="textContainer">
+          <div className="topLineText">
+          <div className="blogTitle">
             {title}
           </div>
           <OpenInNewIcon alt="Open Blog" className={styles.openInNewIcon}/>
           </div>
-          
           {
             (
-              <div styleName="categoriesContainer">
+              <div className="categoriesContainer">
                 {
               categories.map((category) => (
-                <div styleName="category" key={category}>
+                <div className="category" key={category}>
                   {category}
                 </div>
               ))
@@ -31,7 +30,6 @@ const BlogCard = (props) => {
               </div>
             )
           }
-
         </div>
       </div>
     </a>

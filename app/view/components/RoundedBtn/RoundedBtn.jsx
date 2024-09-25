@@ -10,9 +10,9 @@ function RoundedBtn(props) {
   const theme = window.localStorage.getItem('theme');
   const { ctaText, cta, className } = props;
   return (
-    <button type="button" className={className} styleName="container" onClick={cta}>
+    <button type="button" className={`${className} container`} onClick={cta}>
       
-      <div styleName="text">
+      <div className="text">
         {ctaText}
       </div>
     </button>

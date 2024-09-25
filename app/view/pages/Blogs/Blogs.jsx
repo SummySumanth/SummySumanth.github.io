@@ -21,7 +21,7 @@ const Blogs = () => {
       }, []);
   }, []);
   return (
-    <div styleName="page-container">
+    <div className="page-container">
       {
         blogsList.map((blog) => (
           <BlogCard

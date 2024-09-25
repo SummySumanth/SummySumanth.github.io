@@ -3,14 +3,14 @@ import styles from './NavList.css';
 
 export default function NavList({hide}) {
   return (
-  <div styleName={`ham-checkbox-view ${hide ? `slide-out` : `slide-in`}`}>
-    <div styleName="ham-nav-item">Profile</div>
-    <div styleName="ham-nav-item">Blogs</div>
-    <div styleName="ham-nav-item">Projects</div>
-    <div styleName="ham-nav-item">Techstack</div>
-    <div styleName="ham-nav-item">Certificates</div>
-    <div styleName="ham-nav-item">Social Media</div>
-    <div styleName="ham-nav-item">Contact</div>
+  <div className={`ham-checkbox-view ${hide ? `slide-out` : `slide-in`}`}>
+    <div className="ham-nav-item">Profile</div>
+    <div className="ham-nav-item">Blogs</div>
+    <div className="ham-nav-item">Projects</div>
+    <div className="ham-nav-item">Techstack</div>
+    <div className="ham-nav-item">Certificates</div>
+    <div className="ham-nav-item">Social Media</div>
+    <div className="ham-nav-item">Contact</div>
   </div>
   );
 }

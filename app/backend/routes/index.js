@@ -1,12 +1,11 @@
-const express = require('express');
-const blogs = require('./blogs/blogs');
+import express from 'express';
+import downloader  from './downloads.js';
+import blogs  from './blogs/blogs';
 
 const router = express.Router({ mergeParams: true });
-
-const downloader = require('./downloads');
 
 router.use('/blogs', blogs);
 
 router.get('/download/:filename', downloader);
 
-module.exports = router;
+export default router;
