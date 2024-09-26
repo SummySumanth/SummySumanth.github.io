@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import VanillaTilt from 'vanilla-tilt';
 import { bioBg, bioFg } from '../../images';
 
-import './ParallexImage.css';
+import styles from './ParallexImage.module.css';
 
 const ParallexImage = ({ size }) => {
   // const { options, ...rest } = props;
@@ -24,9 +24,9 @@ const ParallexImage = ({ size }) => {
   }, [options]);
 
   return (
-    <div ref={tilt} styleName="box" style={{ width: `${size}px`, height: `${size}px` }}>
-      <img styleName="imgBx" src={bioBg} alt="bioBg" />
-      <img styleName="contentBx" src={bioFg} alt="bioFg" />
+    <div ref={tilt} className={styles.box} style={{ width: `${size}px`, height: `${size}px` }}>
+      <img className={styles.imgBx} src={bioBg} alt="bioBg" />
+      <img className={styles.contentBx} src={bioFg} alt="bioFg" />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import WorkInProgress from '../../components/WorkInProgress';
-import './Certificates.css';
+import styles from './Certificates.module.css';
 
 const Certificates = () => (
   <WorkInProgress />

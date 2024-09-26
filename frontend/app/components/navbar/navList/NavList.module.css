@@ -1,4 +1,4 @@
-.ham-checkbox-view {
+.container {
   position: absolute;
   top: 80px;
   right: 2%;
@@ -10,7 +10,7 @@
   transform: translateY(-100%);
 }
 
-.ham-nav-item {
+.navItem {
   text-align: center;
   font-size: 20pt;
   padding: 10px;
@@ -18,11 +18,11 @@
   white-space: nowrap;
 }
 
-.slide-in {
+.slideIn {
   animation: slide-in var(--animation-speed) ease-out 0ms 1 normal forwards;
 }
 
-.slide-out {
+.slideOut {
   animation: slide-out var(--animation-speed) ease-out 0ms 1 normal forwards;
 }
 

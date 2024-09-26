@@ -1,4 +1,4 @@
-.navbar {
+.container {
     background: rgb(35 35 35 / 5%);
     /* background: blue; */
     box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
@@ -40,7 +40,7 @@
     display: none;
   }
 
-  .toggle-label {
+  .toggleLabel {
     margin: 16px;
     display: none;
   }
@@ -103,7 +103,7 @@
     display: none;
   }
   
-  .navbar-desktop {
+  .navbarDesktop {
     /* background-color: white; */
     max-width: 340px;
     width: 100%;
@@ -112,7 +112,7 @@
     justify-content: flex-end;
   }
   
-  .navbar-desktop nav {
+  .navbarDesktop nav {
     position: relative;
     display: flex;
     align-items: center;
@@ -120,7 +120,7 @@
     width: 100%;
   }
   
-  .navbar-desktop nav label {
+  .navbarDesktop nav label {
     position: relative;
     display: block;
     text-align: center;
@@ -130,7 +130,7 @@
     padding: 8px 0;
   }
 
-  .navbar-actions {
+  .navbarActions {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -146,35 +146,35 @@
     background-color: rgb(53 53 53 / 81%);
   }
   
-  .link-bio:checked ~ nav .navItem-bio {
+  .linkBio:checked ~ nav .navItemBio {
     background-color: rgb(72 72 72 / 22%)
   } 
   
-  .link-blogs:checked ~ nav .navItem-blogs {
+  .linkBlogs:checked ~ nav .navItemBlogs {
     background-color: rgb(72 72 72 / 22%)
   } 
   
-  .link-projects:checked ~ nav .navItem-projects {
+  .linkProjects:checked ~ nav .navItemProjects {
     background-color: rgb(72 72 72 / 22%)
   } 
   
-  .link-certificates:checked ~ nav .navItem-certificates {
+  .linkCertificates:checked ~ nav .navItemCertificates {
     background-color: rgb(72 72 72 / 22%)
   } 
   
-  .link-techstack:checked ~ nav .navItem-  {
+  .linkTechstack:checked ~ nav .navItemTechstack {
     background-color: rgb(72 72 72 / 22%)
   } 
   
-  .link-uses:checked ~ nav .navItem-uses {
+  .linkUses:checked ~ nav .navItemUses {
     background-color: rgb(72 72 72 / 22%)
   } 
   
-  .link-contact:checked ~ nav .navItem-contact {
+  .linkContact:checked ~ nav .navItemContact {
     background-color: rgb(72 72 72 / 22%)
   } 
   
-  .navbar-desktop nav .slider {
+  .navbarDesktop nav .slider {
   position: absolute;
   height: 2px;
   background-color: var(--color-label);
@@ -186,31 +186,31 @@
   transition: transform 400ms ease-out;
   }
   
-  .link-bio:checked ~ nav .slider {
+  .linkBio:checked ~ nav .slider {
     transform: translateX(0%);
   } 
   
-  .link-blogs:checked ~ nav .slider {
+  .linkBlogs:checked ~ nav .slider {
     transform: translateX(100%);
   } 
 /*   
-  .link-projects:checked ~ nav .slider {
+  .linkProjects:checked ~ nav .slider {
     transform: translateX(200%);
   } 
   
-  .link-certificates:checked ~ nav .slider {
+  .linkCertificates:checked ~ nav .slider {
     transform: translateX(300%);
   } 
   
-  .link-techstack:checked ~ nav .slider {
+  .linkTechstack:checked ~ nav .slider {
     transform: translateX(400%);
   } 
   
-  .link-uses:checked ~ nav .slider {
+  .linkUses:checked ~ nav .slider {
     transform: translateX(500%);
   }  */
   
-  .link-contact:checked ~ nav .slider {
+  .linkContact:checked ~ nav .slider {
     transform: translateX(200%);
   } 
 
@@ -220,26 +220,26 @@
   }
   
   @media (--screen-tabletOrLower) {
-    .navbar {
+    .container {
       justify-content: space-between;
     }
-    .navbar-desktop {
+    .navbarDesktop {
       width: unset;
     }
-    .toggle-label {
+    .toggleLabel {
       display: block;
     }
-    .navItems-container {
+    .navItemsContainer {
 
       transform: translateY(-120%) !important;
     }
-    .toggle-navbar:checked ~ .navItems-container{
+    .navbarToggle:checked ~ .navItemsCcontainer{
       transform: translateY(0%) !important;
     }
     input[name=nav-tabs]:checked ~ nav .navItems{
       background-color: transparent !important;
     }
-    .navItems-container{
+    .navItemsContainer{
       position: fixed !important;
       z-index: -9 !important;
       left: 0;
@@ -262,7 +262,6 @@
       padding: 0 !important;
       justify-content: center;
       align-items: center;
-  
     }
     .slider {
       width: 100% !important;
@@ -272,31 +271,31 @@
       top: 0;
     }
   
-    .link-bio:checked ~ nav .slider {
+    .linkBio:checked ~ nav .slider {
       transform: translateY(0%);
     } 
     
-    .link-blogs:checked ~ nav .slider {
+    .linkBlogs:checked ~ nav .slider {
       transform: translateY(100%);
     } 
     
-    .link-projects:checked ~ nav .slider {
+    .linkProjects:checked ~ nav .slider {
       transform: translateY(200%);
     } 
     
-    .link-certificates:checked ~ nav .slider {
+    .linkCertificates:checked ~ nav .slider {
       transform: translateY(300%);
     } 
-    
-    .link-techstack:checked ~ nav .slider {
+     
+    .linkTechstack:checked ~ nav .slider {
       transform: translateY(400%);
     } 
     
-    .link-uses:checked ~ nav .slider {
+    .linkUses:checked ~ nav .slider {
       transform: translateY(500%);
     } 
     
-    .link-contact:checked ~ nav .slider {
+    .linkContact:checked ~ nav .slider {
       transform: translateY(600%);
     } 
   }

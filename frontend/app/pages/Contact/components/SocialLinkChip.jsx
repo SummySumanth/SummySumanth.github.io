@@ -1,19 +1,19 @@
 import React from 'react';
-import './SocialLinkChip.css';
+import styles from './SocialLinkChip.module.css';
 
 function SocialLinkChip({ social, onImageLoadCallback }) {
   const {
     siteName, link, icon,
   } = social;
   return (
-    <a key={siteName} styleName="container" href={link} target="_blank" rel="noreferrer">
+    <a key={siteName} className={styles.container} href={link} target="_blank" rel="noreferrer">
       <img
-        styleName="logo"
+        className={styles.icon}
         src={icon}
         alt={siteName}
         onLoad={onImageLoadCallback}
       />
-      <div styleName="siteName">{siteName}</div>
+      <div className={styles.siteName}>{siteName}</div>
     </a>
   );
 }

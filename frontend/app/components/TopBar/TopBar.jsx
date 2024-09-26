@@ -1,32 +1,37 @@
+// Libs
 import React, { useState } from 'react';
+import classNames from 'classnames';
 
+// Components
 import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
 
+// Assets
 import { Download } from '../../images/svgComponents';
 
-import './TopBar.css';
+// Styles
+import styles from  './TopBar.module.css';
 
 const TopBar = ({
   changeRoute, showNavbar, downloadResume, currentRoute,
 }) => {
   const [showNavItems, setShowNavItems] = useState(false);
   return (
-    <div styleName={`navbar ${showNavbar ? 'show' : ''}`}>
-      <div styleName="navbar-desktop">
+    <div className={classNames(styles.container, { [styles.show]: showNavbar})}>
+      <div className={styles.navbarDesktop}>
         <input
           type="checkbox"
           name="toggle-navbar"
           id="toggle-navbar"
-          styleName="toggle-navbar"
+          className={styles.navbarToggle}
           checked={showNavItems}
           onChange={(e) => {
             setShowNavItems(!showNavItems);
           }}
         />
-        <label htmlFor="toggle-navbar" styleName="toggle-label">
-          <div styleName="barTop" />
-          <div styleName="barMiddle" />
-          <div styleName="barBottom" />
+        <label htmlFor="toggle-navbar" className={styles.toggleLabel}>
+          <div className={styles.barTop} />
+          <div className={styles.barMiddle} />
+          <div className={styles.barBottom} />
         </label>
         <input
           type="radio"
@@ -37,7 +42,7 @@ const TopBar = ({
             changeRoute(e.target.value);
           })}
           value="bio"
-          styleName="link-bio"
+          className={styles.linkBio}
           id="link-bio"
         />
         <input
@@ -49,7 +54,7 @@ const TopBar = ({
             changeRoute(e.target.value);
           })}
           value="blogs"
-          styleName="link-blogs"
+          className={styles.linkBlogs}
           id="link-blogs"
         />
         <input
@@ -61,7 +66,7 @@ const TopBar = ({
             changeRoute(e.target.value);
           })}
           value="projects"
-          styleName="link-projects"
+          className={styles.linkProjects}
           id="link-projects"
         />
         <input
@@ -73,7 +78,7 @@ const TopBar = ({
             changeRoute(e.target.value);
           })}
           value="certificates"
-          styleName="link-certificates"
+          className={styles.linkCertificates}
           id="link-certificates"
         />
         <input
@@ -85,7 +90,7 @@ const TopBar = ({
             changeRoute(e.target.value);
           })}
           value="techstacks"
-          styleName="link-techstack"
+          className={styles.linkTechstack}
           id="link-techstack"
         />
         <input
@@ -97,7 +102,7 @@ const TopBar = ({
             changeRoute(e.target.value);
           })}
           value="uses"
-          styleName="link-uses"
+          className={styles.linkUses}
           id="link-uses"
         />
         <input
@@ -109,32 +114,32 @@ const TopBar = ({
             changeRoute(e.target.value);
           })}
           value="contact"
-          styleName="link-contact"
+          className={styles.linkContact}
           id="link-contact"
         />
-        <nav id="navItems-container" styleName="navItems-container">
-          <label htmlFor="link-bio" styleName="navItems navItem-bio">Bio</label>
-          <label htmlFor="link-blogs" styleName="navItems navItem-blogs">Blogs</label>
-          {/* <label htmlFor="link-projects" styleName="navItems navItem-projects">Projects</label>
-          <label htmlFor="link-certificates" styleName="navItems navItem-certificates">Certificates</label>
-          <label htmlFor="link-techstack" styleName="navItems navItem-techstack">Tech</label>
-          <label htmlFor="link-uses" styleName="navItems navItem-uses">Uses</label> */}
-          <label htmlFor="link-contact" styleName="navItems navItem-contact">Contact</label>
-          <div styleName="slider" />
+        <nav id="navItems-container" className={styles.navItemsContainer}>
+          <label htmlFor="link-bio" className={classNames(styles.navItems, styles.navItemBio)}>Bio</label>
+          <label htmlFor="link-blogs" className={classNames(styles.navItems, styles.navItemBlogs)}>Blogs</label>
+          {/* <label htmlFor="link-projects" className={classNames(styles.navItems, styles.navItemProjects)}>Projects</label>
+          <label htmlFor="link-certificates" className={classNames(styles.navItems, styles.navItemCertificates)}>Certificates</label>
+          <label htmlFor="link-techstack" className={classNames(styles.navItems, styles.navItemTechstack)}>Tech</label>
+          <label htmlFor="link-uses" className={classNames(styles.navItems, styles.navItemUses)}>Uses</label> */}
+          <label htmlFor="link-contact" className={classNames(styles.navItems, styles.navItemContact)}>Contact</label>
+          <div className="slider" />
         </nav>
       </div>
 
-      <div styleName="navbar-actions">
-        <div styleName="resumeDownloadBtn">
-          {/* <img styleName="downloadicon" src={downloadSvg} alt="download btn" /> */}
+      <div className={styles.navbarActions}>
+        <div className={styles.resumeDownloadBtn}>
+          {/* <img className="downloadicon" src={downloadSvg} alt="download btn" /> */}
           {/* <DownloadSvg /> */}
-          <div styleName="downloadicon">
+          <div className={styles.downloadicon}>
 
             <Download />
             {/* <DownloadSvg /> */}
           </div>
 
-          <div styleName="downloadText" onClick={downloadResume}>Download Resume</div>
+          <div className={styles.downloadText} onClick={downloadResume}>Download Resume</div>
         </div>
         <ThemeSwitcher />
       </div>

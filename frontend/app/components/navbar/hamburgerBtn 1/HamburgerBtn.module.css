@@ -1,12 +1,8 @@
-.ham-checkbox-container {
+.container {
   position: relative;
 }
 
-.a {
-  margin: 100px;
-}
-
-.ham-checkbox-input {
+.input {
 display: none;
 }
 
@@ -41,8 +37,6 @@ display: none;
 }
 
 .hrow {
-  /*   width: 70%;
-  height: 10%; */
   width: 53%;
   height: 6%;
   background: var(--button-highlight-color);
@@ -58,30 +52,30 @@ display: none;
   transform: translate(0px, 150%);
 }
 
-.ham-checkbox {
+.checkbox {
   display: none;
 }
 
-.ham-checkbox-input:checked ~ .button > .hrow {
+.input:checked ~ .button > .hrow {
   background: var(--button-highlight-color);
 }
 
-.ham-checkbox-input:checked ~ .button > .h1 {
+.input:checked ~ .button > .h1 {
   transform: rotateZ(270deg) translate(-14%, 0);
   width: 74%;
 }
 
-.ham-checkbox-input:checked ~ .button > .h2 {
+.input:checked ~ .button > .h2 {
   transform: rotateZ(44deg) translate(2%, -413%);
   width: 54%;
 }
 
-.ham-checkbox-input:checked ~ .button > .h3 {
+.input:checked ~ .button > .h3 {
   transform: rotateZ(314deg) translate(9%, -468%);
   width: 54%;
 }
 
-.ham-checkbox-view {
+.view {
   position: absolute;
   top: 70px;
   left: 17%;
@@ -91,7 +85,7 @@ display: none;
   color: var(--secondary-bg);
 }
 
-.ham-nav-item {
+.item {
   text-align: center;
   font-size: 20pt;
   padding: 10px;

@@ -11,8 +11,8 @@ import Routes from './routes';
 import allReducers from './reducers/index';
 import BackgroundAnimationCanvas from './components/backgroundAnimationCanvas/BackgroundAnimationCanvas';
 
-import './styles/resolutions.css';
-import './index.css';
+import './styles/resolutions.module.css';
+import styles from './index.module.css';
 
 const loggerMiddleware = createLogger({ predicate: () => ({ logger: console, diff: true }) });
 
@@ -30,7 +30,7 @@ if (ENV === 'production') {
 root.render(
   <Provider store={store}>
     <BackgroundAnimationCanvas />
-    <div styleName="container">
+    <div className={styles.container}>
       <Routes />
     </div>
   </Provider>,

@@ -1,7 +1,7 @@
-@import './fonts.css';
-@import './reset.css';
-@import './resolutions.css';
-@import './variables.css';
+@import './fonts.module.css';
+@import './reset.module.css';
+@import './resolutions.module.css';
+@import './variables.module.css';
 
 * {
     color: var(--color-label);

@@ -1,9 +1,9 @@
 import React from 'react';
-import './Links.css';
+import styles from './Links.module.css';
 
 function Links({links}) {
   return (
-    <div styleName="links-container">
+    <div className={styles.linksContainer}>
       {
         links.map(item => (
           <a key={item.link}>

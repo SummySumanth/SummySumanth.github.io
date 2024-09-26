@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getBlogsList } from '../../utils/apiCalls/blogs';
 import BlogCard from './components/BlogCard';
 
-import './Blogs.css';
+import styles from './Blogs.module.css';
 
 const Blogs = () => {
   const [loading, setLoading] = useState(true);
@@ -21,7 +21,7 @@ const Blogs = () => {
       }, []);
   }, []);
   return (
-    <div styleName="page-container">
+    <div className={styles.pageContainer}>
       {
         blogsList.map((blog) => (
           <BlogCard

@@ -1,16 +1,17 @@
 import React from 'react';
-import styles from './NavList.css';
+import className from 'classnames';
+import styles from './NavList.module.css';
 
 export default function NavList({hide}) {
   return (
-  <div styleName={`ham-checkbox-view ${hide ? `slide-out` : `slide-in`}`}>
-    <div styleName="ham-nav-item">Profile</div>
-    <div styleName="ham-nav-item">Blogs</div>
-    <div styleName="ham-nav-item">Projects</div>
-    <div styleName="ham-nav-item">Techstack</div>
-    <div styleName="ham-nav-item">Certificates</div>
-    <div styleName="ham-nav-item">Social Media</div>
-    <div styleName="ham-nav-item">Contact</div>
+  <div className={className(styles.container, hide ? styles.slideIn : styles.slideOut)}>
+    <div className={styles.navItem}>Profile</div>
+    <div className={styles.navItem}>Blogs</div>
+    <div className={styles.navItem}>Projects</div>
+    <div className={styles.navItem}>Techstack</div>
+    <div className={styles.navItem}>Certificates</div>
+    <div className={styles.navItem}>Social Media</div>
+    <div className={styles.navItem}>Contact</div>
   </div>
   );
 }

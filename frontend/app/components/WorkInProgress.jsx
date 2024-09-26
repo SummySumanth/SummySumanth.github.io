@@ -1,8 +1,8 @@
 import React from 'react';
-import './WorkInProgress.css';
+import styles from './WorkInProgress.module.css';
 
 const WorkInProgress = () => (
-  <div styleName="page-container">Under Construction mate, check back later !</div>
+  <div className={styles.pageContainer}>Under Construction mate, check back later !</div>
 );
 
 export default WorkInProgress;

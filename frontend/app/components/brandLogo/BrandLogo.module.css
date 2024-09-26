@@ -1,4 +1,4 @@
-.text-container {
+.textContainer {
     font-family: "Ubuntu", sans-serif;
     color: transparent;
     background: var(--color-label);
@@ -7,7 +7,7 @@
     /* transition: background 10s linear; */
 }
 
-.text-container:hover {
+.textContainer:hover {
     background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(255,231,0,1) 50%, rgba(255,0,0,1) 100%);
     background-size: 4000px;
     background-clip: text;

@@ -1,20 +1,20 @@
-.toggle-theme-container {
+.mainContainer {
   margin: 0px 12px;
   background-color: red;
 }
 
-.theme-container {
+.container {
     cursor: pointer;
   }
   
-.theme-icons {
+.icons {
     position: absolute;
     max-width: 28px;
     right: 12px;
     top: 6px;
 }
   
-.theme-checkbox {
+.checkbox {
     display: none;
 }
 
@@ -26,7 +26,7 @@
   transition-timing-function: ease-in;
 }
 
-.theme-checkbox:checked ~ .sun {
+.checkbox:checked ~ .sun {
   transform: translateY(0);
   opacity: 1;
 }
@@ -39,7 +39,7 @@
     transition-timing-function: ease-in;
 }
 
-.theme-checkbox:checked ~ .moon {
+.checkbox:checked ~ .moon {
   transform: translateY(-40px);
   opacity: 0;
 }

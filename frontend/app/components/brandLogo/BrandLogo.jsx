@@ -1,8 +1,9 @@
 import React from 'react';
-import './BrandLogo.css';
+import classNames from 'classnames';
+import styles from './BrandLogo.module.css';
 
 const BrandLogo = (props) => (
-  <div className={props.className} styleName="text-container">
+  <div className={classNames(props.className, styles.textContainer)} c>
     {'<summy.dev />'}
   </div>
 );

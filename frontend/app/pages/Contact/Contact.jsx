@@ -1,11 +1,19 @@
+// Libs
 import React, { useState } from 'react';
+import classNames from 'classnames';
+
+// Assets
 import { ringmeup } from '../../images';
 
+// Constants
 import socialLinks from '../../constants/socialLinks';
+
+// Components
 import SocialLinkChip from './components/SocialLinkChip';
 import RoundedBtn from '../../components/RoundedBtn/RoundedBtn';
 
-import './Contact.css';
+// Styles
+import styles from './Contact.module.css';
 
 const Contact = () => {
   const downloadVcard = () => {
@@ -24,9 +32,9 @@ const Contact = () => {
   };
 
   return (
-    <div styleName="page-container">
-      <div styleName="container ">
-        <div styleName={`social-links-container ${showContentFlag ? 'pop-in-animation ' : ''}`}>
+    <div className={styles.pageContainer}>
+      <div className={styles.container}>
+        <div className={classNames(styles.socialLinksContainer, {[styles.popInAnimation]: showContentFlag})}>
           {
                 socialLinks.map((item) => (
                   <SocialLinkChip
@@ -38,16 +46,15 @@ const Contact = () => {
               }
         </div>
         <RoundedBtn
-          styleName={`downloadBtn  ${showContentFlag ? 'pop-in-animation ' : ''}`}
+          className={classNames(styles.downloadBtn, {[styles.popInAnimation]: showContentFlag})}
           ctaText="Download VCard"
           cta={() => downloadVcard}
         />
-        <div styleName="imageContainer">
-          <img draggable={false} styleName="avatar-img" src={ringmeup} alt="emoji" />
+        <div className={styles.imageContainer}>
+          <img draggable={false} className={styles.avatarImg} src={ringmeup} alt="emoji" />
         </div>
       </div>
     </div>
-
   );
 };
 

@@ -15,6 +15,7 @@
     "@mui/icons-material": "^6.1.1",
     "@mui/material": "^6.1.1",
     "axios": "^1.7.7",
+    "classnames": "^2.5.1",
     "framer-motion": "^11.7.0",
     "mixpanel-browser": "^2.55.1",
     "react": "^18.3.1",
@@ -25,8 +26,6 @@
     "vanilla-tilt": "^1.8.1"
   },
   "devDependencies": {
-    "redux-logger": "^3.0.6",
-    "redux-logger": "^3.0.6",
     "@eslint/js": "^9.9.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
@@ -38,6 +37,7 @@
     "eslint-plugin-react-refresh": "^0.4.9",
     "globals": "^15.9.0",
     "prettier": "^3.3.3",
+    "redux-logger": "^3.0.6",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1"
