@@ -1,14 +1,21 @@
+// Libs
 import React, { useLayoutEffect } from 'react';
 import { motion } from 'framer-motion';
+
+// Utils
 import useScreenDetails, { deviceTypes } from '../../hooks/useScreenDetails';
+
+// Components
 import BrandLogo from '../../components/brandLogo/BrandLogo';
 import ParallexImage from '../../components/ParallexImage/ParallexImage';
-import { DownArrow } from '../../images/svgComponents';
 
+// Assets
+import { DownArrow } from '../../images/svgComponents';
 import {
   fistBump,
 } from '../../images';
 
+// Styles
 import styles from './Bio.module.css';
 
 const Bio = ({ showNavbar }) => {
@@ -37,44 +44,44 @@ const Bio = ({ showNavbar }) => {
         opacity: 0,
       }}
     >
-      <div className="welcome-block">
-        <div className="welcome-banner">
-          <img className="avatar-img" src={fistBump} alt="avatar" />
-          <BrandLogo className="banner-text" />
+      <div className={styles.welcomeBlock}>
+        <div className={styles.welcomeBanner}>
+          <img className={styles.avatarImg} src={fistBump} alt="avatar" />
+          <BrandLogo className={styles.bannerText} />
 
-          <div className="description-text">
+          <div className={styles.descriptionText}>
             Ey yo!
             <br />
             {' '}
             Thanks for showing interest in getting to know me !
 
-            <div className="description-text-enter">
+            <div className={styles.descriptionTextEnter}>
               Scroll Down
             </div>
           </div>
         </div>
-        <div className="down-arrow-icon anim-fade-in ">
+        <div className={`${styles.downArrowIcon} ${styles.animFadeIn}`}>
           <DownArrow />
         </div>
 
       </div>
-      <div className="details-block">
-        <div className="bio-details-image-container">
-          <div className="parallex-image-container">
+      <div className={styles.detailsBlock}>
+        <div className={styles.bioDetailsImageContainer}>
+          <div className={styles.parallexImageContainer}>
             <ParallexImage
               size={screenDetails.deviceType === deviceTypes.TABLET_OR_LOWER ? 200 : 400}
             />
           </div>
         </div>
-        <div className="bio-details-text">
-          <div className="bio-text-header">
+        <div className={styles.bioDetailsText}>
+          <div className={styles.bioTextHeader}>
             about me
           </div>
-          <div className="bio-text-body">
-            <div className="bio-text-body-block">
+          <div className={styles.bioTextBody}>
+            <div className={styles.bioTextBodyBlock}>
               I&apos;m a Frontend Dev and UX Enthusiast From Bengaluru, India.
             </div>
-            <div className="bio-text-body-block">
+            <div className={styles.bioTextBodyBlock}>
               I love quirky designs, minimalistic interfaces, and clean code.
               I&apos;ve have been working in the industry for over 6 years now.
               Currently working at
@@ -83,7 +90,7 @@ const Bio = ({ showNavbar }) => {
               {' '}
               as a Software Engineer.
             </div>
-            <div className="bio-text-body-block">
+            <div className={styles.bioTextBodyBlock}>
               Apart from work, I love to take photos and make video contents,
               That&apos;s where my first love for designing and building things started I believe.
             </div>

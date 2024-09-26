@@ -1,23 +1,23 @@
-.welcome-block {
+.welcomeBlock {
   height: 100vh;
   /* background: #ff000040; */
   display: flex;
   align-items: center;
 }
 
-.details-block {
+.detailsBlock {
   min-height: 100vh;
   /* background: #ffd00040; */
   display: flex;
   align-items: center;
 }
 
-.welcome-banner {
+.welcomeBanner {
     text-align: center;
     width: 100%;
 }
 
-.avatar-img {
+.avatarImg {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -25,12 +25,12 @@
   max-width: 275px;
 }
 
-.banner-text {
+.bannerText {
   font-size: 98pt;
 }
 
 
-.description-text {
+.descriptionText {
   font-family: "Caveat", cursive;
   font-size: 26pt;
   color: var(--color-secondary-label);
@@ -42,7 +42,7 @@
   animation-timeline: scroll(nearest); */
 }
 
-.description-text-enter {
+.descriptionTextEnter {
   display: none;
   font-size: 22pt;
   color: #c20000;
@@ -52,22 +52,22 @@
   margin: 0 auto;
 }
 
-.description-text-enter:hover {
+.descriptionTextEnter:hover {
   color: #e40000;
 }
 
-.theme-checkbox {
+.themeCheckbox {
   display: none;
 }
 
-.theme-container {
+.themeContainer {
   position: fixed;
   top: 16px;
   right: 46px;
   cursor: pointer;
 }
 
-.theme-icons {
+.themeIcons {
   position: absolute;
   max-width: 34px;
 }
@@ -80,7 +80,7 @@
   transition-timing-function: ease-in;
 }
 
-.theme-checkbox:checked ~ .theme-container > .sun {
+.themeCheckbox:checked ~ .themeContainer > .sun {
   transform: translateY(0);
   opacity: 1;
 }
@@ -93,7 +93,7 @@
   transition-timing-function: ease-in;
 }
 
-.theme-checkbox:checked ~ .theme-container > .moon {
+.themeCheckbox:checked ~ .themeContainer > .moon {
   transform: translateY(-40px);
   opacity: 0;
 
@@ -106,7 +106,7 @@
   margin: 12px;
 }
 
-.down-arrow-icon {
+.downArrowIcon {
   width: 40px;
   position: absolute;
   color: var(--color-label);
@@ -136,11 +136,11 @@
 
 /* Details Block */
 
-.parallex-image-container {
+.parallexImageContainer {
   max-width: 300px;
 }
 
-.details-block {
+.detailsBlock {
   display: flex;
   /* flex-direction: column; */
   align-items: stretch;
@@ -148,23 +148,23 @@
   padding: 0 20px;
 }
 
-.details-block > div {
+.detailsBlock > div {
   width: 100%;
 }
 
-.bio-details-image-container {
+.bioDetailsImageContainer {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.bio-details-image {
+.bioDetailsImage {
   max-width: 380px;
   margin: 0 auto;
   position: relative;
 }
 
-.bio-details-image-cont {
+.bioDetailsImageCont {
   position: absolute;
   top: 0;
   left: 0;
@@ -173,30 +173,30 @@
 
 }
 
-.bio-details-image-bg {
+.bioDetailsImageBg {
   border-radius: 8px;
 }
 
-.bio-details-image-fg {
+.bioDetailsImageFg {
   position: absolute;
   top: 0;
   scale: 1.2;
   transform: translateZ(20px)
 }
 
-.bio-text-header {
+.bioTextHeader {
   font-size: 78pt;
   color: var(--color-label);
 }
 
-.bio-details-text {
+.bioDetailsText {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-left: 6%;
 }
 
-.bio-text-body {
+.bioTextBody {
   font-size: 16pt;
   color: var(--color-secondary-label);
   line-height: 32px;
@@ -204,17 +204,17 @@
   text-align: left;
 }
 
-.bio-text-body-block {
+.bioTextBodyBlock {
   margin-top: 28px;
 }
 
 
 
 @media (--screen-tabletOrLower) { 
-  .welcome-block {
+  .welcomeBlock {
     align-items: center;
   }
-  .avatar-img {
+  .avatarImg {
     max-width: 200px;
     display: inline;
     position: relative;
@@ -222,35 +222,35 @@
     left: unset;
     transform: unset;
   }
-  .banner-text {
+  .bannerText {
     font-size: 28pt;
   }
-  .description-text {
+  .descriptionText {
     position: unset;
     transform: unset;
     margin: 10% 5%;
   }
 
-  .details-block {
+  .detailsBlock {
     flex-direction: column;
   }
-  .bio-details-text {
+  .bioDetailsText {
     padding-left: 0;
     margin: 100px 0 35% 0;
     text-align: center;
   }
 
-  .bio-text-header {
+  .bioTextHeader {
     font-size: 38pt;
   }
 
-  .bio-text-body {
+  .bioTextBody {
     font-size: 14pt;
     max-width: 100%;
     text-align: center;
   }
 
-  .bio-details-image-container {
+  .bioDetailsImageContainer {
     margin-top: 100px
   }
   .downloadBtn {

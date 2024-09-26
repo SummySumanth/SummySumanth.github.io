@@ -1,6 +1,6 @@
 import React from 'react';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-import styles from './BlogCard.module.module.css';
+import styles from './BlogCard.module.css';
 
 const BlogCard = (props) => {
   const {

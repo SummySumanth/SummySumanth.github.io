@@ -11,8 +11,8 @@ import Routes from './routes';
 import allReducers from './reducers/index';
 import BackgroundAnimationCanvas from './components/backgroundAnimationCanvas/BackgroundAnimationCanvas';
 
-import './styles/resolutions.module.css';
-import styles from './index.module.css';
+import resolutions from './styles/resolutions.module.css';
+import styles from './app.module.css';
 
 const loggerMiddleware = createLogger({ predicate: () => ({ logger: console, diff: true }) });
 
