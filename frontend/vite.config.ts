@@ -17,7 +17,7 @@ export default defineConfig({
   root: './app',  // Root directory
   build: {
     rollupOptions: {
-      input: './app/template.html',  // Entry point
+      input: './app/index.html',  // Entry point
     },
     outDir: './dist',  // Output directory
     assetsDir: './assets',  // Assets directory

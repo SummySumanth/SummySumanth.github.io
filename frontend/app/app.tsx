@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { applyMiddleware, createStore } from 'redux';
 import { Provider } from 'react-redux';
@@ -14,7 +13,7 @@ import BackgroundAnimationCanvas from './components/backgroundAnimationCanvas/Ba
 import resolutions from './styles/resolutions.module.css';
 import styles from './app.module.css';
 
-const loggerMiddleware = createLogger({ predicate: () => ({ logger: console, diff: true }) });
+const loggerMiddleware = createLogger({ predicate: () => true, logger: console, diff: true });
 
 const store = createStore(
   allReducers,
