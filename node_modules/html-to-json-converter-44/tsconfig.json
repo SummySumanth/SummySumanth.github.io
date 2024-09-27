@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "module": "commonjs",
+    "target": "es2019",
+    "lib": ["ES2019"],
+    "strict": true,
+    "declaration": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": false,
+    "outDir": "./build",
+    "typeRoots": ["./node_modules/@types"],
+    "baseUrl": "."
+  },
+  "include": ["./src/**/*"]
+}

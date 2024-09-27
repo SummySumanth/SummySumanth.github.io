@@ -1,9 +1,0 @@
-@import './fonts.module.css';
-@import './reset.module.css';
-@import './resolutions.module.css';
-@import './variables.module.css';
-
-* {
-    color: var(--color-label);
-    font-family: "Ubuntu", sans-serif;
-  }
