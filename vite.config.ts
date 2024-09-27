@@ -19,7 +19,8 @@ export default defineConfig({
     rollupOptions: {
       input: './app/index.html',  // Entry point
     },
-    outDir: './dist',  // Output directory
+    outDir: './../dist',  // Output directory
+    emptyOutDir: true,  // Empty output directory before building
     assetsDir: './assets',  // Assets directory
     manifest: true,  // Generate manifest.json
     cssCodeSplit: true,  // Enable CSS code splitting

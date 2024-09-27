@@ -1,0 +1,12 @@
+runtime: nodejs20
+
+instance_class: F2
+env_variables:
+  NODE_ENV: 'production'
+
+handlers:
+  - url: /
+    static_files: dist/index.html
+    upload: dist/index.html
+  - url: /
+    static_dir: dist

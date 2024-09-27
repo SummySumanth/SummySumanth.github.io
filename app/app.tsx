@@ -10,7 +10,7 @@ import Routes from './routes';
 import allReducers from './reducers/index';
 import BackgroundAnimationCanvas from './components/backgroundAnimationCanvas/BackgroundAnimationCanvas';
 
-import resolutions from './styles/resolutions.module.css';
+// import resolutions from './styles/resolutions.module.css';
 import styles from './app.module.css';
 
 const loggerMiddleware = createLogger({ predicate: () => true, logger: console, diff: true });
@@ -20,17 +20,22 @@ const store = createStore(
   applyMiddleware(loggerMiddleware),
 );
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const rootElement = document.getElementById('root');
+if (rootElement) {
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(
+    <Provider store={store}>
+      <BackgroundAnimationCanvas />
+      <div className={styles.container}>
+        <Routes />
+      </div>
+    </Provider>,
+  );
+} else {
+  console.error("Root element not found");
+}
 
 if (ENV === 'production') {
   initializeMixpanel();
 }
-
-root.render(
-  <Provider store={store}>
-    <BackgroundAnimationCanvas />
-    <div className={styles.container}>
-      <Routes />
-    </div>
-  </Provider>,
-);
