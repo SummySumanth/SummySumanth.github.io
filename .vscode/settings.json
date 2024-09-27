@@ -26,5 +26,26 @@
         "titleBar.inactiveBackground": "#1a1a1a99",
         "titleBar.inactiveForeground": "#e7e7e799"
     },
-    "peacock.color": "#1a1a1a"
+    "peacock.color": "#1a1a1a",
+    "folders": [
+        {
+            "name": "frontend",
+            "path": "./../frontend",            
+        },
+        {
+            "name": "backend",
+            "path": "./../backend",
+        }
+    ],
+    "eslint.workingDirectories": [
+        {
+            "directory": "../frontend",
+            "changeProcessCWD": true,
+            "overrideConfigFile": "./../frontend/eslint.config.js"
+        },
+        {
+            "directory": "../backend",
+            "changeProcessCWD": true,
+        }
+    ],
 }
